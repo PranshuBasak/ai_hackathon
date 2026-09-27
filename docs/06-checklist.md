@@ -1,6 +1,6 @@
 # Foundation checklist
 
-Updated 2026-09-27. Statuses: **Verified complete / Partial / Not started / Blocked / Deferred**. F1-F5 refer to sections of the approved implementation plan. Original references point to reference/original-plan.txt. Verification date is the evidence review date; blocked tests have not run.
+Updated 2026-09-27 (evening, UI pass). Statuses: **Verified complete / Partial / Not started / Blocked / Deferred**. F1-F5 refer to sections of the approved implementation plan. Original references point to reference/original-plan.txt. Verification date is the evidence review date; blocked tests have not run.
 
 | Item / plan reference | Status | Owner role | Evidence | Next action | Verification date |
 |---|---|---|---|---|---|
@@ -15,9 +15,9 @@ Updated 2026-09-27. Statuses: **Verified complete / Partial / Not started / Bloc
 | Eight scoring factors totaling 100 (F3) | Verified complete | Administrator | UsrScoringFactor readback | Restrict writes | 2026-09-26 |
 | Thresholds 85/50 (F3) | Partial | Administrator | Settings and SysSettings/SysSettingsValue binding readbacks | Verify permissions | 2026-09-26 |
 | Nine original intakes backfilled (F3) | Verified complete | Data steward | Nine preserved GUIDs; PI-LEGACY and Needs review readback | Final count | 2026-09-26 |
-| Generic branding (F3) | Partial | Developer | App/workplace renamed; browser navigation verified | Remaining captions and bindings | 2026-09-26 |
-| Intake section/list/form (F4) | Partial | Developer | Browser list/filter checks; existing form addon; raw-text save and restoration verified; verdict-only readonly rule | Manual creation after compiled listener fix | 2026-09-26 |
-| Buying centre/Intake history (F4) | Partial | Developer | New Project fields and both related-list areas saved; matched intake list verified against temporary link | Verify created-project history and Buying centre in browser | 2026-09-26 |
+| Generic branding (F3) | Partial | Developer | App/workplace renamed; browser navigation verified; page captions moved to sentence case 2026-09-27 | Remaining bindings inventory | 2026-09-27 |
+| Intake section/list/form (F4) | Partial | Developer | Form and list rebuilt 2026-09-27 (scripts/build_intake_form_v2.py, scripts/build_list_page_v2.py); browser acceptance passed for list sort, New filter, form tabs/islands and status dropdown (implementation log) | Manual create in UI; spreadsheet reimport | 2026-09-27 |
+| Buying centre/Intake history (F4) | Partial | Developer | Browser 2026-09-27: Buying centre shows four participants on 1000000001; both Intake history lists load; Location and stage island renders | Verify history lists against a project that has a linked intake; replace or remove the uninstalled qnt.ImageGallery images widget | 2026-09-27 |
 | Static baseline assets (F2/F4/original §6) | Verified complete | Data steward | seed-data; workbook; manifest; tests/oracle.csv | Resolve live values before load | 2026-09-26 |
 | Baseline loaded (F4) | Verified complete | Data steward | demo-readback-2026-09-27.json: 20 accounts, 15 contacts, 25 projects, 95 participants, 8 opportunities, 8 opportunity contacts and 8 project links | Use manifest for scoped reset; platform tags pending | 2026-09-27 |
 | Import mapping (F4) | Partial | Data steward | docs/import-mapping.json; workbook mapping | Save platform mapping after B01 | 2026-09-26 |

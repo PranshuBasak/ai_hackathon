@@ -1,0 +1,15 @@
+{
+  "PDS_UsrName": "Number",
+  "PDS_UsrProjectName": "Project name",
+  "PDS_UsrExternalSource": "Source",
+  "PDS_UsrStatus": "Status",
+  "PDS_UsrPriorityClassification": "Priority",
+  "PDS_UsrRecommendedAction": "Recommended action",
+  "PDS_UsrProjectMatchConfidence": "Match confidence",
+  "PDS_UsrEstimatedProjectValue": "Estimated value",
+  "PDS_UsrReceivedOn": "Received on",
+  "UsrFilterNew": "New",
+  "UsrFilterNeedsReview": "Needs review",
+  "UsrFilterReady": "Ready to apply",
+  "UsrFilterStrategic": "Strategic"
+}
