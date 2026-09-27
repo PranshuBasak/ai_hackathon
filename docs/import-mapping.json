@@ -1,0 +1,126 @@
+{
+  "entity": "UsrADProjectIntelligence",
+  "mapping": [
+    {
+      "header": "Source",
+      "field": "UsrExternalSource",
+      "match_key": true
+    },
+    {
+      "header": "Source Project ID",
+      "field": "UsrExternalProjectId",
+      "match_key": true
+    },
+    {
+      "header": "Project Name",
+      "field": "UsrProjectName",
+      "match_key": false
+    },
+    {
+      "header": "Project Type",
+      "field": "UsrProjectTypeText",
+      "match_key": false
+    },
+    {
+      "header": "Stage",
+      "field": "UsrStageText",
+      "match_key": false
+    },
+    {
+      "header": "Address",
+      "field": "UsrProjectAddress",
+      "match_key": false
+    },
+    {
+      "header": "City",
+      "field": "UsrCityText",
+      "match_key": false
+    },
+    {
+      "header": "State",
+      "field": "UsrStateText",
+      "match_key": false
+    },
+    {
+      "header": "Country",
+      "field": "UsrCountryText",
+      "match_key": false
+    },
+    {
+      "header": "Est. Construction Value",
+      "field": "UsrEstimatedProjectValue",
+      "match_key": false
+    },
+    {
+      "header": "Units",
+      "field": "UsrNumberOfUnits",
+      "match_key": false
+    },
+    {
+      "header": "Bid Date",
+      "field": "UsrBidDate",
+      "match_key": false
+    },
+    {
+      "header": "Start Date",
+      "field": "UsrStartDate",
+      "match_key": false
+    },
+    {
+      "header": "Completion Date",
+      "field": "UsrCompletionDate",
+      "match_key": false
+    },
+    {
+      "header": "Owner/Developer",
+      "field": "UsrDeveloperName",
+      "match_key": false
+    },
+    {
+      "header": "Architect",
+      "field": "UsrArchitectName",
+      "match_key": false
+    },
+    {
+      "header": "GC/Builder",
+      "field": "UsrBuilderName",
+      "match_key": false
+    },
+    {
+      "header": "Dealer",
+      "field": "UsrDealerName",
+      "match_key": false
+    },
+    {
+      "header": "Key Contact",
+      "field": "UsrKeyContactName",
+      "match_key": false
+    },
+    {
+      "header": "Contact Email",
+      "field": "UsrKeyContactEmail",
+      "match_key": false
+    },
+    {
+      "header": "Contact Role",
+      "field": "UsrKeyContactRoleText",
+      "match_key": false
+    },
+    {
+      "header": "Description",
+      "field": "UsrProjectDescription",
+      "match_key": false
+    }
+  ],
+  "excluded": [
+    "UsrStatus",
+    "UsrReviewedBy",
+    "UsrMatchedProject",
+    "UsrQualificationScore",
+    "UsrPriorityClassification",
+    "UsrRecommendedAction",
+    "UsrAnalysisDate",
+    "UsrAgentError"
+  ],
+  "platform_template_saved": false
+}

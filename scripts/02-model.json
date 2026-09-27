@@ -1,0 +1,248 @@
+{
+  "environment-name": "ai_hackathon",
+  "package-name": "UsrMieleADProjects",
+  "operations": [
+    {
+      "type": "update-entity",
+      "schema-name": "UsrADProjectIntelligence",
+      "columns": [
+        {
+          "column-name": "UsrName",
+          "type": "MediumText",
+          "title-localizations": {
+            "en-US": "Intake number"
+          },
+          "default-value-config": {
+            "source": "Sequence",
+            "sequence-prefix": "PI-",
+            "sequence-number-of-chars": 6
+          }
+        },
+        {
+          "column-name": "UsrReceivedOn",
+          "type": "DateTime",
+          "title-localizations": {
+            "en-US": "Received on"
+          }
+        },
+        {
+          "column-name": "UsrBidDate",
+          "type": "DateTime",
+          "title-localizations": {
+            "en-US": "Bid date"
+          }
+        },
+        {
+          "column-name": "UsrStartDate",
+          "type": "DateTime",
+          "title-localizations": {
+            "en-US": "Start date"
+          }
+        },
+        {
+          "column-name": "UsrCompletionDate",
+          "type": "DateTime",
+          "title-localizations": {
+            "en-US": "Completion date"
+          }
+        },
+        {
+          "column-name": "UsrRawText",
+          "type": "MaxSizeText",
+          "title-localizations": {
+            "en-US": "Raw source text"
+          }
+        },
+        {
+          "column-name": "UsrMatchReason",
+          "type": "MaxSizeText",
+          "title-localizations": {
+            "en-US": "Match reason"
+          }
+        },
+        {
+          "column-name": "UsrAgentError",
+          "type": "MaxSizeText",
+          "title-localizations": {
+            "en-US": "Execution error"
+          }
+        },
+        {
+          "column-name": "UsrProjectTypeText",
+          "type": "MediumText",
+          "title-localizations": {
+            "en-US": "Project type (source)"
+          }
+        },
+        {
+          "column-name": "UsrStageText",
+          "type": "MediumText",
+          "title-localizations": {
+            "en-US": "Stage (source)"
+          }
+        },
+        {
+          "column-name": "UsrCityText",
+          "type": "MediumText",
+          "title-localizations": {
+            "en-US": "City (source)"
+          }
+        },
+        {
+          "column-name": "UsrStateText",
+          "type": "MediumText",
+          "title-localizations": {
+            "en-US": "State (source)"
+          }
+        },
+        {
+          "column-name": "UsrCountryText",
+          "type": "MediumText",
+          "title-localizations": {
+            "en-US": "Country (source)"
+          }
+        },
+        {
+          "column-name": "UsrKeyContactName",
+          "type": "MediumText",
+          "title-localizations": {
+            "en-US": "Contact name"
+          }
+        },
+        {
+          "column-name": "UsrKeyContactRoleText",
+          "type": "MediumText",
+          "title-localizations": {
+            "en-US": "Contact role"
+          }
+        },
+        {
+          "column-name": "UsrKeyContactEmail",
+          "type": "Email",
+          "title-localizations": {
+            "en-US": "Contact email"
+          }
+        },
+        {
+          "column-name": "UsrEmailActivity",
+          "type": "Lookup",
+          "title-localizations": {
+            "en-US": "Source email"
+          },
+          "reference-schema-name": "Activity"
+        },
+        {
+          "column-name": "UsrDeveloperAccount",
+          "type": "Lookup",
+          "title-localizations": {
+            "en-US": "Developer account"
+          },
+          "reference-schema-name": "Account"
+        },
+        {
+          "column-name": "UsrArchitectAccount",
+          "type": "Lookup",
+          "title-localizations": {
+            "en-US": "Architect account"
+          },
+          "reference-schema-name": "Account"
+        },
+        {
+          "column-name": "UsrBuilderAccount",
+          "type": "Lookup",
+          "title-localizations": {
+            "en-US": "Builder account"
+          },
+          "reference-schema-name": "Account"
+        },
+        {
+          "column-name": "UsrDealerAccount",
+          "type": "Lookup",
+          "title-localizations": {
+            "en-US": "Dealer account"
+          },
+          "reference-schema-name": "Account"
+        },
+        {
+          "column-name": "UsrReviewedBy",
+          "type": "Lookup",
+          "title-localizations": {
+            "en-US": "Reviewer"
+          },
+          "reference-schema-name": "Contact"
+        },
+        {
+          "column-name": "UsrStatus",
+          "type": "Lookup",
+          "title-localizations": {
+            "en-US": "Intake status"
+          },
+          "reference-schema-name": "UsrIntakeStatus",
+          "default-value-config": {
+            "source": "Const",
+            "value": "efc4cf1b-1b15-4d92-9a65-59960f61e99e"
+          }
+        }
+      ]
+    },
+    {
+      "type": "update-entity",
+      "schema-name": "UsrADProjectParty",
+      "columns": [
+        {
+          "column-name": "UsrAccount",
+          "type": "Lookup",
+          "title-localizations": {
+            "en-US": "Account"
+          },
+          "reference-schema-name": "Account"
+        },
+        {
+          "column-name": "UsrContact",
+          "type": "Lookup",
+          "title-localizations": {
+            "en-US": "Contact"
+          },
+          "reference-schema-name": "Contact"
+        },
+        {
+          "column-name": "UsrIsPrimary",
+          "type": "Boolean",
+          "title-localizations": {
+            "en-US": "Primary party"
+          }
+        },
+        {
+          "column-name": "UsrSourceIntake",
+          "type": "Lookup",
+          "title-localizations": {
+            "en-US": "Source intake"
+          },
+          "reference-schema-name": "UsrADProjectIntelligence"
+        }
+      ]
+    },
+    {
+      "type": "update-entity",
+      "schema-name": "Project",
+      "columns": [
+        {
+          "column-name": "UsrCity",
+          "type": "Lookup",
+          "title-localizations": {
+            "en-US": "City"
+          },
+          "reference-schema-name": "City"
+        },
+        {
+          "column-name": "UsrConstructionStage",
+          "type": "Lookup",
+          "title-localizations": {
+            "en-US": "Construction stage"
+          },
+          "reference-schema-name": "UsrConstructionStage"
+        }
+      ]
+    }
+  ]
+}

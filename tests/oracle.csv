@@ -1,0 +1,16 @@
+﻿Row,Source,SourceProjectId,ProjectName,ExpectedMatchedProjectId,ExpectedAction,ExpectedPriority,ExpectedLifecycle,Rule,Result
+1,Dodge,PI-DEMO-01,Aurora Skyline,,Create new project,Strategic Pursuit,Ready to apply,High confidence and all mandatory information resolved,NOT RUN
+2,Dodge,PI-DEMO-02,Elmwood Residences,,Create new project,Active pursuit,Ready to apply,High confidence and all mandatory information resolved,NOT RUN
+3,Dodge,PI-DEMO-03,Meadow Senior Living,,Create new project,Monitor,Ready to apply,High confidence and all mandatory information resolved,NOT RUN
+4,Dodge,BASE-004,Cedar Grove Heights,a3ce60bc-86ce-5247-ab58-016b47f40a28,Duplicate – no action,Active pursuit,Ready to apply,Same project; never create another Project,NOT RUN
+5,Dodge,PI-DEMO-05,Northgate Hotel,14dcc25b-ab19-5301-bd25-b50e954dce3a,Duplicate – no action,Active pursuit,Ready to apply,Same project; never create another Project,NOT RUN
+6,Dodge,PI-DEMO-06,Bluewater Gardens,c242f69b-941a-5915-9c74-a9141e779766,Duplicate – no action,Strategic Pursuit,Ready to apply,Same project; never create another Project,NOT RUN
+7,Dodge,PI-DEMO-07,The Meridian Tower – Phase 2,41c88ecd-00e3-513d-acf9-b86d740c58e0,Link as new phase,Active pursuit,Needs review,Phase always needs review regardless of threshold,NOT RUN
+8,Dodge,PI-DEMO-08,The Commons at Riverside,8329dee5-0ea4-5d39-b284-443f2e9d55f6,Update existing project,Active pursuit,Needs review,Rename always needs review regardless of threshold,NOT RUN
+9,Dodge,PI-DEMO-09,Harborline West Residences,,Create new project,Active pursuit,Needs review,Developer resolves to Harborline Development Group; reviewer confirms alias,NOT RUN
+10,Dodge,PI-DEMO-10,Scenario 10,,Create new project,Data Incomplete,Needs review,Missing architect; future Apply creates follow-up task,NOT RUN
+11,Dodge,PI-DEMO-11,Scenario 11,,Create new project,Monitor,Needs review,Missing dealer; flag missing information,NOT RUN
+12,Dodge,PI-DEMO-12,Small Home Remodel,,Discard (low value),Low priority,Needs review,Low fit and missing parties; do not create pipeline,NOT RUN
+13,Dodge,PI-DEMO-13,Summit Student Village,5247e509-e3c6-5ed5-9b61-c8cf2c6f8e34,Update existing project,Strategic Pursuit,Ready to apply,Same project; never create another Project,NOT RUN
+14,Dodge,PI-DEMO-14,Pier 9 Residences,5e36c555-9729-5cce-87b4-cc964432070d,Update existing project|Duplicate – no action,Active pursuit,Ready to apply,Same project; never create another Project,NOT RUN
+15,Tender portal,TENDER-PIER9-2026,Pier 9 Residences,5e36c555-9729-5cce-87b4-cc964432070d,Duplicate – no action,Active pursuit,Ready to apply,Same project; never create another Project,NOT RUN

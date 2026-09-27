@@ -1,0 +1,198 @@
+{
+  "environment-name": "ai_hackathon",
+  "package-name": "UsrMieleADProjects",
+  "operations": [
+    {
+      "type": "seed-data",
+      "schema-name": "UsrADIntelligenceSource",
+      "seed-rows": [
+        {
+          "values": {
+            "Name": "ConstructConnect"
+          }
+        },
+        {
+          "values": {
+            "Name": "Tender portal"
+          }
+        },
+        {
+          "values": {
+            "Name": "CSV/Excel"
+          }
+        }
+      ]
+    },
+    {
+      "type": "seed-data",
+      "schema-name": "UsrADProjectPriority",
+      "seed-rows": [
+        {
+          "values": {
+            "Name": "Active pursuit"
+          }
+        },
+        {
+          "values": {
+            "Name": "Low priority"
+          }
+        }
+      ]
+    },
+    {
+      "type": "seed-data",
+      "schema-name": "UsrProjectAIRecommendedAction",
+      "seed-rows": [
+        {
+          "values": {
+            "Name": "Create new project"
+          }
+        },
+        {
+          "values": {
+            "Name": "Link as new phase"
+          }
+        },
+        {
+          "values": {
+            "Name": "Update existing project"
+          }
+        },
+        {
+          "values": {
+            "Name": "Duplicate – no action"
+          }
+        },
+        {
+          "values": {
+            "Name": "Needs review"
+          }
+        },
+        {
+          "values": {
+            "Name": "Discard (low value)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "seed-data",
+      "schema-name": "UsrADStakeholderRole",
+      "seed-rows": [
+        {
+          "values": {
+            "Name": "Developer/Owner"
+          }
+        },
+        {
+          "values": {
+            "Name": "Architect/Specifier"
+          }
+        },
+        {
+          "values": {
+            "Name": "General contractor/Builder"
+          }
+        },
+        {
+          "values": {
+            "Name": "Interior designer"
+          }
+        },
+        {
+          "values": {
+            "Name": "Consultant"
+          }
+        }
+      ]
+    },
+    {
+      "type": "seed-data",
+      "schema-name": "AccountType",
+      "seed-rows": [
+        {
+          "values": {
+            "Name": "Developer"
+          }
+        },
+        {
+          "values": {
+            "Name": "Architect"
+          }
+        },
+        {
+          "values": {
+            "Name": "Dealer"
+          }
+        }
+      ]
+    },
+    {
+      "type": "seed-data",
+      "schema-name": "ProjectType",
+      "seed-rows": [
+        {
+          "values": {
+            "Name": "Multifamily High-Rise"
+          }
+        },
+        {
+          "values": {
+            "Name": "Multifamily Mid-Rise"
+          }
+        },
+        {
+          "values": {
+            "Name": "Mixed-Use"
+          }
+        },
+        {
+          "values": {
+            "Name": "Hospitality"
+          }
+        },
+        {
+          "values": {
+            "Name": "Senior Living"
+          }
+        },
+        {
+          "values": {
+            "Name": "Student Housing"
+          }
+        },
+        {
+          "values": {
+            "Name": "Single-Family Community"
+          }
+        }
+      ]
+    },
+    {
+      "type": "seed-data",
+      "schema-name": "AccountIndustry",
+      "seed-rows": [
+        {
+          "values": {
+            "Name": "Real Estate Development"
+          }
+        },
+        {
+          "values": {
+            "Name": "Architecture & Design"
+          }
+        },
+        {
+          "values": {
+            "Name": "Construction"
+          }
+        },
+        {
+          "values": {
+            "Name": "Building Products Distribution"
+          }
+        }
+      ]
+    }
+  ]
+}

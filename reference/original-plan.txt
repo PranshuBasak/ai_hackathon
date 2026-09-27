@@ -1,0 +1,375 @@
+
+Project Intake Agent: Creatio Hackathon Plan (Industry Agent)
+
+Tagline: "Project intelligence to pipeline for building-products manufacturers." Persona: projects team at Everline Appliances (a fictional US appliance manufacturer). Submission deadline: Wed Sep 30, 2026. Team of 3, 7 days (Sep 23 to Sep 30).
+
+
+0. Context
+Building-product manufacturers get specified into construction projects years before anything ships. Reps find these projects in feeds such as Dodge, ConstructConnect and tender portals, then type them into the CRM by hand. That takes 20–25 minutes per project. It also creates duplicates (a new phase, a renamed project, or a second source for the same project) and misses the architect or specifier. There is no triage.
+The agent works in five steps:
+
+1. It reads each incoming project (bulk Excel, or a single email).
+2. It extracts the entities.
+3. It matches them against existing Projects and Accounts.
+4. It recommends a CRM action and classifies pursuit priority.
+5. A human approves anything ambiguous, and the agent then writes standard Creatio records.
+Decisions already made
+
+Topic	Decision
+Build and demo environment	A new hackathon env, not yet provisioned or registered in clio. LocalDev is reference only.
+AI	Creatio AI Studio: a native Creatio.ai Agent with Skills (CopilotAgent / CopilotIntent in CrtCopilot). No external LLM keys.
+Target records	Project (the physical construction project, with phases via ParentProject) plus Opportunity (our spec/pursuit deal).
+Code and package	A new, neutral package UsrProjectIntakeAgent. The existing client package UsrMieleADProjects on LocalDev is a design reference only. Do not copy, ship or depend on it. It must contain no Miele names, client dealers or real projects.
+Plan deliverable	Markdown docs and seed-data CSVs in the AI_Creatio folder (list in §11). Nothing is created in any Creatio env during planning.
+
+What LocalDev taught us (reference findings)
+
+- Standard Project (package Project) has these columns: 
+- Name, Type→ProjectType, Status→ProjectStatus (required), ProjectEntryType (required), Owner (required)
+- Account, Contact, Opportunity, ParentProject
+- StartDate, EndDate, Deadline, PlanIncome, Notes
+- Related: ProjectProduct, ProjectFile, ProjectRole, ProjectTag
+- There is no standard Project↔Account participant object.
+- Standard Opportunity has Account, Contact, Partner (Account), Stage, Amount, Budget, Probability, Source, LeadType, DueDate, Owner and Description. OpportunityContact adds Role (Decision maker / Influencer / Contact person), Influence and IsMainContact.
+- Standard Account has: 
+- Type→AccountType. It includes Contractor, Distributor and Partner. It has no Developer, Architect or Dealer value.
+- AccountCategory (A/B/C/D), AlternativeName, Industry, Parent, City/Country/Address
+- Relationship links Account↔Account. Lead holds only one company and one contact, so it cannot carry four stakeholders. A dedicated staging object is justified.
+- Creatio's built-in duplicate search exists for Account and Contact only (CrtDeduplication). Project matching has to be done by the agent.
+- Data import infrastructure is standard: ImportSession, FileImportTemplate (CrtFileImport). Import templates can be saved.
+- AI Studio schemas (CopilotIntent) support ResponseFormatJsonSchema, WorkflowOnly, UsePageContext and Prompt. This means skills can return structured JSON and can run from business processes.
+
+
+1. Architecture
+
+[Source adapters]                    [Staging]               [Agent: AI Studio]                [Human]          [Standard CRM]
+ ├ Excel/CSV → Creatio Data Import ─┐
+ ├ Email (synced mailbox / chat)  ──┼─► UsrProjectIntake ─► S1 Extract (if raw text)           Review page:  ─► Account (+Type, AlternativeName)
+ └ (future) Dodge/ConstructConnect ─┘   Status=New          S2 Match & Recommend (candidates)   Approve /       Contact
+      API → same staging fields                             S3 Classify Priority (config)       Override /      Project (+ParentProject for phase)
+                                                            → Needs review / Ready to apply     Reject          UsrProjectParticipant (buying centre)
+                                                                                                                Opportunity (Account=Developer, Partner=Dealer)
+                                                                                                                OpportunityContact (Architect = Influencer)
+                                                                                                                Activity task ("Find architect/specifier")
+
+
+Talking point for the pitch: "The staging object mirrors the Dodge API schema. Swapping in the live feed is a connector, not a redesign."
+Design principles
+
+1. Standard first. Every final business record is a standard object. The only custom things are the staging object, one participant (junction) object, a few lookups and a few Project columns.
+2. Staging stores raw text. Lookups are resolved at apply time. This way an import never fails on an unknown city or type.
+3. The rules decide which records the AI compares; the AI makes the call. An ESQ pre-filter picks the candidate projects and accounts. The LLM decides and explains. Thresholds live in system settings.
+4. Human in the loop. Only high-confidence new or exact-duplicate results can be one-click applied. Anything ambiguous goes to Needs review.
+5. Configurable scoring. Factors and weights live in a lookup, and dealer tier is the standard AccountCategory. Nothing is hardcoded to one customer.
+
+
+2. Data model: standard vs. custom
+2.1 Standard objects reused (no schema change)
+
+Need	Standard object / field
+Developer / owner company	Account with Type=Developer (new value in standard AccountType)
+Architect / specifier	Account Type=Architect (new value). The contact goes in OpportunityContact with Role=Influencer
+Builder / GC	Account Type=Contractor (existing value)
+Dealer	Account Type=Dealer (new value). Dealer tier = AccountCategory A/B/C/D
+Company aliases (for fuzzy matching)	Account.AlternativeName
+People	Contact (Account, Email, JobTitle)
+Construction project	Project: Name, Type (ProjectType, add values), Status, Account=Developer, Owner, StartDate, EndDate=est. completion, Deadline=bid/spec date, PlanIncome=our expected revenue, Notes=AI summary, ParentProject = phase link, Opportunity
+Product package in spec	ProjectProduct linking to standard Product (stretch goal)
+
+Lookup data to add to standard lookups (data only):
+
+- AccountType: Developer, Architect, Dealer.
+- ProjectType: Multifamily High-Rise, Multifamily Mid-Rise, Mixed-Use, Hospitality, Senior Living, Student Housing, Single-Family Community.
+- ProjectStatus: reuse Planned / Lead / In progress / Canceled.
+- AccountIndustry: Real Estate Development, Architecture & Design, Construction, Building Products Distribution.
+2.2 Custom objects (the minimal footprint)
+A. UsrProjectIntake: staging ("Project Intake"). A new section in app "Project Intake".
+
+Group	Columns
+Source	UsrName (auto number, "PI-0001"), UsrSource→UsrIntelligenceSource, UsrSourceId (text, unique with Source), UsrReceivedOn, UsrRawText (unlimited text: email body, pasted sheet or feed description), UsrEmailActivity→Activity
+Parsed fields (text)	UsrProjectName, UsrProjectTypeText, UsrStageText, UsrAddress, UsrCityText, UsrStateText, UsrCountryText, UsrConstructionValue (currency), UsrUnits (int), UsrBidDate, UsrStartDate, UsrCompletionDate
+Stakeholders (text)	UsrDeveloperName, UsrArchitectName, UsrBuilderName, UsrDealerName, UsrKeyContactName, UsrKeyContactEmail, UsrKeyContactRoleText
+Match results	UsrMatchedProject→Project, UsrMatchConfidence (int 0–100), UsrMatchReason, UsrDeveloperAccount, UsrArchitectAccount, UsrBuilderAccount, UsrDealerAccount (→Account)
+Recommendation	UsrRecommendedAction→UsrIntakeAction, UsrPriority→UsrPursuitPriority, UsrPriorityScore (int), UsrAIRationale, UsrMissingInfo, UsrAgentRunOn, UsrAgentError
+Lifecycle	UsrStatus→UsrIntakeStatus (default New), UsrReviewedBy→Contact, UsrCreatedProject→Project, UsrCreatedOpportunity→Opportunity
+
+B. UsrProjectParticipant: the buying centre (Project × Account × Role). This fills the one real gap: there is no standard Project↔Account link. Columns: UsrProject→Project, UsrAccount→Account, UsrContact→Contact, UsrRole→UsrParticipantRole, UsrIsPrimary, UsrSourceIntake→UsrProjectIntake.
+C. New columns on standard Project (only the ones that have no standard equivalent): UsrExternalId, UsrSource→UsrIntelligenceSource, UsrConstructionValue, UsrUnits, UsrConstructionStage→UsrConstructionStage, UsrCity→City (standard lookup), UsrAddress, UsrPriority→UsrPursuitPriority, UsrPriorityScore.
+D. New lookups
+
+Lookup	Values
+UsrIntelligenceSource	Dodge, ConstructConnect, Tender portal, Email, CSV/Excel, Manual
+UsrIntakeStatus	New, Processing, Needs review, Ready to apply, Applied, Rejected, Failed
+UsrIntakeAction	Create new project, Link as new phase, Update existing project, Duplicate – no action, Needs review, Discard (low value)
+UsrPursuitPriority	Strategic pursuit, Active pursuit, Monitor, Low priority, Data incomplete
+UsrConstructionStage	Conceptual, Design development, Construction documents, Bidding, Under construction, Completed
+UsrParticipantRole	Developer/Owner, Architect/Specifier, General contractor/Builder, Dealer, Interior designer, Consultant
+UsrScoringFactor	Columns: Name, UsrWeight (int), UsrDescription (prompt text), UsrIsActive
+
+Starting scoring factors (configurable weights): construction value, unit count, project-type fit (for appliances: multifamily, hospitality and senior living score high), stage (Design or CD means the spec window is open and scores high; Under construction scores low), architect known, dealer tier A/B, existing relationship with the developer (won opportunities), and region coverage.
+
+
+3. Import plan (how intake gets in)
+3.1 Bulk path: Excel/CSV into staging
+
+1. Template seed-data/ProjectIntake_Import_Template.xlsx. Its columns mirror a Dodge-style feed: Source, Source Project ID, Project Name, Project Type, Stage, Address, City, State, Country, Est. Construction Value, Units, Bid Date, Start Date, Completion Date, Owner/Developer, Architect, GC/Builder, Dealer, Key Contact, Contact Email, Contact Role, Description.
+2. Creatio Data Import wizard (from the Project Intake list, Import data): 
+- Target object: UsrProjectIntake. Map every column to the text fields. Source maps to the UsrIntelligenceSource lookup by name.
+- Duplicate rule inside import: match on UsrSource + UsrSourceId, then update existing. Re-importing the same feed doesn't create new staging rows.
+- Save the mapping as an import template (standard FileImportTemplate) so reimports take one click.
+3. Imported rows get UsrStatus = New by default.
+4. Trigger processing. Use a list action "Run Intake Agent on new items". It starts process UsrIntakeBatchProcess, which reads all New intakes and runs UsrIntakeProcessOne per record (sub-process, "for each record in collection"). Optionally add a timer every 10 minutes. There is no insert-signal, because a bulk import would start 15 parallel LLM runs at once.
+5. Progress is visible in the list: status chips go New → Processing → Needs review / Ready to apply.
+Idempotency rules:
+
+- A row that is already Applied is never reprocessed by reimport.
+- A row whose status is Failed can be re-run.
+- Re-running on Needs review overwrites only the AI fields, never reviewer edits to the matched accounts.
+3.2 Single path: email or pasted project sheet (the "wow" moment)
+
+- Option A, primary if mailbox sync works in the hackathon env. A shared mailbox projects@… is synced to Creatio. Process UsrIntakeFromEmail starts on Activity insert (Type=Email, recipient = the intake mailbox, or subject contains [INTAKE]). It creates UsrProjectIntake with Source=Email, UsrRawText=Body and UsrEmailActivity linked, then runs UsrIntakeProcessOne. S1 Extract fills the parsed fields from free text.
+- Option B, guaranteed fallback shown in the chat. On the Project Intake list, the user pastes the forwarded email or sheet text into Creatio.ai chat and types "Log this project". The chat skill S4 calls action Create intake from text, which runs the same pipeline, and replies with the match, action, priority and rationale.
+- PDF (stretch goal). Attach the PDF to the intake. If the env's Creatio.ai can read attachments, S1 reads the file. Otherwise the demo uses the text-bearing email path. Do not promise PDF OCR on stage until it has been verified on Day 1.
+3.3 Future connector (slide only, not built)
+The Dodge or ConstructConnect REST API pushes to UsrProjectIntake through standard OData/DataService, with UsrSource=Dodge and UsrSourceId=the Dodge project ID. Field mapping goes in docs/03-import-plan.md. No schema change.
+3.4 Seed-data load order (demo baseline)
+Load in this order, all through the standard Data import:
+
+1. Accounts (with Type, AccountCategory, AlternativeName)
+2. Contacts
+3. Projects (parents first, then phases via ParentProject)
+4. UsrProjectParticipant
+5. Opportunities
+6. OpportunityContact
+Tag all seed records with standard Tag "HackathonSeed" so reset is easy.
+
+
+4. Agent design in Creatio AI Studio
+Agent: "Project Intake Agent" (Creatio.ai Agent), with the four skills below.
+
+Skill	Mode	Input	Output (JSON schema via ResponseFormatJsonSchema)
+S1 Extract Project Intelligence	Workflow-only	RawText	projectName, projectType, stage, address, city, state, country, constructionValue, units, bidDate, startDate, completionDate, developer, architect, builder, dealer, keyContact{name,email,role}, confidencePerField
+S2 Match & Recommend	Workflow-only	intake fields + CandidateProjects JSON (≤10: id, name, city, developer, stage, value, phase/parent, external id) + CandidateAccounts per role (≤5 each: id, name, alternativeName, type, city)	matchedProjectId or null, matchConfidence 0–100, matchType (exact / new-phase / renamed / cross-source / none), matchReason, accountMatches{developer,architect,builder,dealer:{accountId or null, confidence, isNew}}, recommendedAction
+S3 Classify Pursuit Priority	Workflow-only	intake fields + active UsrScoringFactor rows + dealer tier + developer history (count of won opportunities)	priority, score 0–100, factorBreakdown[], rationale (≤3 sentences), missingInfo[] (for example "Architect unknown")
+S4 Intake Assistant	Chat, UsePageContext	page record / pasted text	Actions: Create intake from text, Run agent on this intake, Apply recommendation, Explain decision. Q&A such as "why is this a duplicate?"
+
+How UsrIntakeProcessOne runs each intake (business process):
+
+1. Set Status=Processing.
+2. If the parsed fields are empty and RawText exists, call S1 and write the parsed fields.
+3. Candidate pre-filter (Read data / ESQ, deterministic): 
+- Projects where City = intake city, OR Name contains the first significant token of the project name, OR developer Account Name/AlternativeName contains the developer token, OR UsrExternalId = SourceId. Limit 10.
+- Accounts per role: Name or AlternativeName contains the first significant token. Limit 5.
+- Serialize the candidates to JSON. Use a script task only if the process designer can't build the text.
+4. Call S2, then S3. Map the JSON outputs to intake fields (use a script task to parse if the output-parameter mapping isn't enough).
+5. Guardrails (deterministic, from system settings):
+- confidence ≥ 85 and action in {Duplicate – no action, Update existing project}: Status = Ready to apply
+- Create new project with every account resolved or new, and confidence of "no match" ≥ 85: Status = Ready to apply
+- Any 50–84 match, Link as new phase, renamed, or any account match below 85: Status = Needs review
+- Required fields missing: Priority = Data incomplete, Status = Needs review
+- Error: Status = Failed, with UsrAgentError
+Apply flow UsrIntakeApply (from the "Apply" button on the intake page, and only if Status ∈ {Ready to apply, Needs review with the reviewer set}):
+
+1. Resolve or create Accounts. Set Type, and add the raw name to AlternativeName if it differs (this is how the system learns aliases).
+2. Act on the recommended action: 
+- Create new: create a Project, resolving Type, City and Stage lookups by name, with Owner = current user, Status = Planned and ProjectEntryType = default.
+- Link as new phase: create a Project with ParentProject = the matched project.
+- Update existing: update Deadline, value, stage and notes on the matched project.
+- Duplicate: nothing; link the intake to the project.
+3. Upsert UsrProjectParticipant rows for each resolved stakeholder.
+4. Create an Opportunity when priority is Strategic or Active and there's no open opportunity on that project: 
+- Account = Developer, Partner = Dealer, Budget = the share of construction value we can realistically target.
+- Set Project.Opportunity.
+- Add an OpportunityContact for the key contact, with Role = Influencer for an architect.
+5. For each missing stakeholder, create an Activity task "Identify architect/specifier for ", due in 3 days.
+6. Set the intake to Status = Applied, with CreatedProject and CreatedOpportunity filled in. Write the AI rationale into Project.Notes.
+Prompt assets. Stored in docs/04-agent-design.md and pasted into AI Studio: system prompt, few-shot examples (one per match type), JSON schemas and scoring rubric.
+
+
+5. UI (Freedom UI)
+
+- App "Project Intake" with a section on UsrProjectIntake: 
+- List page with status and priority chips, and folders: Needs review, Ready to apply, Strategic.
+- Buttons: Import data, Run Intake Agent on new items.
+- Intake form page:
+- Left: source and raw text.
+- Middle: parsed fields, editable by the reviewer.
+- Right: an "Agent verdict" panel showing Matched project (link), a confidence progress bar, Action, Priority, Rationale and Missing info.
+- Buttons: Re-run agent, Apply, Reject.
+- Creatio.ai chat is available with page context.
+- Project page (standard) gets two new tabs: Buying centre (list of UsrProjectParticipant) and Intake history (UsrProjectIntake where CreatedProject or MatchedProject = this project). Phases appear through the standard ParentProject hierarchy.
+- Dashboard "Intake Pipeline":
+- Intakes by status and by priority
+- Duplicates prevented (count of Duplicate / Update / Phase actions)
+- Hours saved = applied intakes × 22 min / 60
+- Architect coverage %: projects with an Architect participant
+
+
+6. Synthetic seed data (all fictional)
+Our company: Everline Appliances (AccountType = Our company).
+Accounts (~20):
+
+- Developers: Harborline Development Group, Summit Ridge Properties, Cedar & Stone Developments, Northgate Urban Partners, Bluewater Living Co.
+- Architects: Arcline Architects, Meridian Design Studio, Halvorsen + Reyes Architecture, Studio Lumen.
+- Builders (Contractor): Ironclad Builders, Keystone Construction Co., Pinnacle General Contracting.
+- Dealers with tier via AccountCategory: Metro Appliance Supply (A), Coastal Kitchen Distributors (B), Prairie Home Appliance (C), Lakeshore Builder Supply (B).
+- Some accounts carry AlternativeName aliases, for example "Harborline Dev Group" and "HDG".
+Contacts (~15): 1–2 per architect, developer and dealer.
+Existing Projects (25): spread over Austin, Denver, Miami, Phoenix, Seattle, Chicago, Charlotte and Nashville, and over the new ProjectTypes and stages.
+
+- Includes "The Meridian Tower – Phase 1" (the parent for the phase test), "Riverside Commons" (the rename test) and "Pier 9 Residences" (the cross-source test).
+- 8 have Opportunities and 5 have no Architect participant, which feeds the coverage KPI.
+Intake batch (15 rows) plus 1 email. Expected results are the test oracle:
+
+#	Scenario	Key trait	Expected action	Expected priority
+1–3	Clean new	New developer or city, full stakeholders	Create new project	1 Strategic (~$180M, 320 units, DD stage), 1 Active, 1 Monitor
+4–6	Obvious duplicate	Same name, city and developer as existing; SourceId matches UsrExternalId on one of them	Duplicate – no action (≥90)	Same as existing
+7	New phase	"The Meridian Tower – Phase 2", same developer and site	Link as new phase (Needs review)	Active
+8	Renamed	"Riverside Commons" became "The Commons at Riverside", same address and developer	Update existing (Needs review)	Active
+9	Typo'd developer	"Harbourline Developmnt Grp"	Create new or match, but the developer resolves to Harborline (Needs review)	Active
+10–11	Missing stakeholders	No architect (10), no dealer (11)	Create new; tasks created on Apply	Data incomplete / Monitor
+12	Junk / low value	Single-family remodel, $150K, 1 unit, no parties	Discard (low value)	Low priority
+13	Update existing	Known project; stage moved from Design to Bidding and value changed	Update existing project	Strategic (spec window closing)
+14–15	Cross-source in the same batch	"Pier 9 Residences" from Dodge (14) and from a tender portal with a different ID (15)	14: Update or Duplicate. 15: Duplicate of the same project, never a second new project	Active
+E1	Forwarded email	Free text from an architect: "Bayview Senior Living, 210 units, Tampa, CDs due Nov…"	Extract, then Create new	Strategic or Active; missing dealer flagged
+
+
+
+7. Testing plan
+7.1 Functional test cases (run in the hackathon env on seed data)
+
+ID	Test	Pass criteria
+T01	Import the 15-row Excel file through the saved template	15 intakes, Status=New, 0 import errors
+T02	Reimport the same file	Still 15 rows, updated rather than duplicated
+T03	Run the batch	All 15 leave New; none stuck in Processing. Total ≤ 5 min
+T04	Extraction accuracy (E1 plus 3 more free-text samples)	≥ 90% of fields correct against the oracle
+T05	Match accuracy (rows 4–9, 13–15)	Correct matched project on ≥ 8/9
+T06	Action accuracy (all 15)	Matches the oracle on ≥ 13/15. No duplicate project is ever created for rows 4–6 or 15 (hard fail)
+T07	Priority accuracy	Strategic/Low correct on 1, 12 and 13. The rest are within ±1 class
+T08	Guardrails	Rows 7, 8 and 9 land in Needs review, not Ready to apply
+T09	Apply, create new (row 1)	Project, 4 participants, Opportunity (Account=Developer, Partner=Dealer), OpportunityContact and Project.Opportunity are all set
+T10	Apply, new phase (row 7)	New Project with ParentProject = Meridian Tower Phase 1
+T11	Apply, missing architect (row 10)	Activity task created for the owner. Architect coverage KPI unchanged until someone is filled in
+T12	Apply twice	Button disabled or second run is a no-op. No duplicate project or opportunity
+T13	Alias learning	After applying row 9, "Harbourline Developmnt Grp" is in Harborline's AlternativeName. A reimport matches it at ≥ 85
+T14	Email path (Option A, or B as fallback)	Intake created from the email or chat in ≤ 60 s with parsed fields and a verdict
+T15	Chat explain	"Why is PI-0008 a match?" gives a rationale that cites the address and developer
+T16	Failure handling	A forced AI error (empty raw text and no fields) gives Status=Failed with a message. Re-run works
+T17	Config change	Changing a scoring-factor weight or deactivating it, then re-running one intake, changes the score. No code change needed
+T18	Threshold change	Lowering UsrIntakeAutoApplyThreshold to 70 moves row 7 to Ready to apply
+T19	Permissions	A non-admin sales user can see the section and apply, and can't edit the scoring config
+T20	Dashboard	Hours-saved and duplicates-prevented numbers match the counts
+
+7.2 Eval loop for prompt tuning
+Keep tests/oracle.csv with the expected values per row. After each prompt change, re-run the batch, export the intake list and diff it against the oracle. Log the pass rate per run in docs/05-test-plan.md. Prompt-tuning stops at Day 5 EOD.
+7.3 Demo rehearsal test
+Run the full script (§9) twice from a clean reset, timed at ≤ 6 minutes. Reset procedure:
+
+1. Delete intakes and the records created from them (anything not tagged HackathonSeed).
+2. Re-import the seed baseline if needed.
+
+
+8. Day-by-day checklist (3 people)
+Roles:
+
+- P1 Platform/Data: objects, pages, import, seed.
+- P2 AI: AI Studio skills, prompts, eval.
+- P3 Process/Demo: processes, apply, email, dashboard, pitch.
+Day 0 (Wed Sep 23): setup
+
+- [x] P1: Provision the hackathon env and register it in clio. Record the version.
+- [x] P1: Go/no-go checks in the env: 
+- The Project object/app exists. If not, fall back to Opportunity-only per §10.
+- AI Studio and Creatio.ai are enabled, with LLM quota.
+- Skills can be called from a business process.
+- Data import works.
+- Mailbox sync is possible.
+- [ ] All: Freeze the data model (§2) and the oracle table (§6).
+- [ ] P3: Create repo docs skeleton (§11).
+Day 1 (Thu Sep 24): foundation
+
+- [ ] P1: Package UsrProjectIntakeAgent. Lookups (§2.2 D) and their values. Values added to standard AccountType and ProjectType. System settings.
+- [ ] P1: UsrProjectIntake and UsrProjectParticipant objects. Project columns. App "Project Intake" with list and form pages.
+- [ ] P2: S1 Extract skill with JSON schema, tested in AI Studio on 4 sample texts. Verify whether PDF/attachments can be read and decide PDF go/no-go.
+- [ ] P3: Author the seed CSVs (accounts, contacts, projects, participants, opportunities) and the 15-row intake Excel file plus the E1 email text.
+Day 2 (Fri Sep 25): data plus skills
+
+- [ ] P1: Import the seed baseline in order (§3.4). Create and save the intake import template. Run T01 and T02.
+- [ ] P2: S2 Match & Recommend and S3 Classify skills. Scoring-factor lookup rows.
+- [ ] P3: UsrIntakeProcessOne skeleton: pre-filter ESQ, then candidate JSON, then S2 and S3, then field mapping.
+Day 3 (Sat Sep 26): end-to-end
+
+- [ ] P3: Guardrail logic, UsrIntakeBatchProcess (for-each sub-process) and list action button.
+- [ ] P3: UsrIntakeApply: accounts and aliases, Project/phase/update, participants, Opportunity and OpportunityContact, tasks.
+- [ ] P1: Form page Agent-verdict panel, Apply/Re-run/Reject buttons, Project page tabs (Buying centre, Intake history).
+- [ ] P2: First full batch run. Eval pass rate recorded (T03–T08).
+Day 4 (Sun Sep 27): wow path plus tuning
+
+- [ ] P3: Email path (Option A), or confirm Option B.
+- [ ] P2: S4 chat skill and actions (create from text, run, apply, explain). Prompt tuning round 2.
+- [ ] P1: Dashboard "Intake Pipeline".
+- [ ] All: Run T09–T16.
+Day 5 (Mon Sep 28): hardening
+
+- [ ] All: T17–T20. Fix defects. Prompt freeze at EOD.
+- [ ] P1: Export the package (clio pull or download) to the repo as a backup. Write and test the reset procedure.
+- [ ] P3: Draft the pitch deck: problem, Dodge ecosystem gap (Salesforce and Dynamics have PipeLine packages, Creatio has none), architecture, "connector not redesign".
+Day 6 (Tue Sep 29): demo freeze
+
+- [ ] All: Two timed rehearsals (§7.3). Record the demo video, plus a backup video in case live AI is slow.
+- [ ] P3: Final README and submission text. Industry Agent category, tagline, persona.
+Day 7 (Wed Sep 30): submit
+
+- [ ] Reset the env to baseline. Final smoke test (T01, T03, T14). Submit.
+
+
+9. Demo script (≤ 6 min)
+
+1. Pain (30 s). 20–25 minutes per project, duplicates, the architect gets missed, no triage.
+2. Bulk (2 min). Import the Dodge-style Excel file, then Run Intake Agent. The list fills with verdicts. Open: 
+- Row 4: a duplicate that the agent caught.
+- Row 7: a Phase 2 linked to its parent, with the reviewer approving it.
+- Row 1: the $180M Strategic tower. Apply, and show the Project, buying centre, Opportunity with the dealer as Partner, and the architect as Influencer.
+3. Wow (1.5 min). Forward the architect email (or paste it into chat). In under a minute you get an intake with extracted fields, a Strategic classification, a "Dealer missing" flag, and on Apply a task for the rep.
+4. Configurable (30 s). Change a scoring weight, re-run, and the priority changes. "Your dealer tiers are just AccountCategory."
+5. Impact (30 s). Dashboard: hours saved, duplicates prevented, architect coverage. "Staging mirrors the Dodge API: connector, not redesign."
+
+
+10. Risks and fallbacks
+
+Risk	Fallback
+The hackathon env has no Project object	Opportunity-only. Project attributes go as Usr columns on Opportunity, phase via a parent Opportunity lookup, participants re-pointed to Opportunity. Decide on Day 0
+A skill can't be called from a business process	Drive processing from the S4 chat agent (action per record). The batch runs as "process all new" through the agent action
+LLM latency or quota	Batch runs in the background with status chips. Pre-record a backup video. Merge S2 and S3 into one call if needed
+JSON output mapping in the process is awkward	A script task parses the JSON into process parameters
+PDF can't be read	Demo uses the email text. PDF is marked as roadmap
+Mailbox sync unavailable	Option B: paste into chat
+Match errors on tricky rows	The guardrails push them to Needs review. The human-in-loop is the feature, not a bug
+Client IP leakage	Build nothing from UsrMieleADProjects. All names are fictional. Review the seed data before submission
+
+
+
+11. Repo deliverables (written after plan approval, in AI_Creatio/)
+
+README.md                        pitch, tagline, architecture diagram, how to install & demo
+docs/01-architecture.md          §1
+docs/02-data-model.md            §2 full column specs (code name, title, type, lookup, required)
+docs/03-import-plan.md           §3, incl. Dodge→staging field mapping & import template steps
+docs/04-agent-design.md          §4 skills, system prompts, few-shots, JSON schemas, process flows
+docs/05-test-plan.md             §7 test cases + eval log table
+docs/06-checklist.md             §8 day-by-day with owners & checkboxes
+docs/07-demo-script.md           §9 + reset procedure
+seed-data/accounts.csv, contacts.csv, projects.csv, participants.csv, opportunities.csv
+seed-data/ProjectIntake_batch.csv (15 rows)  + ProjectIntake_Import_Template.xlsx (headers)
+seed-data/email_E1.txt, sample_texts/*.txt
+tests/oracle.csv                 expected match/action/priority per intake row
+
+
+12. Verification of this plan's output
+
+- Docs: every table in 02-data-model.md must be consistent with the columns referenced in 04-agent-design.md and the import template headers.
+- Seed CSVs:
+- Headers match the import-template mapping.
+- Every intake row in oracle.csv references a project that exists in projects.csv.
+- Names are fictional, checked with a grep for "Miele" and any client names.
+- Implementation (Days 1–7): verified by test cases T01–T20 in the hackathon env, with results logged in docs/05-test-plan.md.

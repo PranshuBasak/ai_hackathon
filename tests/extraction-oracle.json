@@ -1,0 +1,59 @@
+[
+  {
+    "sample": "E1",
+    "projectName": "Bayview Senior Living",
+    "city": "Tampa",
+    "state": "Florida",
+    "country": "United States",
+    "units": 210,
+    "constructionValue": 85000000,
+    "stage": "Construction documents",
+    "developer": "Bluewater Living Co.",
+    "architect": "Arcline Architects",
+    "builder": "Ironclad Builders",
+    "dealer": null,
+    "keyContact": {
+      "name": "Avery Lane",
+      "email": "architect@example.com",
+      "role": "Architect"
+    },
+    "bidDate": null,
+    "dateNote": "November 2026 only; do not invent a day"
+  },
+  {
+    "sample": "E2",
+    "projectName": "Oak Terrace Hotel",
+    "city": "Nashville",
+    "state": "TN",
+    "country": "United States",
+    "units": 140,
+    "constructionValue": 60000000,
+    "stage": "Design development",
+    "developer": "Summit Ridge Properties",
+    "architect": "Studio Lumen",
+    "builder": "Keystone Construction Co.",
+    "dealer": "Metro Appliance Supply"
+  },
+  {
+    "sample": "E3",
+    "projectName": "The Meridian Tower \u2013 Phase 2",
+    "city": "Austin",
+    "units": 240,
+    "constructionValue": 120000000,
+    "stage": "Construction documents",
+    "matchType": "new-phase",
+    "status": "Needs review"
+  },
+  {
+    "sample": "E4",
+    "projectName": "The Commons at Riverside",
+    "city": "Denver",
+    "units": 110,
+    "constructionValue": 45000000,
+    "stage": "Bidding",
+    "matchType": "renamed",
+    "status": "Needs review",
+    "architect": null,
+    "dealer": null
+  }
+]

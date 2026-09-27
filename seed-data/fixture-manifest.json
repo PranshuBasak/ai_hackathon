@@ -1,0 +1,1179 @@
+{
+  "version": 1,
+  "environment": "ai_hackathon",
+  "tag": "HackathonSeed",
+  "state": "LOADED_VERIFIED",
+  "baseline": {
+    "Account": [
+      {
+        "id": "d6e12069-b229-5676-ab8b-72129ee8f6ca",
+        "key": "Harborline Development Group",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "698fdf09-5bcb-5e15-809b-20e16e108424",
+        "key": "Summit Ridge Properties",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "33e97852-7071-5f4f-9766-dcfeb4b424cb",
+        "key": "Cedar & Stone Developments",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "e1268ab9-e9a8-5927-9012-491d97293fa3",
+        "key": "Northgate Urban Partners",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "a1ff4661-d791-5859-830e-a3a34981c02a",
+        "key": "Bluewater Living Co.",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "17719cd9-3488-5637-9b94-876a1dcbda7e",
+        "key": "Arcline Architects",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "3a98c667-c13a-5bec-bef4-057d19a4956d",
+        "key": "Meridian Design Studio",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "375b1302-2b67-5e34-8de6-5c9f0e29cef7",
+        "key": "Halvorsen + Reyes Architecture",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "64d0f99f-57c7-5b17-b790-5804357612a9",
+        "key": "Studio Lumen",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "01f748db-1fbe-5868-ae9d-96398222f9c1",
+        "key": "Ironclad Builders",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "26a7cf4e-5aee-5be1-9b53-5347ce2ac282",
+        "key": "Keystone Construction Co.",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "5ca26606-5641-54cc-9f76-b13068e8c273",
+        "key": "Pinnacle General Contracting",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "9daa8548-1d3b-5068-857a-eea7430c2faa",
+        "key": "Metro Appliance Supply",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "7d9ed92b-ad67-5154-9be3-75b9a73cdf8e",
+        "key": "Coastal Kitchen Distributors",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "6133c6f6-eb07-54cc-90ce-a56e71000241",
+        "key": "Prairie Home Appliance",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "5d40f820-d8aa-56e3-b73e-62a26fba7da2",
+        "key": "Lakeshore Builder Supply",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "fd265150-7823-5dbd-9a4d-890b46452e7d",
+        "key": "Everline Appliances",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "2b5117e5-837c-5249-a7f0-22279d2833f1",
+        "key": "Crest Interior Studio",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "6184e709-2e1d-5979-8e99-b63eeb5d2002",
+        "key": "Copperleaf Engineering",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "75ab927d-cbd7-5207-86db-afdcf318a5a0",
+        "key": "Vista Specification Partners",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      }
+    ],
+    "Contact": [
+      {
+        "id": "799d05b0-7010-56e0-8674-f89facd2bbaf",
+        "key": "Avery Lane",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "7c0f4edf-0ee2-514c-a6ca-f201e8fcbe3a",
+        "key": "Jordan Reed",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "c68b6cb4-e054-58ca-8018-e4f17ce313eb",
+        "key": "Morgan Brooks",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "298e7c62-6bb7-569a-8282-07b46e12682d",
+        "key": "Taylor Quinn",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "3fa05f22-37a6-5dbf-948a-02f82a180340",
+        "key": "Casey Blake",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "a72867b3-4993-5230-9509-e9b441975901",
+        "key": "Riley Hart",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "bde948e6-14e1-5487-809a-5a647be38e90",
+        "key": "Jamie Ellis",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "3503d8fa-08ab-5b43-a61d-3df476dee4cf",
+        "key": "Cameron Vale",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "3a28db7f-96c6-5ffa-910a-793c22d0ed1e",
+        "key": "Alex Rowan",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "87ae156d-4081-5891-b9c2-b8a3362d979d",
+        "key": "Drew Parker",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "5cd6a89b-98e0-525f-820a-d9a7abfe7b61",
+        "key": "Robin Hayes",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "6df32749-30c3-5999-8d70-1f45c69ee052",
+        "key": "Sam Emery",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "7624ec96-eaba-5823-986d-9fca60d4b323",
+        "key": "Quinn Avery",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "f088a467-4737-5eae-b9f5-1b299a9b8cb0",
+        "key": "Reese Harper",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "1fe4b3bc-7e28-5a0f-9629-02330f2da46c",
+        "key": "Skyler Gray",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      }
+    ],
+    "Project": [
+      {
+        "id": "41c88ecd-00e3-513d-acf9-b86d740c58e0",
+        "key": "The Meridian Tower \u2013 Phase 1",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "8329dee5-0ea4-5d39-b284-443f2e9d55f6",
+        "key": "Riverside Commons",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "5e36c555-9729-5cce-87b4-cc964432070d",
+        "key": "Pier 9 Residences",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "a3ce60bc-86ce-5247-ab58-016b47f40a28",
+        "key": "Cedar Grove Heights",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "14dcc25b-ab19-5301-bd25-b50e954dce3a",
+        "key": "Northgate Hotel",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "c242f69b-941a-5915-9c74-a9141e779766",
+        "key": "Bluewater Gardens",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "5247e509-e3c6-5ed5-9b61-c8cf2c6f8e34",
+        "key": "Summit Student Village",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "bc51cf40-9102-5038-b6c6-f8341e1f92b3",
+        "key": "Lumen Senior Living",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "d0284c60-0382-5d08-b317-0219d12e135f",
+        "key": "Copperleaf Residences",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "1f824708-9da7-5e47-8112-bcea8a1c988f",
+        "key": "Stonebridge Commons",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "ee3ea9a6-61c6-5ed7-88b5-a9d23066af02",
+        "key": "Willow Creek Apartments",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "85793922-a6f5-52ef-8fda-ab2f2feca4c2",
+        "key": "Lakeview Terrace",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "53820822-d658-5fcd-b2c4-40c54d8c2e2a",
+        "key": "Vista Mixed Use",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "cbd49339-007b-5275-a43d-e6b098e650d1",
+        "key": "Orchard Square",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "80513616-47c0-5b05-9d6f-e7cc444e6764",
+        "key": "Maple Court",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "984341dc-a6c9-5844-ab4f-2c97185a5f15",
+        "key": "Juniper Heights",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "c9388df7-45bb-5fef-a150-c746d37df502",
+        "key": "Prairie Village",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "5df9a784-5afa-5f35-9924-4a274fae2b9f",
+        "key": "Harbor Point Hotel",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "81fdbaf9-7bef-55ce-8f77-9ea39a7c4d3e",
+        "key": "Canyon Apartments",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "1eef1e92-c20f-540b-b6b6-34a2e54c5f46",
+        "key": "Elm Street Residences",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "ceaa3057-2503-5771-bf25-270b8b2de0ca",
+        "key": "Pinecrest Living",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "d07b8408-2bb2-5f3e-86c7-c7663534b3ae",
+        "key": "Westgate Place",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "4eb3a8c5-e150-5533-a03b-ce33fd7d4604",
+        "key": "Clearwater Court",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "e376588a-a96f-541f-be16-0bba7280736a",
+        "key": "Oakline Campus",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "443999e6-f292-554f-b9fc-5128e8f016a7",
+        "key": "Meadowbrook Community",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      }
+    ],
+    "UsrADProjectParty": [
+      {
+        "id": "bddde4ba-fb27-552a-84b5-11841779d80e",
+        "key": "bddde4ba-fb27-552a-84b5-11841779d80e",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "2a144f2a-990f-5aa1-850d-5a29424d6b2f",
+        "key": "2a144f2a-990f-5aa1-850d-5a29424d6b2f",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "9bb06944-8b68-56ea-b73d-d1366fd4b788",
+        "key": "9bb06944-8b68-56ea-b73d-d1366fd4b788",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "96d1efc9-fa79-5b6d-9454-fb86057ed7ab",
+        "key": "96d1efc9-fa79-5b6d-9454-fb86057ed7ab",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "30d6e572-1ab1-5e67-add7-5ee510f5d683",
+        "key": "30d6e572-1ab1-5e67-add7-5ee510f5d683",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "8555f6a3-3096-5a1c-9c97-40a262c11861",
+        "key": "8555f6a3-3096-5a1c-9c97-40a262c11861",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "76a8d4a1-c4ea-5982-84b6-2724b67c9827",
+        "key": "76a8d4a1-c4ea-5982-84b6-2724b67c9827",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "c3d6c6ac-5f5b-520d-a81f-1fcfb0e0bd3f",
+        "key": "c3d6c6ac-5f5b-520d-a81f-1fcfb0e0bd3f",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "efaae351-0e38-5bab-aa7a-2f0c0728cdd7",
+        "key": "efaae351-0e38-5bab-aa7a-2f0c0728cdd7",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "eac89382-a762-583c-b9a1-fc73e30ac739",
+        "key": "eac89382-a762-583c-b9a1-fc73e30ac739",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "0489f955-9877-5fc9-a5aa-6522aae50c0b",
+        "key": "0489f955-9877-5fc9-a5aa-6522aae50c0b",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "b554ad23-dac9-5a2e-a315-887795966a52",
+        "key": "b554ad23-dac9-5a2e-a315-887795966a52",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "8451ce7f-e9df-5a06-a350-a454b571b784",
+        "key": "8451ce7f-e9df-5a06-a350-a454b571b784",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "f4658cce-9192-5ca9-8227-b282288c4524",
+        "key": "f4658cce-9192-5ca9-8227-b282288c4524",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "113ca93b-1b37-5757-be1c-eedf4801f7d6",
+        "key": "113ca93b-1b37-5757-be1c-eedf4801f7d6",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "470aad43-251f-585d-aab7-6514cd436660",
+        "key": "470aad43-251f-585d-aab7-6514cd436660",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "a8edcbbc-0f3c-5cdf-871a-08b0f59582c3",
+        "key": "a8edcbbc-0f3c-5cdf-871a-08b0f59582c3",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "a539fd2c-22d1-5d22-b23d-798b3846fb7b",
+        "key": "a539fd2c-22d1-5d22-b23d-798b3846fb7b",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "941f0f29-51d4-5e29-ba5a-2cc8b63c87c7",
+        "key": "941f0f29-51d4-5e29-ba5a-2cc8b63c87c7",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "f152418b-ce57-59a9-a6f3-036a39147d8d",
+        "key": "f152418b-ce57-59a9-a6f3-036a39147d8d",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "18bdf60a-78a9-5cbc-a705-fb5cd28971cb",
+        "key": "18bdf60a-78a9-5cbc-a705-fb5cd28971cb",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "1b411b75-1ed0-5350-9cbe-c2d79d692446",
+        "key": "1b411b75-1ed0-5350-9cbe-c2d79d692446",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "ab27a246-34e3-51f3-8ce7-f8c226bbdc4e",
+        "key": "ab27a246-34e3-51f3-8ce7-f8c226bbdc4e",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "4dc7e7cd-300b-599f-9ead-e8849d27db2f",
+        "key": "4dc7e7cd-300b-599f-9ead-e8849d27db2f",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "1e8d0f8c-23d8-50f8-9916-ec557c9687ad",
+        "key": "1e8d0f8c-23d8-50f8-9916-ec557c9687ad",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "adb7644b-4fdb-5e65-b3be-41ece3ef45bb",
+        "key": "adb7644b-4fdb-5e65-b3be-41ece3ef45bb",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "5fbe5c8c-cd73-5522-a034-14aa4c14728c",
+        "key": "5fbe5c8c-cd73-5522-a034-14aa4c14728c",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "f9eb9c69-983e-5635-bc77-fc6cfb4cef70",
+        "key": "f9eb9c69-983e-5635-bc77-fc6cfb4cef70",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "caf45164-867e-5ca8-89c1-0ae83800ad56",
+        "key": "caf45164-867e-5ca8-89c1-0ae83800ad56",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "01ba98fd-177a-573d-9093-1b22619172f8",
+        "key": "01ba98fd-177a-573d-9093-1b22619172f8",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "5f03a78a-3803-54da-89b3-909ac310c208",
+        "key": "5f03a78a-3803-54da-89b3-909ac310c208",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "3d5082ba-8849-5ad0-ace4-f6ad64ee29c1",
+        "key": "3d5082ba-8849-5ad0-ace4-f6ad64ee29c1",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "9cb5fb25-4e4d-5adb-a8ff-05d41983bc82",
+        "key": "9cb5fb25-4e4d-5adb-a8ff-05d41983bc82",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "eb6099b3-86cb-5a6e-8039-1f6ec50cb097",
+        "key": "eb6099b3-86cb-5a6e-8039-1f6ec50cb097",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "c6b30a26-3b86-5c97-93fd-1a2a490cff06",
+        "key": "c6b30a26-3b86-5c97-93fd-1a2a490cff06",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "10a073a5-6778-5b1e-a6d9-89d38a451c72",
+        "key": "10a073a5-6778-5b1e-a6d9-89d38a451c72",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "4aa7a692-089f-5594-bdd1-3decb0139765",
+        "key": "4aa7a692-089f-5594-bdd1-3decb0139765",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "b819eddd-8709-590c-baae-a8d0408df285",
+        "key": "b819eddd-8709-590c-baae-a8d0408df285",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "0718b40f-c036-5e00-905e-67c3e25ee7db",
+        "key": "0718b40f-c036-5e00-905e-67c3e25ee7db",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "17c1f291-1148-52ee-9973-58be834c19eb",
+        "key": "17c1f291-1148-52ee-9973-58be834c19eb",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "8c300e09-8561-5bb0-ad4e-2cc25dddf2c8",
+        "key": "8c300e09-8561-5bb0-ad4e-2cc25dddf2c8",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "90b7c847-0c8f-5feb-a18c-860575b55bfb",
+        "key": "90b7c847-0c8f-5feb-a18c-860575b55bfb",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "9a08f699-a033-5533-aef1-8cac99af85b3",
+        "key": "9a08f699-a033-5533-aef1-8cac99af85b3",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "b7601a24-cc06-547f-a9e8-df941bbdf4cb",
+        "key": "b7601a24-cc06-547f-a9e8-df941bbdf4cb",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "eaff1072-1fb6-5909-a94b-b26e6de97fb9",
+        "key": "eaff1072-1fb6-5909-a94b-b26e6de97fb9",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "21c7e546-66b7-548f-94d5-9a344b579016",
+        "key": "21c7e546-66b7-548f-94d5-9a344b579016",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "45bd664e-c136-5535-90ec-da4adac2bb1b",
+        "key": "45bd664e-c136-5535-90ec-da4adac2bb1b",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "52ace840-fcab-532a-af1d-01405edd32b0",
+        "key": "52ace840-fcab-532a-af1d-01405edd32b0",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "77c451bc-ab7f-50ac-9430-06cb2701f876",
+        "key": "77c451bc-ab7f-50ac-9430-06cb2701f876",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "df69467c-501a-56e2-b367-54cf5f9d4d1d",
+        "key": "df69467c-501a-56e2-b367-54cf5f9d4d1d",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "fdc2bafd-2917-503f-b158-663f7cf35792",
+        "key": "fdc2bafd-2917-503f-b158-663f7cf35792",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "1b5c2bd1-c4db-5766-8f38-1c9768b67fcd",
+        "key": "1b5c2bd1-c4db-5766-8f38-1c9768b67fcd",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "cbbd9323-a9fb-5770-a958-3fd90a23d079",
+        "key": "cbbd9323-a9fb-5770-a958-3fd90a23d079",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "53fc2f3b-e30d-5896-9893-b7a43bc77467",
+        "key": "53fc2f3b-e30d-5896-9893-b7a43bc77467",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "993ed34c-cf28-5078-87b2-cc987557e02c",
+        "key": "993ed34c-cf28-5078-87b2-cc987557e02c",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "9837bd4d-08e0-5233-ac99-cf42b01e128f",
+        "key": "9837bd4d-08e0-5233-ac99-cf42b01e128f",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "4f5d0f75-93e8-5291-adb2-c49b17b7386a",
+        "key": "4f5d0f75-93e8-5291-adb2-c49b17b7386a",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "a10eb463-1df0-5c57-8b4a-4ccda29df4c1",
+        "key": "a10eb463-1df0-5c57-8b4a-4ccda29df4c1",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "c4c27caf-2813-59b6-bc6e-92b9e869cad9",
+        "key": "c4c27caf-2813-59b6-bc6e-92b9e869cad9",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "3cb76ead-8882-5e33-9f8a-fa25e256f075",
+        "key": "3cb76ead-8882-5e33-9f8a-fa25e256f075",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "0f9f0dbe-f43a-56d2-a5d4-e2a257c6c524",
+        "key": "0f9f0dbe-f43a-56d2-a5d4-e2a257c6c524",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "15ed55c3-43f5-53c7-865f-e8a1a3f8b12a",
+        "key": "15ed55c3-43f5-53c7-865f-e8a1a3f8b12a",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "b60f3bc5-a894-57f8-93f4-a61019bd1866",
+        "key": "b60f3bc5-a894-57f8-93f4-a61019bd1866",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "65ab1dfc-6bd4-55c1-879d-8f5883432d97",
+        "key": "65ab1dfc-6bd4-55c1-879d-8f5883432d97",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "7431119a-e579-537b-8e7f-34b9555c1ea8",
+        "key": "7431119a-e579-537b-8e7f-34b9555c1ea8",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "1f8631e7-d9e2-5d6c-b6eb-ecc7d7ee2ff2",
+        "key": "1f8631e7-d9e2-5d6c-b6eb-ecc7d7ee2ff2",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "98a5e9f5-0c5c-5e90-9ca1-345cd9757671",
+        "key": "98a5e9f5-0c5c-5e90-9ca1-345cd9757671",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "5e723668-9148-574d-8448-4e66af8a0f91",
+        "key": "5e723668-9148-574d-8448-4e66af8a0f91",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "564f8e43-bc60-5b8a-8718-8a3cb51d7ac5",
+        "key": "564f8e43-bc60-5b8a-8718-8a3cb51d7ac5",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "d43a78fb-01b1-51e7-b580-5ecd7ed97abc",
+        "key": "d43a78fb-01b1-51e7-b580-5ecd7ed97abc",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "3144c866-df41-5a5e-850e-3d8fe88760b2",
+        "key": "3144c866-df41-5a5e-850e-3d8fe88760b2",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "63ebdf22-d0ef-51bc-b79d-04f3dddb597a",
+        "key": "63ebdf22-d0ef-51bc-b79d-04f3dddb597a",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "ce452f50-a96a-553f-b8c8-58844a39c00f",
+        "key": "ce452f50-a96a-553f-b8c8-58844a39c00f",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "b9963d88-0158-55bd-b425-f54734686b5d",
+        "key": "b9963d88-0158-55bd-b425-f54734686b5d",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "ace5deba-fda9-5e50-9509-e9d7158016f0",
+        "key": "ace5deba-fda9-5e50-9509-e9d7158016f0",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "c91df2d5-90b3-5b17-b4c3-409c8e79ff0b",
+        "key": "c91df2d5-90b3-5b17-b4c3-409c8e79ff0b",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "d220e10f-e93b-534f-81b3-2c11e497212c",
+        "key": "d220e10f-e93b-534f-81b3-2c11e497212c",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "8fac0209-e896-5089-97cf-e00432f22f8b",
+        "key": "8fac0209-e896-5089-97cf-e00432f22f8b",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "d9eb9787-fd83-59f7-aa1f-b20cb1d39e22",
+        "key": "d9eb9787-fd83-59f7-aa1f-b20cb1d39e22",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "da76e591-e0af-5710-a4ce-56c31409ad60",
+        "key": "da76e591-e0af-5710-a4ce-56c31409ad60",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "6a9fd6c9-dc2e-595b-8195-5c65f813d429",
+        "key": "6a9fd6c9-dc2e-595b-8195-5c65f813d429",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "d2dcbf15-e7c8-53e9-a474-de946cf2b325",
+        "key": "d2dcbf15-e7c8-53e9-a474-de946cf2b325",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "dcb5b6dc-df90-5bf6-b854-afd060f50d2c",
+        "key": "dcb5b6dc-df90-5bf6-b854-afd060f50d2c",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "f923b229-e290-55a2-80cd-0be63bef8702",
+        "key": "f923b229-e290-55a2-80cd-0be63bef8702",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "98cdf3d8-028f-5af4-8954-ca5933f62dde",
+        "key": "98cdf3d8-028f-5af4-8954-ca5933f62dde",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "7dbc5859-b998-5f05-b930-dfaad599ce96",
+        "key": "7dbc5859-b998-5f05-b930-dfaad599ce96",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "bd3ad575-fce4-5108-81e3-2b3366eb5596",
+        "key": "bd3ad575-fce4-5108-81e3-2b3366eb5596",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "23898be0-09e2-5c83-b8f0-50e30fd390fd",
+        "key": "23898be0-09e2-5c83-b8f0-50e30fd390fd",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "f3a8921e-9c15-54e2-aca2-437adbcc7546",
+        "key": "f3a8921e-9c15-54e2-aca2-437adbcc7546",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "fe899c7a-bc66-5700-a919-46275f887182",
+        "key": "fe899c7a-bc66-5700-a919-46275f887182",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "56d45360-50e3-5e73-9506-d185e051c113",
+        "key": "56d45360-50e3-5e73-9506-d185e051c113",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "8ea4754b-8597-5b08-9113-d06467a2a0da",
+        "key": "8ea4754b-8597-5b08-9113-d06467a2a0da",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "109b27a0-0e57-548d-af56-700e7499f2f3",
+        "key": "109b27a0-0e57-548d-af56-700e7499f2f3",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "50a7136b-7549-5347-adcf-efdf65f278e1",
+        "key": "50a7136b-7549-5347-adcf-efdf65f278e1",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "446e4be8-0ea9-50f3-89c0-b0dbee99367c",
+        "key": "446e4be8-0ea9-50f3-89c0-b0dbee99367c",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      }
+    ],
+    "Opportunity": [
+      {
+        "id": "c298bdf6-131b-5527-8256-3cb47e528cb3",
+        "key": "The Meridian Tower \u2013 Phase 1 appliance pursuit",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "9ee0c4b1-682a-5cf8-bdfe-1e03de5259fa",
+        "key": "Riverside Commons appliance pursuit",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "7c8fc1ec-e5f3-5aed-8baf-d86841991c23",
+        "key": "Pier 9 Residences appliance pursuit",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "3cac48c6-6be0-51aa-a51e-d08fb93b6bbc",
+        "key": "Cedar Grove Heights appliance pursuit",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "5f3ec7be-ba52-563f-9072-deed965ccad6",
+        "key": "Northgate Hotel appliance pursuit",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "7a694445-2c26-5540-897a-3828aba09a30",
+        "key": "Bluewater Gardens appliance pursuit",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "821497ef-d492-52bb-820c-99431b5b8ce8",
+        "key": "Summit Student Village appliance pursuit",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "7a04f748-faa1-54bf-9000-6fa52760092d",
+        "key": "Lumen Senior Living appliance pursuit",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      }
+    ],
+    "OpportunityContact": [
+      {
+        "id": "8e26c7dc-8fa5-58aa-947c-2ec15de93674",
+        "key": "8e26c7dc-8fa5-58aa-947c-2ec15de93674",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "4d595b0e-4555-546c-92b7-6b8440fc4ddc",
+        "key": "4d595b0e-4555-546c-92b7-6b8440fc4ddc",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "97ef0921-93bf-5be8-9653-71aeeed61f5e",
+        "key": "97ef0921-93bf-5be8-9653-71aeeed61f5e",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "a9c8bee9-2101-537c-a859-3182e7739cb4",
+        "key": "a9c8bee9-2101-537c-a859-3182e7739cb4",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "d2700639-be36-51d4-8f24-9201acb60da7",
+        "key": "d2700639-be36-51d4-8f24-9201acb60da7",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "e8ea0f4d-80f5-5773-a66a-8327565b1acb",
+        "key": "e8ea0f4d-80f5-5773-a66a-8327565b1acb",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "c6b8f3a5-da80-58d3-9824-932f73f856de",
+        "key": "c6b8f3a5-da80-58d3-9824-932f73f856de",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      },
+      {
+        "id": "39448021-cefe-5f14-b32f-57e935ff0a80",
+        "key": "39448021-cefe-5f14-b32f-57e935ff0a80",
+        "loaded": true,
+        "verifiedOn": "2026-09-27"
+      }
+    ]
+  },
+  "intakeKeys": [
+    {
+      "source": "Dodge",
+      "sourceProjectId": "PI-DEMO-01",
+      "id": "18ed0f26-72af-4e55-995f-b33c937010de",
+      "loaded": true,
+      "verifiedOn": "2026-09-27"
+    },
+    {
+      "source": "Dodge",
+      "sourceProjectId": "PI-DEMO-02",
+      "id": "36516102-986f-45a0-a751-f0f5e62d10c4",
+      "loaded": true,
+      "verifiedOn": "2026-09-27"
+    },
+    {
+      "source": "Dodge",
+      "sourceProjectId": "PI-DEMO-03",
+      "id": "6440999b-8dd4-4612-a1e7-7f99a52087cc",
+      "loaded": true,
+      "verifiedOn": "2026-09-27"
+    },
+    {
+      "source": "Dodge",
+      "sourceProjectId": "BASE-004",
+      "id": "dbc177ec-ba31-4857-916e-37c576931dfc",
+      "loaded": true,
+      "verifiedOn": "2026-09-27"
+    },
+    {
+      "source": "Dodge",
+      "sourceProjectId": "PI-DEMO-05",
+      "id": "4b20f4a4-c574-4cfa-a5b1-0fa8b4986c55",
+      "loaded": true,
+      "verifiedOn": "2026-09-27"
+    },
+    {
+      "source": "Dodge",
+      "sourceProjectId": "PI-DEMO-06",
+      "id": "6d52cd7b-9e25-44b7-8ce8-f664fcf668c1",
+      "loaded": true,
+      "verifiedOn": "2026-09-27"
+    },
+    {
+      "source": "Dodge",
+      "sourceProjectId": "PI-DEMO-07",
+      "id": "b7381440-7332-438d-8202-8f34aa295b39",
+      "loaded": true,
+      "verifiedOn": "2026-09-27"
+    },
+    {
+      "source": "Dodge",
+      "sourceProjectId": "PI-DEMO-08",
+      "id": "488081f9-e103-4167-9b55-c46c0989addc",
+      "loaded": true,
+      "verifiedOn": "2026-09-27"
+    },
+    {
+      "source": "Dodge",
+      "sourceProjectId": "PI-DEMO-09",
+      "id": "4fd71e0c-b756-4d1a-a272-4dd9d27d084e",
+      "loaded": true,
+      "verifiedOn": "2026-09-27"
+    },
+    {
+      "source": "Dodge",
+      "sourceProjectId": "PI-DEMO-10",
+      "id": "f565fdf1-add1-4810-b367-8dd8116f8067",
+      "loaded": true,
+      "verifiedOn": "2026-09-27"
+    },
+    {
+      "source": "Dodge",
+      "sourceProjectId": "PI-DEMO-11",
+      "id": "975694e5-8a6c-4a04-b204-fff06f26d471",
+      "loaded": true,
+      "verifiedOn": "2026-09-27"
+    },
+    {
+      "source": "Dodge",
+      "sourceProjectId": "PI-DEMO-12",
+      "id": "fd9e0d3d-4ad8-4639-ab13-24218acd3c15",
+      "loaded": true,
+      "verifiedOn": "2026-09-27"
+    },
+    {
+      "source": "Dodge",
+      "sourceProjectId": "PI-DEMO-13",
+      "id": "ae720af3-f577-47a0-bd3e-a55c4dacfe73",
+      "loaded": true,
+      "verifiedOn": "2026-09-27"
+    },
+    {
+      "source": "Dodge",
+      "sourceProjectId": "PI-DEMO-14",
+      "id": "2ce0e2f8-03e2-4677-bc87-153b58bc9f93",
+      "loaded": true,
+      "verifiedOn": "2026-09-27"
+    },
+    {
+      "source": "Tender portal",
+      "sourceProjectId": "TENDER-PIER9-2026",
+      "id": "982be63a-da4f-4212-9ce0-1fa35c191f49",
+      "loaded": true,
+      "verifiedOn": "2026-09-27"
+    }
+  ],
+  "runRecords": [
+    {
+      "entity": "UsrADProjectIntelligence",
+      "id": "b12bf04c-4ccd-46f8-afaf-70a0e4a3b65d",
+      "key": "foundation-runtime-smoke",
+      "purpose": "Verify defaults and disabled intake Lead listener; remove this disposable record after verification",
+      "loaded": false,
+      "state": "NOT_USED_FIRST_DEMO_INTAKE_TESTED_INSTEAD"
+    }
+  ],
+  "resetRule": "Delete only verified loaded GUIDs in this manifest; null IDs are never eligible",
+  "supportingLookups": [
+    {
+      "entity": "City",
+      "id": "a39dbe04-ea95-4df7-a6b7-be12766b66f7",
+      "key": "Charlotte",
+      "loaded": true,
+      "verifiedOn": "2026-09-27",
+      "resetPolicy": "Preserve shared lookup unless separately reviewed and unreferenced"
+    }
+  ],
+  "verifiedOn": "2026-09-27",
+  "loadMethod": "Clio OData create and update",
+  "evidence": "evidence/demo-readback-2026-09-27.json",
+  "tagsInstalled": false,
+  "tagNote": "HackathonSeed remains local metadata; exact manifest GUIDs identify loaded fixtures. Platform tag links are not installed."
+}

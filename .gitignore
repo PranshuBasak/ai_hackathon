@@ -1,0 +1,29 @@
+# Local platform exports, runtime data and tool caches
+/.clio-pages/
+/backups/
+/evidence/
+
+# Authentication and machine-specific configuration
+.env
+.env.*
+!.env.example
+appsettings*.json
+clio.json
+connections.json
+*.pfx
+*.p12
+*.pem
+*.key
+*credentials*
+*secrets*
+
+# Generated runtime files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+~$*
+*.log
+.DS_Store
+Thumbs.db

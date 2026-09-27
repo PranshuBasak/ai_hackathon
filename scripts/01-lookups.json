@@ -1,0 +1,189 @@
+{
+  "environment-name": "ai_hackathon",
+  "package-name": "UsrMieleADProjects",
+  "operations": [
+    {
+      "type": "create-lookup",
+      "schema-name": "UsrIntakeStatus",
+      "title-localizations": {
+        "en-US": "Intake status"
+      },
+      "seed-rows": [
+        {
+          "values": {
+            "Name": "New"
+          }
+        },
+        {
+          "values": {
+            "Name": "Processing"
+          }
+        },
+        {
+          "values": {
+            "Name": "Needs review"
+          }
+        },
+        {
+          "values": {
+            "Name": "Ready to apply"
+          }
+        },
+        {
+          "values": {
+            "Name": "Applied"
+          }
+        },
+        {
+          "values": {
+            "Name": "Rejected"
+          }
+        },
+        {
+          "values": {
+            "Name": "Failed"
+          }
+        }
+      ]
+    },
+    {
+      "type": "create-lookup",
+      "schema-name": "UsrConstructionStage",
+      "title-localizations": {
+        "en-US": "Construction stage"
+      },
+      "seed-rows": [
+        {
+          "values": {
+            "Name": "Conceptual"
+          }
+        },
+        {
+          "values": {
+            "Name": "Design development"
+          }
+        },
+        {
+          "values": {
+            "Name": "Construction documents"
+          }
+        },
+        {
+          "values": {
+            "Name": "Bidding"
+          }
+        },
+        {
+          "values": {
+            "Name": "Under construction"
+          }
+        },
+        {
+          "values": {
+            "Name": "Completed"
+          }
+        }
+      ]
+    },
+    {
+      "type": "create-lookup",
+      "schema-name": "UsrScoringFactor",
+      "title-localizations": {
+        "en-US": "Intake scoring factor"
+      },
+      "columns": [
+        {
+          "column-name": "UsrWeight",
+          "type": "Integer",
+          "title-localizations": {
+            "en-US": "Weight"
+          }
+        },
+        {
+          "column-name": "UsrDescription",
+          "type": "MaxSizeText",
+          "title-localizations": {
+            "en-US": "Scoring guidance"
+          }
+        },
+        {
+          "column-name": "UsrIsActive",
+          "type": "Boolean",
+          "title-localizations": {
+            "en-US": "Active"
+          },
+          "default-value-config": {
+            "source": "Const",
+            "value": true
+          }
+        }
+      ],
+      "seed-rows": [
+        {
+          "values": {
+            "Name": "Construction value",
+            "UsrWeight": 20,
+            "UsrDescription": "Score higher for larger construction values.",
+            "UsrIsActive": true
+          }
+        },
+        {
+          "values": {
+            "Name": "Unit count",
+            "UsrWeight": 15,
+            "UsrDescription": "Score higher for more units.",
+            "UsrIsActive": true
+          }
+        },
+        {
+          "values": {
+            "Name": "Project type fit",
+            "UsrWeight": 15,
+            "UsrDescription": "Configure fit for manufacturer products. Demo: multifamily, hospitality and senior living score high.",
+            "UsrIsActive": true
+          }
+        },
+        {
+          "values": {
+            "Name": "Construction stage",
+            "UsrWeight": 15,
+            "UsrDescription": "Design development and construction documents score high; under construction scores low.",
+            "UsrIsActive": true
+          }
+        },
+        {
+          "values": {
+            "Name": "Architect known",
+            "UsrWeight": 10,
+            "UsrDescription": "Resolved architect or specifier raises readiness.",
+            "UsrIsActive": true
+          }
+        },
+        {
+          "values": {
+            "Name": "Dealer tier",
+            "UsrWeight": 10,
+            "UsrDescription": "AccountCategory A and B score higher.",
+            "UsrIsActive": true
+          }
+        },
+        {
+          "values": {
+            "Name": "Developer relationship",
+            "UsrWeight": 10,
+            "UsrDescription": "Use count of won opportunities with this developer.",
+            "UsrIsActive": true
+          }
+        },
+        {
+          "values": {
+            "Name": "Region coverage",
+            "UsrWeight": 5,
+            "UsrDescription": "Use configured commercial region coverage; do not hard-code geography.",
+            "UsrIsActive": true
+          }
+        }
+      ]
+    }
+  ]
+}

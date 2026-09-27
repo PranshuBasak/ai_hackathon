@@ -1,0 +1,96 @@
+﻿Id,UsrProject,UsrAccount,UsrContact,UsrPartyRole,UsrIsPrimary,UsrSourceIntake,SeedTag
+bddde4ba-fb27-552a-84b5-11841779d80e,41c88ecd-00e3-513d-acf9-b86d740c58e0,Harborline Development Group,,Developer/Owner,True,,HackathonSeed
+2a144f2a-990f-5aa1-850d-5a29424d6b2f,41c88ecd-00e3-513d-acf9-b86d740c58e0,Ironclad Builders,,General contractor/Builder,False,,HackathonSeed
+9bb06944-8b68-56ea-b73d-d1366fd4b788,41c88ecd-00e3-513d-acf9-b86d740c58e0,Metro Appliance Supply,,Dealer,False,,HackathonSeed
+96d1efc9-fa79-5b6d-9454-fb86057ed7ab,41c88ecd-00e3-513d-acf9-b86d740c58e0,Arcline Architects,,Architect/Specifier,False,,HackathonSeed
+30d6e572-1ab1-5e67-add7-5ee510f5d683,8329dee5-0ea4-5d39-b284-443f2e9d55f6,Summit Ridge Properties,,Developer/Owner,True,,HackathonSeed
+8555f6a3-3096-5a1c-9c97-40a262c11861,8329dee5-0ea4-5d39-b284-443f2e9d55f6,Keystone Construction Co.,,General contractor/Builder,False,,HackathonSeed
+76a8d4a1-c4ea-5982-84b6-2724b67c9827,8329dee5-0ea4-5d39-b284-443f2e9d55f6,Coastal Kitchen Distributors,,Dealer,False,,HackathonSeed
+c3d6c6ac-5f5b-520d-a81f-1fcfb0e0bd3f,8329dee5-0ea4-5d39-b284-443f2e9d55f6,Meridian Design Studio,,Architect/Specifier,False,,HackathonSeed
+efaae351-0e38-5bab-aa7a-2f0c0728cdd7,5e36c555-9729-5cce-87b4-cc964432070d,Cedar & Stone Developments,,Developer/Owner,True,,HackathonSeed
+eac89382-a762-583c-b9a1-fc73e30ac739,5e36c555-9729-5cce-87b4-cc964432070d,Pinnacle General Contracting,,General contractor/Builder,False,,HackathonSeed
+0489f955-9877-5fc9-a5aa-6522aae50c0b,5e36c555-9729-5cce-87b4-cc964432070d,Prairie Home Appliance,,Dealer,False,,HackathonSeed
+b554ad23-dac9-5a2e-a315-887795966a52,5e36c555-9729-5cce-87b4-cc964432070d,Halvorsen + Reyes Architecture,,Architect/Specifier,False,,HackathonSeed
+8451ce7f-e9df-5a06-a350-a454b571b784,a3ce60bc-86ce-5247-ab58-016b47f40a28,Northgate Urban Partners,,Developer/Owner,True,,HackathonSeed
+f4658cce-9192-5ca9-8227-b282288c4524,a3ce60bc-86ce-5247-ab58-016b47f40a28,Ironclad Builders,,General contractor/Builder,False,,HackathonSeed
+113ca93b-1b37-5757-be1c-eedf4801f7d6,a3ce60bc-86ce-5247-ab58-016b47f40a28,Lakeshore Builder Supply,,Dealer,False,,HackathonSeed
+470aad43-251f-585d-aab7-6514cd436660,a3ce60bc-86ce-5247-ab58-016b47f40a28,Studio Lumen,,Architect/Specifier,False,,HackathonSeed
+a8edcbbc-0f3c-5cdf-871a-08b0f59582c3,14dcc25b-ab19-5301-bd25-b50e954dce3a,Bluewater Living Co.,,Developer/Owner,True,,HackathonSeed
+a539fd2c-22d1-5d22-b23d-798b3846fb7b,14dcc25b-ab19-5301-bd25-b50e954dce3a,Keystone Construction Co.,,General contractor/Builder,False,,HackathonSeed
+941f0f29-51d4-5e29-ba5a-2cc8b63c87c7,14dcc25b-ab19-5301-bd25-b50e954dce3a,Metro Appliance Supply,,Dealer,False,,HackathonSeed
+f152418b-ce57-59a9-a6f3-036a39147d8d,14dcc25b-ab19-5301-bd25-b50e954dce3a,Arcline Architects,,Architect/Specifier,False,,HackathonSeed
+18bdf60a-78a9-5cbc-a705-fb5cd28971cb,c242f69b-941a-5915-9c74-a9141e779766,Harborline Development Group,,Developer/Owner,True,,HackathonSeed
+1b411b75-1ed0-5350-9cbe-c2d79d692446,c242f69b-941a-5915-9c74-a9141e779766,Pinnacle General Contracting,,General contractor/Builder,False,,HackathonSeed
+ab27a246-34e3-51f3-8ce7-f8c226bbdc4e,c242f69b-941a-5915-9c74-a9141e779766,Coastal Kitchen Distributors,,Dealer,False,,HackathonSeed
+4dc7e7cd-300b-599f-9ead-e8849d27db2f,c242f69b-941a-5915-9c74-a9141e779766,Meridian Design Studio,,Architect/Specifier,False,,HackathonSeed
+1e8d0f8c-23d8-50f8-9916-ec557c9687ad,5247e509-e3c6-5ed5-9b61-c8cf2c6f8e34,Summit Ridge Properties,,Developer/Owner,True,,HackathonSeed
+adb7644b-4fdb-5e65-b3be-41ece3ef45bb,5247e509-e3c6-5ed5-9b61-c8cf2c6f8e34,Ironclad Builders,,General contractor/Builder,False,,HackathonSeed
+5fbe5c8c-cd73-5522-a034-14aa4c14728c,5247e509-e3c6-5ed5-9b61-c8cf2c6f8e34,Prairie Home Appliance,,Dealer,False,,HackathonSeed
+f9eb9c69-983e-5635-bc77-fc6cfb4cef70,5247e509-e3c6-5ed5-9b61-c8cf2c6f8e34,Halvorsen + Reyes Architecture,,Architect/Specifier,False,,HackathonSeed
+caf45164-867e-5ca8-89c1-0ae83800ad56,bc51cf40-9102-5038-b6c6-f8341e1f92b3,Cedar & Stone Developments,,Developer/Owner,True,,HackathonSeed
+01ba98fd-177a-573d-9093-1b22619172f8,bc51cf40-9102-5038-b6c6-f8341e1f92b3,Keystone Construction Co.,,General contractor/Builder,False,,HackathonSeed
+5f03a78a-3803-54da-89b3-909ac310c208,bc51cf40-9102-5038-b6c6-f8341e1f92b3,Lakeshore Builder Supply,,Dealer,False,,HackathonSeed
+3d5082ba-8849-5ad0-ace4-f6ad64ee29c1,bc51cf40-9102-5038-b6c6-f8341e1f92b3,Studio Lumen,,Architect/Specifier,False,,HackathonSeed
+9cb5fb25-4e4d-5adb-a8ff-05d41983bc82,d0284c60-0382-5d08-b317-0219d12e135f,Northgate Urban Partners,,Developer/Owner,True,,HackathonSeed
+eb6099b3-86cb-5a6e-8039-1f6ec50cb097,d0284c60-0382-5d08-b317-0219d12e135f,Pinnacle General Contracting,,General contractor/Builder,False,,HackathonSeed
+c6b30a26-3b86-5c97-93fd-1a2a490cff06,d0284c60-0382-5d08-b317-0219d12e135f,Metro Appliance Supply,,Dealer,False,,HackathonSeed
+10a073a5-6778-5b1e-a6d9-89d38a451c72,d0284c60-0382-5d08-b317-0219d12e135f,Arcline Architects,,Architect/Specifier,False,,HackathonSeed
+4aa7a692-089f-5594-bdd1-3decb0139765,1f824708-9da7-5e47-8112-bcea8a1c988f,Bluewater Living Co.,,Developer/Owner,True,,HackathonSeed
+b819eddd-8709-590c-baae-a8d0408df285,1f824708-9da7-5e47-8112-bcea8a1c988f,Ironclad Builders,,General contractor/Builder,False,,HackathonSeed
+0718b40f-c036-5e00-905e-67c3e25ee7db,1f824708-9da7-5e47-8112-bcea8a1c988f,Coastal Kitchen Distributors,,Dealer,False,,HackathonSeed
+17c1f291-1148-52ee-9973-58be834c19eb,1f824708-9da7-5e47-8112-bcea8a1c988f,Meridian Design Studio,,Architect/Specifier,False,,HackathonSeed
+8c300e09-8561-5bb0-ad4e-2cc25dddf2c8,ee3ea9a6-61c6-5ed7-88b5-a9d23066af02,Harborline Development Group,,Developer/Owner,True,,HackathonSeed
+90b7c847-0c8f-5feb-a18c-860575b55bfb,ee3ea9a6-61c6-5ed7-88b5-a9d23066af02,Keystone Construction Co.,,General contractor/Builder,False,,HackathonSeed
+9a08f699-a033-5533-aef1-8cac99af85b3,ee3ea9a6-61c6-5ed7-88b5-a9d23066af02,Prairie Home Appliance,,Dealer,False,,HackathonSeed
+b7601a24-cc06-547f-a9e8-df941bbdf4cb,ee3ea9a6-61c6-5ed7-88b5-a9d23066af02,Halvorsen + Reyes Architecture,,Architect/Specifier,False,,HackathonSeed
+eaff1072-1fb6-5909-a94b-b26e6de97fb9,85793922-a6f5-52ef-8fda-ab2f2feca4c2,Summit Ridge Properties,,Developer/Owner,True,,HackathonSeed
+21c7e546-66b7-548f-94d5-9a344b579016,85793922-a6f5-52ef-8fda-ab2f2feca4c2,Pinnacle General Contracting,,General contractor/Builder,False,,HackathonSeed
+45bd664e-c136-5535-90ec-da4adac2bb1b,85793922-a6f5-52ef-8fda-ab2f2feca4c2,Lakeshore Builder Supply,,Dealer,False,,HackathonSeed
+52ace840-fcab-532a-af1d-01405edd32b0,85793922-a6f5-52ef-8fda-ab2f2feca4c2,Studio Lumen,,Architect/Specifier,False,,HackathonSeed
+77c451bc-ab7f-50ac-9430-06cb2701f876,53820822-d658-5fcd-b2c4-40c54d8c2e2a,Cedar & Stone Developments,,Developer/Owner,True,,HackathonSeed
+df69467c-501a-56e2-b367-54cf5f9d4d1d,53820822-d658-5fcd-b2c4-40c54d8c2e2a,Ironclad Builders,,General contractor/Builder,False,,HackathonSeed
+fdc2bafd-2917-503f-b158-663f7cf35792,53820822-d658-5fcd-b2c4-40c54d8c2e2a,Metro Appliance Supply,,Dealer,False,,HackathonSeed
+1b5c2bd1-c4db-5766-8f38-1c9768b67fcd,53820822-d658-5fcd-b2c4-40c54d8c2e2a,Arcline Architects,,Architect/Specifier,False,,HackathonSeed
+cbbd9323-a9fb-5770-a958-3fd90a23d079,cbd49339-007b-5275-a43d-e6b098e650d1,Northgate Urban Partners,,Developer/Owner,True,,HackathonSeed
+53fc2f3b-e30d-5896-9893-b7a43bc77467,cbd49339-007b-5275-a43d-e6b098e650d1,Keystone Construction Co.,,General contractor/Builder,False,,HackathonSeed
+993ed34c-cf28-5078-87b2-cc987557e02c,cbd49339-007b-5275-a43d-e6b098e650d1,Coastal Kitchen Distributors,,Dealer,False,,HackathonSeed
+9837bd4d-08e0-5233-ac99-cf42b01e128f,cbd49339-007b-5275-a43d-e6b098e650d1,Meridian Design Studio,,Architect/Specifier,False,,HackathonSeed
+4f5d0f75-93e8-5291-adb2-c49b17b7386a,80513616-47c0-5b05-9d6f-e7cc444e6764,Bluewater Living Co.,,Developer/Owner,True,,HackathonSeed
+a10eb463-1df0-5c57-8b4a-4ccda29df4c1,80513616-47c0-5b05-9d6f-e7cc444e6764,Pinnacle General Contracting,,General contractor/Builder,False,,HackathonSeed
+c4c27caf-2813-59b6-bc6e-92b9e869cad9,80513616-47c0-5b05-9d6f-e7cc444e6764,Prairie Home Appliance,,Dealer,False,,HackathonSeed
+3cb76ead-8882-5e33-9f8a-fa25e256f075,80513616-47c0-5b05-9d6f-e7cc444e6764,Halvorsen + Reyes Architecture,,Architect/Specifier,False,,HackathonSeed
+0f9f0dbe-f43a-56d2-a5d4-e2a257c6c524,984341dc-a6c9-5844-ab4f-2c97185a5f15,Harborline Development Group,,Developer/Owner,True,,HackathonSeed
+15ed55c3-43f5-53c7-865f-e8a1a3f8b12a,984341dc-a6c9-5844-ab4f-2c97185a5f15,Ironclad Builders,,General contractor/Builder,False,,HackathonSeed
+b60f3bc5-a894-57f8-93f4-a61019bd1866,984341dc-a6c9-5844-ab4f-2c97185a5f15,Lakeshore Builder Supply,,Dealer,False,,HackathonSeed
+65ab1dfc-6bd4-55c1-879d-8f5883432d97,984341dc-a6c9-5844-ab4f-2c97185a5f15,Studio Lumen,,Architect/Specifier,False,,HackathonSeed
+7431119a-e579-537b-8e7f-34b9555c1ea8,c9388df7-45bb-5fef-a150-c746d37df502,Summit Ridge Properties,,Developer/Owner,True,,HackathonSeed
+1f8631e7-d9e2-5d6c-b6eb-ecc7d7ee2ff2,c9388df7-45bb-5fef-a150-c746d37df502,Keystone Construction Co.,,General contractor/Builder,False,,HackathonSeed
+98a5e9f5-0c5c-5e90-9ca1-345cd9757671,c9388df7-45bb-5fef-a150-c746d37df502,Metro Appliance Supply,,Dealer,False,,HackathonSeed
+5e723668-9148-574d-8448-4e66af8a0f91,c9388df7-45bb-5fef-a150-c746d37df502,Arcline Architects,,Architect/Specifier,False,,HackathonSeed
+564f8e43-bc60-5b8a-8718-8a3cb51d7ac5,5df9a784-5afa-5f35-9924-4a274fae2b9f,Cedar & Stone Developments,,Developer/Owner,True,,HackathonSeed
+d43a78fb-01b1-51e7-b580-5ecd7ed97abc,5df9a784-5afa-5f35-9924-4a274fae2b9f,Pinnacle General Contracting,,General contractor/Builder,False,,HackathonSeed
+3144c866-df41-5a5e-850e-3d8fe88760b2,5df9a784-5afa-5f35-9924-4a274fae2b9f,Coastal Kitchen Distributors,,Dealer,False,,HackathonSeed
+63ebdf22-d0ef-51bc-b79d-04f3dddb597a,5df9a784-5afa-5f35-9924-4a274fae2b9f,Meridian Design Studio,,Architect/Specifier,False,,HackathonSeed
+ce452f50-a96a-553f-b8c8-58844a39c00f,81fdbaf9-7bef-55ce-8f77-9ea39a7c4d3e,Northgate Urban Partners,,Developer/Owner,True,,HackathonSeed
+b9963d88-0158-55bd-b425-f54734686b5d,81fdbaf9-7bef-55ce-8f77-9ea39a7c4d3e,Ironclad Builders,,General contractor/Builder,False,,HackathonSeed
+ace5deba-fda9-5e50-9509-e9d7158016f0,81fdbaf9-7bef-55ce-8f77-9ea39a7c4d3e,Prairie Home Appliance,,Dealer,False,,HackathonSeed
+c91df2d5-90b3-5b17-b4c3-409c8e79ff0b,81fdbaf9-7bef-55ce-8f77-9ea39a7c4d3e,Halvorsen + Reyes Architecture,,Architect/Specifier,False,,HackathonSeed
+d220e10f-e93b-534f-81b3-2c11e497212c,1eef1e92-c20f-540b-b6b6-34a2e54c5f46,Bluewater Living Co.,,Developer/Owner,True,,HackathonSeed
+8fac0209-e896-5089-97cf-e00432f22f8b,1eef1e92-c20f-540b-b6b6-34a2e54c5f46,Keystone Construction Co.,,General contractor/Builder,False,,HackathonSeed
+d9eb9787-fd83-59f7-aa1f-b20cb1d39e22,1eef1e92-c20f-540b-b6b6-34a2e54c5f46,Lakeshore Builder Supply,,Dealer,False,,HackathonSeed
+da76e591-e0af-5710-a4ce-56c31409ad60,1eef1e92-c20f-540b-b6b6-34a2e54c5f46,Studio Lumen,,Architect/Specifier,False,,HackathonSeed
+6a9fd6c9-dc2e-595b-8195-5c65f813d429,ceaa3057-2503-5771-bf25-270b8b2de0ca,Harborline Development Group,,Developer/Owner,True,,HackathonSeed
+d2dcbf15-e7c8-53e9-a474-de946cf2b325,ceaa3057-2503-5771-bf25-270b8b2de0ca,Pinnacle General Contracting,,General contractor/Builder,False,,HackathonSeed
+dcb5b6dc-df90-5bf6-b854-afd060f50d2c,ceaa3057-2503-5771-bf25-270b8b2de0ca,Metro Appliance Supply,,Dealer,False,,HackathonSeed
+f923b229-e290-55a2-80cd-0be63bef8702,d07b8408-2bb2-5f3e-86c7-c7663534b3ae,Summit Ridge Properties,,Developer/Owner,True,,HackathonSeed
+98cdf3d8-028f-5af4-8954-ca5933f62dde,d07b8408-2bb2-5f3e-86c7-c7663534b3ae,Ironclad Builders,,General contractor/Builder,False,,HackathonSeed
+7dbc5859-b998-5f05-b930-dfaad599ce96,d07b8408-2bb2-5f3e-86c7-c7663534b3ae,Coastal Kitchen Distributors,,Dealer,False,,HackathonSeed
+bd3ad575-fce4-5108-81e3-2b3366eb5596,4eb3a8c5-e150-5533-a03b-ce33fd7d4604,Cedar & Stone Developments,,Developer/Owner,True,,HackathonSeed
+23898be0-09e2-5c83-b8f0-50e30fd390fd,4eb3a8c5-e150-5533-a03b-ce33fd7d4604,Keystone Construction Co.,,General contractor/Builder,False,,HackathonSeed
+f3a8921e-9c15-54e2-aca2-437adbcc7546,4eb3a8c5-e150-5533-a03b-ce33fd7d4604,Prairie Home Appliance,,Dealer,False,,HackathonSeed
+fe899c7a-bc66-5700-a919-46275f887182,e376588a-a96f-541f-be16-0bba7280736a,Northgate Urban Partners,,Developer/Owner,True,,HackathonSeed
+56d45360-50e3-5e73-9506-d185e051c113,e376588a-a96f-541f-be16-0bba7280736a,Pinnacle General Contracting,,General contractor/Builder,False,,HackathonSeed
+8ea4754b-8597-5b08-9113-d06467a2a0da,e376588a-a96f-541f-be16-0bba7280736a,Lakeshore Builder Supply,,Dealer,False,,HackathonSeed
+109b27a0-0e57-548d-af56-700e7499f2f3,443999e6-f292-554f-b9fc-5128e8f016a7,Bluewater Living Co.,,Developer/Owner,True,,HackathonSeed
+50a7136b-7549-5347-adcf-efdf65f278e1,443999e6-f292-554f-b9fc-5128e8f016a7,Ironclad Builders,,General contractor/Builder,False,,HackathonSeed
+446e4be8-0ea9-50f3-89c0-b0dbee99367c,443999e6-f292-554f-b9fc-5128e8f016a7,Metro Appliance Supply,,Dealer,False,,HackathonSeed
