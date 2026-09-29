@@ -11,9 +11,9 @@ Fill the hackathon form field by field with the text below. Placeholders in `<an
 ## Category
 **CRM Agent**
 
-## What does your agent do? (153 words, limit 150)
+## What does your agent do? (150 words, limit 150)
 
-Project Assistant turns construction project leads into qualified CRM records for a building-products manufacturer that sells appliances into multifamily, hospitality, senior-living and student-housing projects. Leads arrive as customer emails, meeting notes and weekly Dodge spreadsheets. Today each one is re-typed, checked for duplicates, matched to the developer, architect, builder and dealer, and judged by hand: about five hours per lead.
+Project Assistant turns construction project leads into qualified CRM records for an appliance manufacturer selling into multifamily, hospitality, senior-living and student-housing projects. Leads arrive as customer emails, meeting notes and weekly Dodge spreadsheets. Each one is re-typed, checked for duplicates, matched to the developer, architect, builder and dealer, and judged by hand: about five hours per lead.
 
 One Creatio AI Studio agent with four custom skills does it in a conversation. Capture reads chat, pasted text or an uploaded Excel file into a Project Intake, linking stakeholders to existing Accounts (even by alternative names) and blocking duplicates by source ID. Verdict matches the intake against existing projects, detects new phases, and computes a deterministic, explainable score from scoring rules that administrators maintain as Creatio lookups. Apply shows a plan and, only after a human "yes", creates the Project, involved parties and Opportunity, then writes back. Nothing is deleted or invented.
 
