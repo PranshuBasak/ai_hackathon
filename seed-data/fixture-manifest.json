@@ -221,7 +221,7 @@
     "Project": [
       {
         "id": "41c88ecd-00e3-513d-acf9-b86d740c58e0",
-        "key": "The Meridian Tower \u2013 Phase 1",
+        "key": "The Meridian Tower – Phase 1",
         "loaded": true,
         "verifiedOn": "2026-09-27"
       },
@@ -945,7 +945,7 @@
     "Opportunity": [
       {
         "id": "c298bdf6-131b-5527-8256-3cb47e528cb3",
-        "key": "The Meridian Tower \u2013 Phase 1 appliance pursuit",
+        "key": "The Meridian Tower – Phase 1 appliance pursuit",
         "loaded": true,
         "verifiedOn": "2026-09-27"
       },
@@ -1175,5 +1175,232 @@
   "loadMethod": "Clio OData create and update",
   "evidence": "evidence/demo-readback-2026-09-27.json",
   "tagsInstalled": false,
-  "tagNote": "HackathonSeed remains local metadata; exact manifest GUIDs identify loaded fixtures. Platform tag links are not installed."
+  "tagNote": "HackathonSeed remains local metadata; exact manifest GUIDs identify loaded fixtures. Platform tag links are not installed.",
+  "stakeholderFixtures": {
+    "file": "seed-data/stakeholder-fixtures-2026-09-29.json",
+    "loaded": true,
+    "verifiedOn": "2026-09-29",
+    "loadMethod": "Clio odata-create with explicit uuid5 Ids, read back",
+    "resetOrder": "contacts, then accounts",
+    "accounts": [
+      {
+        "id": "e9114b67-55b3-55cc-9337-14c198987871",
+        "key": "Granite Peak Cabinetry"
+      },
+      {
+        "id": "3ab296bd-57f3-55d2-be16-7af14e905d50",
+        "key": "Brightwater Plumbing Supply"
+      },
+      {
+        "id": "dddf966b-d62d-51b3-b8d8-8362ddb5a8dc",
+        "key": "Voltline Electrical Wholesale"
+      },
+      {
+        "id": "203a57ed-a7ea-5ba1-b8b0-192c98b86870",
+        "key": "Harbor Appliance Center"
+      }
+    ],
+    "contacts": [
+      {
+        "id": "ed6769bb-2d9f-5501-82dc-dacc7c634dfe",
+        "key": "Dana Reeves"
+      },
+      {
+        "id": "f3711ad2-acb0-594f-a482-ac98194dfb7b",
+        "key": "Parker Nolan"
+      },
+      {
+        "id": "57fc47dc-2a0a-5df5-a143-78dbc29a3cf5",
+        "key": "Hayden Cross"
+      },
+      {
+        "id": "52d7c156-05e6-5e60-934c-967df9afe4bf",
+        "key": "Rowan Ellis"
+      },
+      {
+        "id": "6a2f0044-a683-508a-bee3-e926687e9aa5",
+        "key": "Emerson Kade"
+      },
+      {
+        "id": "81bfb93f-ac20-533e-888f-4fa97835339c",
+        "key": "Blair Monroe"
+      },
+      {
+        "id": "a87629a6-880a-5bb9-83df-684b9a7faa19",
+        "key": "Sydney Park"
+      },
+      {
+        "id": "b14a7486-6dbc-50b8-8d5e-6d4331f8b9f8",
+        "key": "Logan Pierce"
+      },
+      {
+        "id": "2ea6d26a-e951-51c0-90d5-b47d4546cba6",
+        "key": "Micah Stone"
+      },
+      {
+        "id": "8bdc5b1c-e35d-5827-a479-09df5474ec56",
+        "key": "Harper Lin"
+      },
+      {
+        "id": "3c9291c3-effe-541c-92e2-b1475600f11e",
+        "key": "Devon Walsh"
+      },
+      {
+        "id": "3391e8ef-b9ac-544e-ab04-355e72b39b9a",
+        "key": "Kendall Frost"
+      }
+    ]
+  },
+  "testSet2": {
+    "file": "seed-data/test-set-2-2026-09-29.json",
+    "loaded": true,
+    "verifiedOn": "2026-09-29",
+    "resetOrder": "contacts, then accounts",
+    "accounts": [
+      {
+        "id": "d88cd8b4-0223-5b6c-a278-660046fd4055",
+        "key": "Solstice Harbor Partners"
+      },
+      {
+        "id": "1304a8ec-0925-56f8-825a-e1bb9b1d0573",
+        "key": "Northlight Atelier"
+      },
+      {
+        "id": "cd3a0a26-ea25-5133-ad93-f53c821e2ec6",
+        "key": "Cobalt Ridge Builders"
+      },
+      {
+        "id": "8a9404fd-8f61-5d0a-82c0-7eaeee86133e",
+        "key": "Summitline Appliance Group"
+      }
+    ],
+    "contacts": [
+      {
+        "id": "c6a88e59-8fb8-5e8d-92c3-ad029fe8a92c",
+        "key": "Priya Natarajan"
+      },
+      {
+        "id": "77c20558-906a-5bc2-b285-77b62874752d",
+        "key": "Owen Castillo"
+      },
+      {
+        "id": "c04e58fc-7b4b-59a7-93eb-dfe24e56eb09",
+        "key": "Tessa Morgan"
+      }
+    ]
+  },
+  "demoScripts": {
+    "file": "seed-data/demo/demo-script-data-2026-09-29.json",
+    "loaded": true,
+    "verifiedOn": "2026-09-29",
+    "loadMethod": "Clio odata-create with explicit uuid5 Ids; Project.Opportunity linked with odata-update",
+    "resetOrder": "parties, then Project.Opportunity cleared, opportunities, projects, contacts, accounts",
+    "accounts": [
+      {
+        "id": "067f46a9-67f3-5f81-83e4-63c489165178",
+        "key": "Crescent Bay Hospitality Group"
+      },
+      {
+        "id": "c7841d4d-7f61-585c-b35d-aad149346aec",
+        "key": "Linden & Voss Architects"
+      },
+      {
+        "id": "6ff74f1a-40c0-5d5a-9351-2103fa37f0a6",
+        "key": "Ironbridge Construction"
+      },
+      {
+        "id": "345b5616-12f9-5fa6-90f6-1a024a6a1477",
+        "key": "Carolina Kitchen & Appliance"
+      },
+      {
+        "id": "8e6046d3-b957-54a2-9ec6-c9dc644cf89e",
+        "key": "Bellwether Residential"
+      },
+      {
+        "id": "cca336b6-34ef-5dca-aca8-cdc14ce9f851",
+        "key": "Arbor & Finch Architects"
+      },
+      {
+        "id": "1b0f4831-fd6c-577c-8475-50ec4e4a220e",
+        "key": "Tidewater Builders"
+      },
+      {
+        "id": "949a86da-7d86-57ac-95c1-f3de1683347c",
+        "key": "Blue Ridge Appliance Distributors"
+      }
+    ],
+    "contacts": [
+      {
+        "id": "9e532ed2-ebf2-59c0-b06c-98045af21901",
+        "key": "Marcus Delgado"
+      },
+      {
+        "id": "ca3adc80-1860-5739-b0ee-a36aa3222410",
+        "key": "Hannah Voss"
+      },
+      {
+        "id": "9ce0ad35-eeac-5f58-bf30-50b30421699e",
+        "key": "Ray Whitfield"
+      },
+      {
+        "id": "7d53b6b5-6934-5f6b-84c8-58f53e17e455",
+        "key": "Diane Okafor"
+      },
+      {
+        "id": "ac633eea-5674-514c-bd73-27f0cb7ea86b",
+        "key": "Tom Brennan"
+      },
+      {
+        "id": "251773bd-ee52-554c-857e-0dc85c4db3ff",
+        "key": "Leah Chambers"
+      }
+    ],
+    "projects": [
+      {
+        "id": "9b295213-84ab-5bec-9d52-518089d6252a",
+        "key": "Crescent Bay Resort Myrtle Beach"
+      },
+      {
+        "id": "89f02128-592b-5c85-967d-5ff7160d1d0c",
+        "key": "Tech Square Commons Phase 1"
+      }
+    ],
+    "opportunities": [
+      {
+        "id": "5183edb1-224d-58a9-b1e5-eda28759f866",
+        "key": "Crescent Bay Resort Myrtle Beach appliance package"
+      },
+      {
+        "id": "259d94df-c0a5-5804-ad12-4ffa7b4beac0",
+        "key": "Tech Square Commons Phase 1 appliance package"
+      }
+    ],
+    "parties": [
+      {
+        "id": "14cd5e92-9fa7-5d1a-90f8-ea9f59d953ca"
+      },
+      {
+        "id": "a2f8190e-96da-5935-af52-46b9030fcd25"
+      },
+      {
+        "id": "b1a273ca-1765-57fa-945b-5f5cd3dc8a62"
+      },
+      {
+        "id": "d88dce39-88ca-5381-8e7c-bb3269be9f6f"
+      },
+      {
+        "id": "67332c37-97c9-5933-b091-f150374e1a98"
+      },
+      {
+        "id": "6c240565-8e7e-5c64-b039-ea767c87dcc1"
+      },
+      {
+        "id": "4500462d-3cb9-5693-94ba-158320dd80d8"
+      },
+      {
+        "id": "013612fc-0bfb-5231-a409-a6c1aec78222"
+      }
+    ],
+    "spreadsheet": "seed-data/demo/Dodge_Weekly_Export_2026-09-29.xlsx"
+  }
 }

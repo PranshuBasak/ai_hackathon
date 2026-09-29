@@ -1,0 +1,58 @@
+{
+  "project_name": {
+    "value": "Cedar Quay Residences",
+    "evidence": "SYNTHETIC example evidence; replace with verified intake/CRM source."
+  },
+  "usable_location": {
+    "value": true,
+    "evidence": "SYNTHETIC example evidence; replace with verified intake/CRM source."
+  },
+  "construction_value": {
+    "value": 90000000,
+    "evidence": "SYNTHETIC example evidence; replace with verified intake/CRM source."
+  },
+  "units": {
+    "value": 240,
+    "evidence": "SYNTHETIC example evidence; replace with verified intake/CRM source."
+  },
+  "type_fit": {
+    "value": "apartments",
+    "evidence": "SYNTHETIC example evidence; replace with verified intake/CRM source."
+  },
+  "stage": {
+    "value": "design development",
+    "evidence": "SYNTHETIC example evidence; replace with verified intake/CRM source."
+  },
+  "architect": {
+    "value": "resolved",
+    "evidence": "SYNTHETIC example evidence; replace with verified intake/CRM source."
+  },
+  "dealer": {
+    "value": "b",
+    "evidence": "SYNTHETIC example evidence; replace with verified intake/CRM source."
+  },
+  "developer_relationship": {
+    "value": 2,
+    "evidence": "SYNTHETIC example evidence; replace with verified intake/CRM source."
+  },
+  "region": {
+    "value": "us-nc",
+    "evidence": "SYNTHETIC example evidence; replace with verified intake/CRM source."
+  },
+  "developer_identity": {
+    "value": "resolved",
+    "evidence": "SYNTHETIC example evidence; replace with verified intake/CRM source."
+  },
+  "architect_identity": {
+    "value": "resolved",
+    "evidence": "SYNTHETIC example evidence; replace with verified intake/CRM source."
+  },
+  "builder_identity": {
+    "value": "resolved",
+    "evidence": "SYNTHETIC example evidence; replace with verified intake/CRM source."
+  },
+  "dealer_identity": {
+    "value": "resolved",
+    "evidence": "SYNTHETIC example evidence; replace with verified intake/CRM source."
+  }
+}

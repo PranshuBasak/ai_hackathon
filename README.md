@@ -44,3 +44,7 @@ Use Clio metadata/data read-back plus browser checks. A schema count, successful
 ## User walkthrough
 
 See [the step-by-step user guide](docs/08-user-guide.md) for available foundation tasks, demo examples and the future AI workflow. Demo records are loaded and verified; spreadsheet reimport acceptance remains pending.
+
+## Latest checkpoint — 28 September 2026
+
+The owner confirms the capture agent is built and Excel intake import succeeded. Actual agent/import IDs and broader acceptance remain to be recorded. See [checkpoint](docs/checkpoint.md) and the [Verdict Analyst build kit](docs/ai-studio/verdict-agent/README.md). The kit includes system/build prompts, a skill, references, assets, an offline reference script and email/chat examples; it is not a deployed verdict agent.

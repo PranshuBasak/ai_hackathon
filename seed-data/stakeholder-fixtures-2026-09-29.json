@@ -1,0 +1,117 @@
+{
+ "version": 1,
+ "environment": "ai_hackathon",
+ "tag": "HackathonSeed",
+ "created": "2026-09-29",
+ "purpose": "Stakeholder fixtures: supplier accounts, an extra A-tier dealer, and contacts for contractors, partners, our company and the PI-000034 key contact",
+ "resetRule": "Delete only these GUIDs, contacts before accounts; never other records",
+ "accounts": [
+  {
+   "Id": "e9114b67-55b3-55cc-9337-14c198987871",
+   "Name": "Granite Peak Cabinetry",
+   "TypeId": "d34b9da2-53e6-df11-971b-001d60e938c6"
+  },
+  {
+   "Id": "3ab296bd-57f3-55d2-be16-7af14e905d50",
+   "Name": "Brightwater Plumbing Supply",
+   "TypeId": "d34b9da2-53e6-df11-971b-001d60e938c6"
+  },
+  {
+   "Id": "dddf966b-d62d-51b3-b8d8-8362ddb5a8dc",
+   "Name": "Voltline Electrical Wholesale",
+   "TypeId": "d34b9da2-53e6-df11-971b-001d60e938c6"
+  },
+  {
+   "Id": "203a57ed-a7ea-5ba1-b8b0-192c98b86870",
+   "Name": "Harbor Appliance Center",
+   "TypeId": "cdf9cadf-ae2c-439c-8c16-6249461ebdfa",
+   "AccountCategoryId": "37ea507c-55e6-df11-971b-001d60e938c6"
+  }
+ ],
+ "contacts": [
+  {
+   "Id": "ed6769bb-2d9f-5501-82dc-dacc7c634dfe",
+   "Name": "Dana Reeves",
+   "AccountId": "a1ff4661-d791-5859-830e-a3a34981c02a",
+   "Email": "fixture16@example.com",
+   "JobTitle": "Development manager"
+  },
+  {
+   "Id": "f3711ad2-acb0-594f-a482-ac98194dfb7b",
+   "Name": "Parker Nolan",
+   "AccountId": "01f748db-1fbe-5868-ae9d-96398222f9c1",
+   "Email": "fixture17@example.com",
+   "JobTitle": "Project manager"
+  },
+  {
+   "Id": "57fc47dc-2a0a-5df5-a143-78dbc29a3cf5",
+   "Name": "Hayden Cross",
+   "AccountId": "26a7cf4e-5aee-5be1-9b53-5347ce2ac282",
+   "Email": "fixture18@example.com",
+   "JobTitle": "Project manager"
+  },
+  {
+   "Id": "52d7c156-05e6-5e60-934c-967df9afe4bf",
+   "Name": "Rowan Ellis",
+   "AccountId": "5ca26606-5641-54cc-9f76-b13068e8c273",
+   "Email": "fixture19@example.com",
+   "JobTitle": "Preconstruction manager"
+  },
+  {
+   "Id": "6a2f0044-a683-508a-bee3-e926687e9aa5",
+   "Name": "Emerson Kade",
+   "AccountId": "2b5117e5-837c-5249-a7f0-22279d2833f1",
+   "Email": "fixture20@example.com",
+   "JobTitle": "Interior designer"
+  },
+  {
+   "Id": "81bfb93f-ac20-533e-888f-4fa97835339c",
+   "Name": "Blair Monroe",
+   "AccountId": "6184e709-2e1d-5979-8e99-b63eeb5d2002",
+   "Email": "fixture21@example.com",
+   "JobTitle": "MEP engineer"
+  },
+  {
+   "Id": "a87629a6-880a-5bb9-83df-684b9a7faa19",
+   "Name": "Sydney Park",
+   "AccountId": "75ab927d-cbd7-5207-86db-afdcf318a5a0",
+   "Email": "fixture22@example.com",
+   "JobTitle": "Specification consultant"
+  },
+  {
+   "Id": "b14a7486-6dbc-50b8-8d5e-6d4331f8b9f8",
+   "Name": "Logan Pierce",
+   "AccountId": "fd265150-7823-5dbd-9a4d-890b46452e7d",
+   "Email": "fixture23@example.com",
+   "JobTitle": "Contract sales manager"
+  },
+  {
+   "Id": "2ea6d26a-e951-51c0-90d5-b47d4546cba6",
+   "Name": "Micah Stone",
+   "AccountId": "e9114b67-55b3-55cc-9337-14c198987871",
+   "Email": "fixture24@example.com",
+   "JobTitle": "Account manager"
+  },
+  {
+   "Id": "8bdc5b1c-e35d-5827-a479-09df5474ec56",
+   "Name": "Harper Lin",
+   "AccountId": "3ab296bd-57f3-55d2-be16-7af14e905d50",
+   "Email": "fixture25@example.com",
+   "JobTitle": "Account manager"
+  },
+  {
+   "Id": "3c9291c3-effe-541c-92e2-b1475600f11e",
+   "Name": "Devon Walsh",
+   "AccountId": "dddf966b-d62d-51b3-b8d8-8362ddb5a8dc",
+   "Email": "fixture26@example.com",
+   "JobTitle": "Account manager"
+  },
+  {
+   "Id": "3391e8ef-b9ac-544e-ab04-355e72b39b9a",
+   "Name": "Kendall Frost",
+   "AccountId": "203a57ed-a7ea-5ba1-b8b0-192c98b86870",
+   "Email": "fixture27@example.com",
+   "JobTitle": "Builder sales lead"
+  }
+ ]
+}

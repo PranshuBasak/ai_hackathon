@@ -1,0 +1,26 @@
+[
+  {
+    "Code": "UsrIntakeVerdictPolicy",
+    "Name": "Project Intake verdict policy",
+    "DataType": "Unlimited length text (verify supported system-setting type before deployment)",
+    "ValueFile": "policy-proposed.json",
+    "Scope": "One global effective value; no personal overrides",
+    "Operation": "Proposed new setting; administrators edit, verdict workflow reads"
+  },
+  {
+    "Code": "UsrIntakeAutoApplyThreshold",
+    "Name": "Preserve existing title and record ID",
+    "DataType": "Preserve existing numeric type",
+    "Value": 85,
+    "Scope": "Global effective value",
+    "Operation": "Read existing; gates Ready to apply only"
+  },
+  {
+    "Code": "UsrIntakeReviewThreshold",
+    "Name": "Preserve existing title and record ID",
+    "DataType": "Preserve existing numeric type",
+    "Value": 50,
+    "Scope": "Global effective value",
+    "Operation": "Read existing; below this adds low-confidence escalation"
+  }
+]
