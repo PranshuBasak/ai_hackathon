@@ -1,5 +1,7 @@
 # Native agent design — next phase
 
+**Update 2026-09-29:** this design is implemented as one unified AI Studio agent, **Project Assistant**. Its skills are lifecycle (S4 guide), capture (S1), verdict (S2 + S3, deterministic scoring from lookups instead of model scoring) and apply (UsrIntakeApply as a human-confirmed skill instead of a process). Sources and verified behaviour: ai-studio/unified-agent/ and demo/05-agent-capabilities.md. Differences from this contract: accounts are never created by the agent (they are linked only, with near-match proposals); apply asks for the responsible person; involved parties are created by apply.
+
 This document is the original end-to-end design contract. Update 2026-09-28: the owner confirms the capture agent is built and Excel intake import succeeded. Verdict matching/scoring and Apply are not yet verified. The verdict build kit is in ai-studio/verdict-agent/; see checkpoint.md for evidence boundaries.
 
 ## Skills

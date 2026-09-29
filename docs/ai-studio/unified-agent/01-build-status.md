@@ -181,3 +181,21 @@ Notes:
 - AI credits: the earlier apply run used about 160 credits. A full capture → verdict → apply chain costs several hundred.
 
 Next: once capacity is restored, run apply on PI-000037 (expect 1 Project, 4 parties, 1 Opportunity with Contact Priya and Partner Summitline, and the intake Applied with its Can* flags false), then repeat apply.
+
+## 29 Sep 2026 — capture v4 prepared (near-match proposals)
+
+`skills/project-intake-capture/SKILL.md` §E now matches stakeholders in three tiers:
+1. exact Name or AlternativeName → linked;
+2. **near match**: distinctive-word search, candidates of the expected type **proposed** and linked only after the user confirms (in Excel, only on "link the suggested matches");
+3. none → "not in CRM".
+
+Needed for demo Scripts D and E (docs/demo/07, 08). The AI Studio draft could not be created because the AI Studio session had signed out. Next: the owner signs in; the capture v4 draft is created, checked, published and pinned on the agent.
+
+### Update — capture v4 draft and knowledge v3 uploaded (owner signed in)
+
+- **Capture v4 draft** created in AI Studio, with near-match proposals in §E and the new stakeholder line. The saved SKILL.md body is identical to the local source (hash match). Checks **passed**. **Not published**; the owner publishes it and pins it on Project Assistant.
+- **Knowledge source "Project Assistant Reference"** (`d9a7d92b…`):
+  - uploaded `project-assistant-reference.md` v3 (9 KB, 2:25 PM);
+  - removed the v2 file (2:46 AM);
+  - re-indexed.
+  Now 1 file, Ready, source Serving. Knowledge changes apply without republishing the agent.

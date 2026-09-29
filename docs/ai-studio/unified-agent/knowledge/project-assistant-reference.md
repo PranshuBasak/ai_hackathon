@@ -1,6 +1,6 @@
 # Project Assistant Reference
 
-Version 2 — 29 September 2026. Environment 189543-crm-bundle, package UsrMieleADProjects.
+Version 3 — 29 September 2026. Environment 189543-crm-bundle, package UsrMieleADProjects.
 This is background reference. It is **not live data**: always read current records, lookups and settings from Creatio.
 
 ## 1. Business purpose
@@ -28,13 +28,26 @@ A building-products manufacturer tracks construction projects early (design, bid
 - Missing Information, Missing Stakeholders
 - AI Summary, Recommendation Details (a JSON audit trail), Analysis Date/Status
 
+**Scoring and outcome indicators**, filled by the verdict:
+- Can create project, Can create opportunity, Can update opportunity (outcome flags)
+- Buying centre health (share of developer, architect, builder, dealer and key contact linked to CRM × 100)
+- Project classification, Service risk level, Expected margin: only when stated explicitly
+- Probability of conversion: not calculated yet
+
 **Outcome fields**, filled by apply:
 - Created Project, Created Opportunity, Matched Opportunity
-- Reviewer, Intake status
+- Reviewer, Intake status (the outcome flags are cleared once Applied or Rejected)
+
+**Key contact** (a lookup to Contact): when it is set, the intake page fills the contact name and email from the CRM contact.
 
 System fields: Intake number (PI-…) and Received on are generated automatically. New intakes start as **New**.
 
-Stakeholder links: when a developer, architect, builder or dealer name exactly matches one existing Account of the right type, capture links it to the intake automatically; otherwise the name stays as text and the assistant asks or reports "not in CRM".
+Stakeholder links:
+- **Exact match**: the name equals one Account's Name or Alternative name, with the right type. It is linked automatically.
+- **Near match**: similar words, for example "Keel and Stone" vs "Keel & Stone Construction". The assistant proposes the Account and links it only after the user confirms.
+- **No match**: the name stays as text and is reported as "not in CRM".
+
+Accounts and Contacts are never created by the assistant.
 
 Source values: the provider's name when known. A chat entry without a provider uses **Manual**. Excel files keep the provider named in the file; use "CSV/Excel" only when no provider is given. Source + External Project ID together identify a provider submission and prevent duplicates.
 
@@ -61,6 +74,13 @@ Configured in the Project Intake settings tab (gear icon on the Project Intake l
 
 Score = Σ weight × rule score / 100. If any active factor is unknown, the priority is **Data Incomplete** and the intake needs review. Values not in a rule list (for example a state with no rule) are unknown, never 0.
 
+## 4b. Qualifying, disqualifying and explaining
+
+- **Qualified**: Ready to apply with Strategic Pursuit or Active pursuit. Apply creates the Project and an Opportunity.
+- **Monitor or Low priority**: usually disqualified by the user ("too small", "outside territory"). The intake becomes Rejected with the reason recorded. Applying it anyway would create a Project without an Opportunity.
+- **Data Incomplete**: a fact has no scoring rule (for example a state the company does not cover) or is unknown. Always Needs review; the reviewer fills facts and re-runs, or rejects.
+- **Explaining a score**: for each factor, give fact → matched rule → rule score → weight × score / 100 = points, then the total and the priority band.
+
 ## 5. Apply rules
 
 | Recommended action | Result after "yes" |
@@ -73,6 +93,7 @@ Score = Σ weight × rule score / 100. If any active factor is unknown, the prio
 
 New Project: record type "Project". The Project ID and Status come from Creatio defaults. Owner is the responsible person confirmed in the plan, and Supplier is "Our company". The name, type, construction stage, address, city, country, value, units, completion year, source and external ID, developer account, key contact and qualification are copied from the intake when known.
 Stakeholders: each resolved developer, architect, builder and dealer becomes an **involved party** of the Project, with its role; the developer is the primary party. The key contact is attached when it is an existing Contact at one of those companies.
+A new phase gets **Parent = the matched project**.
 New Opportunity: name "<Project name> pursuit", stage Qualification (default), owner = the responsible person, linked to the Project; Account = developer, Contact = key contact, Partner = dealer; amount = expected order value when known.
 After apply, the intake stores the created links, the reviewer and status Applied. An intake with links is never applied again.
 

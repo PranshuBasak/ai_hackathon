@@ -169,3 +169,20 @@ For a deliberate rollback: set policy approved=false through the native setting 
   - 8 involved parties.
 - Demo inputs in `seed-data/demo/`: email-the-wren.txt, meeting-note-tech-square-phase-2.txt, and Dodge_Weekly_Export_2026-09-29.xlsx (4 rows: 3 valid, 1 without a Dodge ID). Script B uses the 27 Sep seed companies; "Triangle Builders Group" is intentionally absent from CRM.
 - Expected scores were computed from the live scoring rules: A 89.75 Strategic; B 74.25 / 76.50 Active and Brightleaf 77.50 Needs review; C 90.50 Strategic → Needs review (phase).
+
+## 2026-09-29 — Scripts D/E, capture v4 source, context refresh
+
+- Demo data sets D and E loaded with clio (uuid5 Ids, read back; manifest `demoScriptsDE`): 10 Accounts, 6 Contacts, and 3 Closed won Northbeam opportunities.
+- Scripts D (guided assistant: missing facts, near-match linking, explain score, qualify → convert, disqualify) and E (full end-to-end demo run, word for word) added to docs/demo.
+- Capture skill v4 source (near-match proposals) written locally; the AI Studio draft is pending owner sign-in.
+- Knowledge reference updated to v3 locally (outcome flags, buying centre, key contact, near match, qualify/disqualify, score explanation); upload to the AI Studio knowledge source is pending.
+- Context refreshed: README, AGENTS, checkpoint, checklist, decisions, agent design, demo-script pointer, ai-studio README, user guide.
+
+## 2026-09-29 — Lookup colours (Freedom UI coloured list values)
+
+- Pre-change export of all 12 lookups with clio `export-schema` in `backups/lookup-colors-2026-09-29/` (git-ignored).
+- Colour column (`UsrColor`, type Color) added with clio `sync-schemas` to 9 lookups: UsrIntakeStatus, UsrProjectAIRecommendedAction, UsrProjectAIAnalysisStatus, UsrADIntelligenceSource, UsrADSpecificationStatus, UsrProjectClassification, UsrADRiskLevel, UsrConstructionStage and UsrScoringRuleType. UsrADProjectPriority, UsrProjectCategory and UsrADStakeholderRole already had it.
+- The object's colour-column setting (metadata `D37`) is not settable by `sync-schemas` or `set-entity-schema-properties`. It was set in the object designer (Object settings → Color → Save and publish) for the 9 lookups. For future lookups use the clio route: `export-schema` → set `D37` to the UsrColor column UId → `import-schema`.
+- Colour values for all 83 existing rows written with clio `upsert-data-binding-row-db`, which also adds UsrColor to each package binding. Existing Ids, names and descriptions are unchanged; no rows were added or removed. `execute-dataservice-batch` cannot write Color columns, and OData does not expose them.
+- Read-back: `execute-esq` returned the expected hex value for all 83 rows. A post-change `export-schema` shows `D37` equal to the UsrColor column UId for all 8 newly flagged lookups; Intake status was verified earlier. In the browser, the Project Intake list renders the "Needs review" status as a coloured chip, rgba(255,172,7,0.2), which is #FFAC07 at 0.2 opacity.
+- Palette: the out-of-the-box Creatio colours. Green means positive or advanced, amber means review or waiting, orange and red mean risk, lost, rejected or duplicate, and blue, purple and teal are neutral categories. Full mapping: `docs/lookup-colors.md`.

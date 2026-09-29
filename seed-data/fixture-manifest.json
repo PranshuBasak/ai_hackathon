@@ -1402,5 +1402,93 @@
       }
     ],
     "spreadsheet": "seed-data/demo/Dodge_Weekly_Export_2026-09-29.xlsx"
+  },
+  "demoScriptsDE": {
+    "file": "seed-data/demo/demo-script-data-DE-2026-09-29.json",
+    "loaded": true,
+    "verifiedOn": "2026-09-29",
+    "resetOrder": "opportunities, contacts, accounts",
+    "accounts": [
+      {
+        "id": "e60b9757-c510-5a23-8cdf-d489a9d32ac3",
+        "key": "Oakhurst Senior Living LLC"
+      },
+      {
+        "id": "8f3e4ad5-c69f-5354-9ca5-94bf15a02dab",
+        "key": "Kline & Hart Architects"
+      },
+      {
+        "id": "afc22db1-f6bf-55ec-b8a1-3d6d4d894ed5",
+        "key": "Granitefield Builders"
+      },
+      {
+        "id": "0670e671-64ef-57f6-8d2b-81c364ad331a",
+        "key": "Sunbelt Appliance Supply Co."
+      },
+      {
+        "id": "5d48a7c4-6479-5dcb-8694-6513edf9f6db",
+        "key": "Pacific Crest Homes"
+      },
+      {
+        "id": "686c6fca-1828-584b-b474-e16bba13765a",
+        "key": "Northbeam Communities"
+      },
+      {
+        "id": "05fd267c-c025-511f-af69-532823e422eb",
+        "key": "Studio Arcadia"
+      },
+      {
+        "id": "1185f2ef-86ed-5a0f-9abe-3c86fda58632",
+        "key": "Keel & Stone Construction"
+      },
+      {
+        "id": "8ac4cb5a-26c6-5f31-a1d5-e2e8e48b378a",
+        "key": "Peach State Appliance Distributors"
+      },
+      {
+        "id": "6299a608-97f0-5a0f-bff9-e5e03525c61c",
+        "key": "Sierra Pines Builders"
+      }
+    ],
+    "contacts": [
+      {
+        "id": "b5d4a174-fc25-53ea-b6a3-c7b279ec538f",
+        "key": "Nina Patel"
+      },
+      {
+        "id": "79e55cbd-261d-552f-9d62-c09d0f3d1894",
+        "key": "Ben Carter"
+      },
+      {
+        "id": "f6c38547-4bf2-5f3b-8ae1-5e43c1e48cc2",
+        "key": "Grace Liu"
+      },
+      {
+        "id": "390481c0-846b-5aae-9059-1d259acee438",
+        "key": "Omar Haddad"
+      },
+      {
+        "id": "412b57ea-f703-5db4-845f-1bb67a51466f",
+        "key": "Rachel Kim"
+      },
+      {
+        "id": "2ea1f35d-560a-513d-a857-7fedff58d0de",
+        "key": "Dylan Brooks"
+      }
+    ],
+    "opportunities": [
+      {
+        "id": "9a586994-af04-503d-8204-25cf4efd14af",
+        "key": "Northbeam Midtown Flats appliance package"
+      },
+      {
+        "id": "97f19b1d-8dad-5e2c-8f90-fc0d697fc0a9",
+        "key": "Northbeam Decatur Commons appliance package"
+      },
+      {
+        "id": "b61eebe8-a449-5dae-8c3d-6c217df134e2",
+        "key": "Northbeam Georgia Tech West appliance package"
+      }
+    ]
   }
 }

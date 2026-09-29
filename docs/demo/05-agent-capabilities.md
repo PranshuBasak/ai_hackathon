@@ -6,7 +6,7 @@ Agent **Project Assistant** is an Enterprise prompt agent in Creatio AI Studio.
 - Knowledge: "Project Assistant Reference".
 - Integration: Creatio Business Studio MCP, with 16 of its 17 CRM tools enabled. `creatio_delete_record` is **off**.
 
-Current released configuration (agent v3): lifecycle v1, capture v3, verdict v5, apply v3.
+Current released configuration (agent v3): lifecycle v1, capture v3, verdict v5, apply v3. **Capture v4** (near-match stakeholder proposals) is prepared for release.
 
 ---
 
@@ -108,10 +108,10 @@ Steps:
 | GC / builder | Builder Name | Builder account | Contractor |
 | Dealer | Dealer Name | Dealer account | Dealer |
 
-The agent searches Account by exact Name, then by **AlternativeName**.
-- **Exactly one** match of the right type → linked.
-- Several matches, or the wrong type → it asks in chat (in Excel it notes the reason).
-- None → "not in CRM", left unlinked.
+Matching runs in three tiers:
+1. **Exact.** Account Name equals the text, or AlternativeName matches ("SHP Living" → Solstice Harbor Partners, "Northbeam" → Northbeam Communities). Exactly one match of the right type → linked.
+2. **Near match (proximate), capture v4.** If there is no exact match, the agent drops generic words (Group, Co., LLC, Construction, Builders, Architects, Appliance, Supply, Studio, "and", "&" …) and searches by each distinctive word. It ranks candidates of the expected type and **proposes** them. Examples: "Keel and Stone" → *Keel & Stone Construction*, "Kline Hart" → *Kline & Hart Architects*, "Peach State Appliance" → *Peach State Appliance Distributors*. It links **only after the user confirms**. In Excel, possible matches appear in the preview and are linked only if the user says "link the suggested matches".
+3. **None.** "Not in CRM", left unlinked. The verdict lists it as a missing stakeholder.
 
 It **never creates Accounts or Contacts.**
 
@@ -219,7 +219,7 @@ Steps:
    | Link as new phase | New Project with **Parent = the matched project**, plus an Opportunity by the same rule |
    | Update existing project | Field-by-field current → new; empty fields filled, non-empty ones only if ticked; an Opportunity only if the priority qualifies and there is no open one |
    | Duplicate | Nothing created; intake Rejected |
-   | Reject (reviewer) | Nothing created; intake Rejected with the reason |
+   | Reject / disqualify (user or reviewer decision) | Nothing created; intake Rejected with the reason (for example "too small, outside territory") |
 5. **Show the plan in plain language:**
    - the intake line;
    - records to create or update with their key fields;
@@ -240,6 +240,13 @@ Steps:
 8. **Failure handling:** never retry blindly and never delete. The agent writes the links that do exist, sets status Failed with a short error, and reports exactly what exists.
 
 ---
+
+## 5b. Qualifying and disqualifying
+
+- **Qualified** means the verdict is Ready to apply with priority **Strategic Pursuit** or **Active pursuit**. Apply then creates the Project **and** an Opportunity.
+- **Monitor** or **Low priority**: apply would create a Project only (no Opportunity), so the user usually **disqualifies** instead ("disqualify it — too small, outside territory"). The intake becomes **Rejected**, with the reason stored in Match reason and the outcome flags cleared.
+- **Data Incomplete** (a factor has no rule, for example a state or project type the company does not serve) always means **Needs review**. The reviewer can fill the facts and re-run, or reject.
+- **"Explain the score"** answers with a factor table: fact → matched rule → rule score → weight × score / 100 → points. The total maps to the priority band (Strategic ≥ 80, Active ≥ 60, Monitor ≥ 35, Low ≥ 0). All values come from the live lookups and the saved Qualification explanation and Recommendation details.
 
 ## 6. Hard rules (system prompt)
 

@@ -35,7 +35,7 @@ Seven planning documents are in docs/01-architecture.md through docs/07-demo-scr
 
 ## Scope
 
-This phase establishes schema, configuration, navigation, review UI, import assets and evidence. Native agent skills, matching/scoring execution, batch processing, Apply, chat/email entry and AI metrics remain deferred.
+The foundation (schema, configuration, navigation, review UI, import assets and evidence) is complete enough for the demo. The AI phase is delivered as one AI Studio agent, **Project Assistant**, with capture (chat, email text, Excel), verdict (matching, deterministic scoring from Creatio lookups, review routing) and human-approved apply (Project, involved parties, Opportunity). Email-channel ingestion, scheduled digests and AI metrics remain future work; see docs/demo/00-submission.md → What's next.
 
 ## Verification
 
@@ -45,6 +45,10 @@ Use Clio metadata/data read-back plus browser checks. A schema count, successful
 
 See [the step-by-step user guide](docs/08-user-guide.md) for available foundation tasks, demo examples and the future AI workflow. Demo records are loaded and verified; spreadsheet reimport acceptance remains pending.
 
-## Latest checkpoint — 28 September 2026
+## Latest checkpoint — 29 September 2026
+
+**Project Assistant** is deployed on 189543-crm-bundle and verified by chat tests. Start with [the demo pack](docs/demo/README.md) (submission text, Scripts A–E, capabilities reference) and [the unified agent build status](docs/ai-studio/unified-agent/01-build-status.md).
+
+### Previous checkpoint — 28 September 2026
 
 The owner confirms the capture agent is built and Excel intake import succeeded. Actual agent/import IDs and broader acceptance remain to be recorded. See [checkpoint](docs/checkpoint.md) and the [Verdict Analyst build kit](docs/ai-studio/verdict-agent/README.md). The kit includes system/build prompts, a skill, references, assets, an offline reference script and email/chat examples; it is not a deployed verdict agent.

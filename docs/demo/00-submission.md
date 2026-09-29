@@ -24,6 +24,8 @@ That work is slow and inconsistent, and it is often skipped. The result is dupli
 
 1. **Capture.** Chat, a pasted email or meeting note, or an uploaded Excel/CSV provider export becomes a structured **Project Intake** record.
    - Stakeholder names are linked to existing CRM Accounts, including by alternative name (for example "SHP Living" → Solstice Harbor Partners).
+   - Near matches are proposed for confirmation ("Keel and Stone" → Keel & Stone Construction), never linked silently.
+   - When facts are missing, the agent asks for them 1–2 at a time and offers the next step.
    - The key contact is linked to the CRM Contact.
    - Project type and country are matched to CRM lookups.
    - Duplicates are blocked by Source + provider project ID, so re-uploading the same file creates nothing.
@@ -42,7 +44,9 @@ That work is slow and inconsistent, and it is often skipped. The result is dupli
    - or links a **new phase** to its parent project;
    - then writes everything back to the intake (links, reviewer, status Applied).
 
-   It never deletes, never invents data, and never applies the same intake twice.
+   - Low-value or out-of-territory leads are **disqualified** with a recorded reason (status Rejected).
+
+   It never deletes, never invents data, and never applies the same intake twice. On request it explains every point of a score from the configured rules.
 
 **The result for the user:** an email or a spreadsheet row becomes a scored, de-duplicated, stakeholder-linked Project and Opportunity in about a minute of conversation. The score is consistent and explainable, and a person stays accountable for every record created.
 
