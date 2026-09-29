@@ -12,3 +12,9 @@ These files record incremental authoring work. They are not a migration runner a
 The live environment and dated evidence, not these historical snapshots, determine current implementation status.
 
 `prepare_fixture_payloads.py` resolves local seed CSVs against dated live lookup evidence and writes `evidence/fixture-payloads-prepared.json`. It performs no remote actions and does not change the manifest. Its output includes explicit outstanding gates and missing lookups; do not submit it until those are resolved. Large OData collision queries were rejected; five-record groups succeeded.
+
+## 2026-09-27 UI pass
+
+- `build_intake_form_v2.py` regenerates `intake-form-v2.js` and `intake-form-v2-resources.json`, the current body of `UsrADProjectIntelligence_FormPage`. Edit the script, rerun it, validate with Clio `validate-page`, then save with `update-page` in replace mode passing the resources file and the latest checksum from `get-page`.
+- `build_list_page_v2.py` does the same for `UsrProjectIntakeSection_ListPage`; it reads the current body from `.clio-pages`, so run `get-page` first.
+- `project-page-location-island.js` is the append fragment that created the Location and stage island; `project-page-v2.js` is the full replace-mode snapshot saved afterwards to restore parent-first operation order. It supersedes `project-history-native.js`.

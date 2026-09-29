@@ -2,7 +2,7 @@
 
 > **Update 29 Sep 2026:** the AI phase is available through **Project Assistant** in the Creatio.ai panel on the Project Intake page. Chat or paste a lead, attach a spreadsheet, ask for a verdict, and approve the apply plan. See [the capabilities reference](demo/05-agent-capabilities.md) and [the demo scripts](demo/README.md). Sections below marked *Future* describe the original plan; the agent now covers capture, verdict and apply. Buttons such as *Run agent* are replaced by the chat.
 
-Updated: 27 September 2026. Environment: **ai_hackathon**.
+Updated: 27 September 2026 (UI pass). Environment: **ai_hackathon**.
 
 ## 1. What this application is for
 
@@ -27,8 +27,8 @@ Employee/admin permission testing is still incomplete; these are the intended re
 
 1. Sign in to the ai_hackathon Creatio environment.
 2. Choose the **Project Intake** workplace, then its **Project Intake** section.
-3. Find **Aurora Skyline** in the project-name column. If a review-only filter is selected, clear it so New records can appear.
-4. Open the intake. Review its source, Source Project ID, project name, location, value, units, dates and stakeholder names.
+3. Find **Aurora Skyline** in the project-name column. The list is sorted newest first; use the **New**, **Needs review**, **Ready to apply** or **Strategic** quick filters to narrow it.
+4. Open the intake. The left column shows the number, status, source, source project ID, received date, reviewer, priority and score, plus a Linked records island. The **Project** tab holds the Project, Location, Value and timeline and Source text panels; **Stakeholders** holds the key contact and the source company names beside their CRM accounts; **AI verdict** holds the read-only agent output.
 5. Confirm that it has a generated PI number, a received timestamp and status **New**. Its AI verdict is intentionally empty.
 6. Review the existing demo Projects separately. Use the human-readable project name; the standard Project Name can be a generated identifier.
 7. Open a demo Project to inspect its stored participants and linked opportunity, where present. The Project related-list UI still has outstanding verification; an empty widget is not proof that linked records were not loaded.
