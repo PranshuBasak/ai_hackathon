@@ -1,6 +1,6 @@
 # Demo script — Project Assistant (final, judged version)
 
-**Format:** one recorded video of **4 min 58 s**, four stories, one presenter voice. Every line the presenter says is written out. Every prompt to type is in a quote block. Every expected screen is stated so the editor knows what to keep.
+**Format:** one recorded video of **4 min 59 s**, four stories, one presenter voice. Every line the presenter says is written out. Every prompt to type is in a quote block. Every expected screen is stated so the editor knows what to keep.
 **Stories:** A (email), D/E (phone call: near-match linking and a disqualified lead), B (Dodge spreadsheet), C (Phase 2 with a reviewer).
 **Built for the scoring criteria:** 40 % effective use of Creatio AI Studio · 30 % innovation · 30 % demo delivery.
 **Environment:** 189543-crm-bundle · agent **Project Assistant** (Enterprise, AI Studio) · data from `seed-data/demo/` (Sets A, B, C and E).
@@ -18,9 +18,9 @@
 | | Unknown is never scored as zero: a lead outside the rules goes to a human and is disqualified with a recorded reason | 2:15 |
 | | Phase detection: "this is Phase 2 of a project we won" → child project instead of a duplicate | 3:35 |
 | | Idempotent batch import keyed on Source + provider ID, blocked rows, review routing with reasons | 2:35 |
-| | Prompt-injection resistance: the email's "approve it right away" is ignored | 0:28 |
+| | Prompt-injection resistance: the email's "approve it right away" is ignored | 0:32 |
 | | Human in the loop by construction: plan → named owner → yes → write | 1:20, 4:05 |
-| **Demo delivery (30 %)** | Outcome first, one complete flow end to end, then breadth (call, spreadsheet), then governance (reviewer), then depth. Plain-language benefit at the start and the close | whole video |
+| **Demo delivery (30 %)** | Team intro, then the problem, then one complete flow end to end, then breadth (call, spreadsheet), then governance (reviewer), then depth. Plain-language benefit at the start and the close | whole video |
 
 ---
 
@@ -37,18 +37,18 @@
 
 ## 3. The script
 
-### 0:00–0:28 — Cold open: the outcome first, and the agent
-**Screen:** split view for 15 s. Left: the Crescent Bay email and the Dodge spreadsheet. Right: a finished Project page with the Involved parties list and the linked Opportunity (a rehearsal result or test project 1000000028). Then 10 s: the Creatio.ai panel with Project Assistant selected, and a 3 s cut to AI Studio → Skills.
-**Lower third:** *Project Assistant — 1 Enterprise agent · 4 custom skills · Business Studio MCP · delete off*
+### 0:00–0:32 — Cold open: team, problem, answer
+**Screen:** 0:00–0:05 a title card: "Team Qnovate — Project Assistant, built on Creatio AI Studio", with the team members' names. 0:05–0:22 split view: the Crescent Bay email and the Dodge spreadsheet on the left, a finished Project page with the Involved parties list and the linked Opportunity on the right (a rehearsal result or test project 1000000028). 0:22–0:32 the Creatio.ai panel with Project Assistant selected, and a 3 s cut to AI Studio → Skills.
+**Lower third (0:22):** *Project Assistant — 1 Enterprise agent · 4 custom skills · Business Studio MCP · delete off*
 
 **Say:**
-> "We sell kitchen and laundry appliances into hotels, apartments, senior living and student housing, and we win those deals years before a building opens. Our reps chase leads from emails, phone calls, meeting notes and weekly Dodge exports. Qualifying one and setting it up in CRM used to take a morning. Project Assistant, one Creatio AI Studio agent with four custom skills, does it in a conversation, and a person approves every record."
+> "Hi, we're team Qnovate. Our users are appliance manufacturers selling into hotels, apartments, senior living and student housing. They win deals years before a building opens, so their reps chase project leads from emails, calls, meeting notes and weekly Dodge exports. Qualifying one lead and setting it up in CRM takes a morning. Project Assistant, one Creatio AI Studio agent with four custom skills, does it in a conversation, and a person approves every record. I'll play the sales rep."
 
 ---
 
-### Story A — A customer email becomes a Strategic Pursuit (0:28–1:45)
+### Story A — A customer email becomes a Strategic Pursuit (0:32–1:45)
 
-#### 0:28–0:55 — Capture
+#### 0:32–0:55 — Capture
 **Type:**
 > Capture this email as a new project intake:
 > *(paste the full text of email-the-wren.txt)*
@@ -219,7 +219,7 @@ Data: Set E (Northbeam Communities with 3 won opportunities, Studio Arcadia, Kee
 
 ---
 
-### 4:25–4:50 — Under the hood (the 40 %)
+### 4:25–4:47 — Under the hood (the 40 %)
 **Screen, in this order, about 6 s each:**
 1. Project Intake list → **Settings** (gear): scoring factors with weights, scoring rules with bands, priority bands.
 2. AI Studio → Project Assistant → **Skills**: the four custom skills plus vendor skills; hover one to show its reference files.
@@ -229,13 +229,13 @@ Data: Set E (Northbeam Communities with 3 won opportunities, Studio Arcadia, Kee
 **Lower third (one per shot):** *Scoring = Creatio lookups, tuned by sales ops* · *4 custom skills + vendor skills* · *Knowledge · MCP integration, delete off · PII policy · versioned* · *Observability: every write traced*
 
 **Say:**
-> "Under the hood. Scoring factors, rules and priority bands are Creatio lookups that sales operations tunes; the agent reads them live. In AI Studio: four custom skills with reference files, a knowledge source with citations, the Business Studio MCP integration with delete disabled, the PII policy, and released versions. Every run is traceable in Observability, from validate to write-back."
+> "Under the hood. Scoring factors, rules and priority bands are Creatio lookups that sales operations tunes; the agent reads them live. In AI Studio: four custom skills with reference files, a knowledge source, the Business Studio MCP integration with delete disabled, the PII policy, and released versions. Every run is traceable in Observability."
 
-### 4:50–4:58 — Close
+### 4:47–4:59 — Close
 **Screen:** Project Intake list, no filter, sorted by Received on: the demo rows showing New, Ready to apply, Needs review, Rejected and Applied in the Status column.
 
 **Say:**
-> "From an email, a call, a spreadsheet or a meeting note to a scored, de-duplicated, stakeholder-linked pursuit in minutes. Explainable, and a person accountable for every record."
+> "From an email, a call, a spreadsheet or a meeting note to a scored, de-duplicated, stakeholder-linked pursuit in minutes, with a person accountable for every record. That's Project Assistant, from team Qnovate. Thank you."
 
 ---
 
