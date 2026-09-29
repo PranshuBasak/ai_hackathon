@@ -1,0 +1,55 @@
+{
+  "formatVersion": 1,
+  "version": "demo-2026-09-28-v1",
+  "approved": true,
+  "factorConfigHash": "b87237cf3040116174e49daa3ef13f0ec20727dc51931c4e76e2645675af350a",
+  "factorKeys": [
+    "construction_value",
+    "units",
+    "type_fit",
+    "stage",
+    "architect",
+    "dealer",
+    "developer_relationship",
+    "region"
+  ],
+  "allowDiscard": false,
+  "priorityBands": [
+    {
+      "minScore": 80,
+      "name": "Strategic Pursuit"
+    },
+    {
+      "minScore": 60,
+      "name": "Active pursuit"
+    },
+    {
+      "minScore": 35,
+      "name": "Monitor"
+    },
+    {
+      "minScore": 0,
+      "name": "Low priority"
+    }
+  ],
+  "requiredFacts": [
+    "project_name",
+    "usable_location",
+    "type_fit",
+    "stage",
+    "construction_value",
+    "units",
+    "developer_identity",
+    "architect_identity",
+    "builder_identity",
+    "dealer_identity"
+  ],
+  "reviewRules": [
+    "phase_or_rename",
+    "unresolved_stakeholder",
+    "missing_required",
+    "conflicting_evidence",
+    "incomplete_search"
+  ],
+  "notes": "Hackathon demo policy installed under the owner request to build UsrIntakeVerdictPolicy. Demo USD bands and fictional US-NC/US-GA/US-FL coverage; US-CA outside; other regions unknown. Preserve mandatory review and do not auto-apply. Confidence thresholds are separate existing settings."
+}

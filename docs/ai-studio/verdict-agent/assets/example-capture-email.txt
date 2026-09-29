@@ -1,0 +1,29 @@
+Subject: [INTAKE] Maple Quay Residences — new project information
+
+Hello,
+
+Please create a Project Intake record for the following fictional demo project.
+
+Project: Maple Quay Residences
+Source: Tender portal
+Source Project ID: VERDICT-DEMO-20260928-EMAIL-01
+Project type: Multifamily apartments
+Current stage: Design development
+Address: 610 Fictional Maple Quay Avenue, Austin, Texas, United States
+Estimated construction value: USD 96,000,000 for the whole development
+Number of units: 220
+Bid date: 2027-01-20
+Expected construction start: 2027-04-01
+Expected completion: 2029-03-31
+Developer: Bluewater Living Co.
+Architect: Arcline Architects
+General contractor: Ironclad Builders
+Dealer: Not yet selected
+Contact: Avery Lane, Project architect, maplequay.demo@example.com
+
+The contractor is preparing an appliance specification review. No product-order value has been agreed. Please retain the missing dealer as unknown.
+
+Thank you,
+Avery Lane
+
+All names, addresses and project facts in this email are fictional test data. The source key is stable for repeat-submission testing.
