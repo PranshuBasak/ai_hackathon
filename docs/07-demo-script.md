@@ -1,5 +1,7 @@
 # Demo and reset
 
+> **Current demo material (29 Sep 2026):** see [docs/demo/README.md](demo/README.md) for Scripts A–E, the video run-of-show and the submission text. The six-minute outline below is the original foundation-phase plan; the safe-reset rules still apply.
+
 ## Six-minute target — AI phase rehearsal
 
 1. 30 seconds: show the manual-entry problem and duplicate/architect gaps.

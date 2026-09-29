@@ -1,0 +1,55 @@
+{
+  "formatVersion": 1,
+  "version": "proposed-2026-09-28-v2",
+  "approved": false,
+  "factorConfigHash": "b87237cf3040116174e49daa3ef13f0ec20727dc51931c4e76e2645675af350a",
+  "factorKeys": [
+    "construction_value",
+    "units",
+    "type_fit",
+    "stage",
+    "architect",
+    "dealer",
+    "developer_relationship",
+    "region"
+  ],
+  "allowDiscard": false,
+  "priorityBands": [
+    {
+      "minScore": 80,
+      "name": "Strategic Pursuit"
+    },
+    {
+      "minScore": 60,
+      "name": "Active pursuit"
+    },
+    {
+      "minScore": 35,
+      "name": "Monitor"
+    },
+    {
+      "minScore": 0,
+      "name": "Low priority"
+    }
+  ],
+  "requiredFacts": [
+    "project_name",
+    "usable_location",
+    "type_fit",
+    "stage",
+    "construction_value",
+    "units",
+    "developer_identity",
+    "architect_identity",
+    "builder_identity",
+    "dealer_identity"
+  ],
+  "reviewRules": [
+    "phase_or_rename",
+    "unresolved_stakeholder",
+    "missing_required",
+    "conflicting_evidence",
+    "incomplete_search"
+  ],
+  "notes": "PROPOSED, not installed or approved. Confidence thresholds are read separately from the existing system settings. Region policy is fictional demo coverage."
+}

@@ -1,0 +1,219 @@
+{
+ "version": 1,
+ "environment": "ai_hackathon",
+ "tag": "HackathonSeed",
+ "created": "2026-09-29",
+ "purpose": "Demo scripts A and C backing data (Script B uses the 27 Sep seed accounts)",
+ "resetOrder": "parties, then Project.Opportunity cleared, opportunities, projects, contacts, accounts",
+ "accounts": [
+  {
+   "Id": "067f46a9-67f3-5f81-83e4-63c489165178",
+   "Name": "Crescent Bay Hospitality Group",
+   "TypeId": "a241ff06-8e26-4e6f-b27b-7e129c410f2f",
+   "AlternativeName": "Crescent Bay"
+  },
+  {
+   "Id": "c7841d4d-7f61-585c-b35d-aad149346aec",
+   "Name": "Linden & Voss Architects",
+   "TypeId": "4b42462b-8eeb-4427-bc65-c46bed37353f"
+  },
+  {
+   "Id": "6ff74f1a-40c0-5d5a-9351-2103fa37f0a6",
+   "Name": "Ironbridge Construction",
+   "TypeId": "f3c0ce97-53e6-df11-971b-001d60e938c6"
+  },
+  {
+   "Id": "345b5616-12f9-5fa6-90f6-1a024a6a1477",
+   "Name": "Carolina Kitchen & Appliance",
+   "TypeId": "cdf9cadf-ae2c-439c-8c16-6249461ebdfa",
+   "AccountCategoryId": "37ea507c-55e6-df11-971b-001d60e938c6"
+  },
+  {
+   "Id": "8e6046d3-b957-54a2-9ec6-c9dc644cf89e",
+   "Name": "Bellwether Residential",
+   "TypeId": "a241ff06-8e26-4e6f-b27b-7e129c410f2f",
+   "AlternativeName": "Bellwether"
+  },
+  {
+   "Id": "cca336b6-34ef-5dca-aca8-cdc14ce9f851",
+   "Name": "Arbor & Finch Architects",
+   "TypeId": "4b42462b-8eeb-4427-bc65-c46bed37353f"
+  },
+  {
+   "Id": "1b0f4831-fd6c-577c-8475-50ec4e4a220e",
+   "Name": "Tidewater Builders",
+   "TypeId": "f3c0ce97-53e6-df11-971b-001d60e938c6"
+  },
+  {
+   "Id": "949a86da-7d86-57ac-95c1-f3de1683347c",
+   "Name": "Blue Ridge Appliance Distributors",
+   "TypeId": "cdf9cadf-ae2c-439c-8c16-6249461ebdfa",
+   "AccountCategoryId": "37ea507c-55e6-df11-971b-001d60e938c6"
+  }
+ ],
+ "contacts": [
+  {
+   "Id": "9e532ed2-ebf2-59c0-b06c-98045af21901",
+   "Name": "Marcus Delgado",
+   "AccountId": "067f46a9-67f3-5f81-83e4-63c489165178",
+   "JobTitle": "VP of Development",
+   "Email": "marcus.delgado@example.com"
+  },
+  {
+   "Id": "ca3adc80-1860-5739-b0ee-a36aa3222410",
+   "Name": "Hannah Voss",
+   "AccountId": "c7841d4d-7f61-585c-b35d-aad149346aec",
+   "JobTitle": "Principal Architect",
+   "Email": "hannah.voss@example.com"
+  },
+  {
+   "Id": "9ce0ad35-eeac-5f58-bf30-50b30421699e",
+   "Name": "Ray Whitfield",
+   "AccountId": "345b5616-12f9-5fa6-90f6-1a024a6a1477",
+   "JobTitle": "Builder Sales Manager",
+   "Email": "ray.whitfield@example.com"
+  },
+  {
+   "Id": "7d53b6b5-6934-5f6b-84c8-58f53e17e455",
+   "Name": "Diane Okafor",
+   "AccountId": "8e6046d3-b957-54a2-9ec6-c9dc644cf89e",
+   "JobTitle": "Director of Development",
+   "Email": "diane.okafor@example.com"
+  },
+  {
+   "Id": "ac633eea-5674-514c-bd73-27f0cb7ea86b",
+   "Name": "Tom Brennan",
+   "AccountId": "1b0f4831-fd6c-577c-8475-50ec4e4a220e",
+   "JobTitle": "Senior Project Manager",
+   "Email": "tom.brennan@example.com"
+  },
+  {
+   "Id": "251773bd-ee52-554c-857e-0dc85c4db3ff",
+   "Name": "Leah Chambers",
+   "AccountId": "949a86da-7d86-57ac-95c1-f3de1683347c",
+   "JobTitle": "Contract Sales Lead",
+   "Email": "leah.chambers@example.com"
+  }
+ ],
+ "projects": [
+  {
+   "Id": "9b295213-84ab-5bec-9d52-518089d6252a",
+   "UsrProjectName": "Crescent Bay Resort Myrtle Beach",
+   "ProjectEntryTypeId": "6b4928d7-456a-4acd-a863-3361d46b7649",
+   "OwnerId": "76929f8c-7e15-4c64-bdb0-adc62d383727",
+   "SupplierId": "e308b781-3c5b-4ecb-89ef-5c1ed4da488e",
+   "AccountId": "067f46a9-67f3-5f81-83e4-63c489165178",
+   "ContactId": "9e532ed2-ebf2-59c0-b06c-98045af21901",
+   "TypeId": "c4cf2e27-b0de-4ba5-8822-d4c0309d16e6",
+   "UsrConstructionStageId": "bfde4e4f-b890-4f73-bf19-6f5ca83dad74",
+   "UsrProjectAddress": "9800 N Ocean Blvd, Myrtle Beach, SC",
+   "UsrProjectCountryId": "e0be1264-f36b-1410-fa98-00155d043204",
+   "UsrEstimatedProjectValue": 118000000,
+   "UsrNumberOfUnits": 240,
+   "UsrCompletionYear": 2024
+  },
+  {
+   "Id": "89f02128-592b-5c85-967d-5ff7160d1d0c",
+   "UsrProjectName": "Tech Square Commons Phase 1",
+   "ProjectEntryTypeId": "6b4928d7-456a-4acd-a863-3361d46b7649",
+   "OwnerId": "76929f8c-7e15-4c64-bdb0-adc62d383727",
+   "SupplierId": "e308b781-3c5b-4ecb-89ef-5c1ed4da488e",
+   "AccountId": "8e6046d3-b957-54a2-9ec6-c9dc644cf89e",
+   "ContactId": "7d53b6b5-6934-5f6b-84c8-58f53e17e455",
+   "TypeId": "d2c395f8-6685-4491-9b9a-50379794c1a1",
+   "UsrConstructionStageId": "04093795-e152-4c0d-af39-2a2459a470d5",
+   "UsrProjectAddress": "780 Spring Street NW",
+   "UsrCityId": "e1ae3e86-f36b-1410-0099-00155d043204",
+   "UsrProjectCountryId": "e0be1264-f36b-1410-fa98-00155d043204",
+   "UsrEstimatedProjectValue": 96000000,
+   "UsrNumberOfUnits": 520,
+   "UsrCompletionYear": 2027
+  }
+ ],
+ "opportunities": [
+  {
+   "Id": "5183edb1-224d-58a9-b1e5-eda28759f866",
+   "Title": "Crescent Bay Resort Myrtle Beach appliance package",
+   "AccountId": "067f46a9-67f3-5f81-83e4-63c489165178",
+   "ContactId": "9e532ed2-ebf2-59c0-b06c-98045af21901",
+   "PartnerId": "345b5616-12f9-5fa6-90f6-1a024a6a1477",
+   "OwnerId": "76929f8c-7e15-4c64-bdb0-adc62d383727",
+   "StageId": "60d5310c-5be6-df11-971b-001d60e938c6",
+   "UsrADProjectId": "9b295213-84ab-5bec-9d52-518089d6252a",
+   "Amount": 2350000,
+   "DueDate": "2023-11-17T00:00:00Z"
+  },
+  {
+   "Id": "259d94df-c0a5-5804-ad12-4ffa7b4beac0",
+   "Title": "Tech Square Commons Phase 1 appliance package",
+   "AccountId": "8e6046d3-b957-54a2-9ec6-c9dc644cf89e",
+   "ContactId": "7d53b6b5-6934-5f6b-84c8-58f53e17e455",
+   "PartnerId": "949a86da-7d86-57ac-95c1-f3de1683347c",
+   "OwnerId": "76929f8c-7e15-4c64-bdb0-adc62d383727",
+   "StageId": "60d5310c-5be6-df11-971b-001d60e938c6",
+   "UsrADProjectId": "89f02128-592b-5c85-967d-5ff7160d1d0c",
+   "Amount": 1680000,
+   "DueDate": "2025-06-20T00:00:00Z"
+  }
+ ],
+ "parties": [
+  {
+   "Id": "14cd5e92-9fa7-5d1a-90f8-ea9f59d953ca",
+   "UsrProjectId": "9b295213-84ab-5bec-9d52-518089d6252a",
+   "UsrAccountId": "067f46a9-67f3-5f81-83e4-63c489165178",
+   "UsrPartyRoleId": "aa3bb455-2c37-4a2f-9759-fd12ab81420b",
+   "UsrIsPrimary": true,
+   "UsrContactId": "9e532ed2-ebf2-59c0-b06c-98045af21901"
+  },
+  {
+   "Id": "a2f8190e-96da-5935-af52-46b9030fcd25",
+   "UsrProjectId": "9b295213-84ab-5bec-9d52-518089d6252a",
+   "UsrAccountId": "c7841d4d-7f61-585c-b35d-aad149346aec",
+   "UsrPartyRoleId": "a9333388-7aa3-4105-bf94-06387926df02",
+   "UsrIsPrimary": false
+  },
+  {
+   "Id": "b1a273ca-1765-57fa-945b-5f5cd3dc8a62",
+   "UsrProjectId": "9b295213-84ab-5bec-9d52-518089d6252a",
+   "UsrAccountId": "6ff74f1a-40c0-5d5a-9351-2103fa37f0a6",
+   "UsrPartyRoleId": "29309fa7-9741-4f2b-a060-2b96168d9524",
+   "UsrIsPrimary": false
+  },
+  {
+   "Id": "d88dce39-88ca-5381-8e7c-bb3269be9f6f",
+   "UsrProjectId": "9b295213-84ab-5bec-9d52-518089d6252a",
+   "UsrAccountId": "345b5616-12f9-5fa6-90f6-1a024a6a1477",
+   "UsrPartyRoleId": "a8b40e92-b8fa-467b-8b6b-88309cd65dbd",
+   "UsrIsPrimary": false
+  },
+  {
+   "Id": "67332c37-97c9-5933-b091-f150374e1a98",
+   "UsrProjectId": "89f02128-592b-5c85-967d-5ff7160d1d0c",
+   "UsrAccountId": "8e6046d3-b957-54a2-9ec6-c9dc644cf89e",
+   "UsrPartyRoleId": "aa3bb455-2c37-4a2f-9759-fd12ab81420b",
+   "UsrIsPrimary": true,
+   "UsrContactId": "7d53b6b5-6934-5f6b-84c8-58f53e17e455"
+  },
+  {
+   "Id": "6c240565-8e7e-5c64-b039-ea767c87dcc1",
+   "UsrProjectId": "89f02128-592b-5c85-967d-5ff7160d1d0c",
+   "UsrAccountId": "cca336b6-34ef-5dca-aca8-cdc14ce9f851",
+   "UsrPartyRoleId": "a9333388-7aa3-4105-bf94-06387926df02",
+   "UsrIsPrimary": false
+  },
+  {
+   "Id": "4500462d-3cb9-5693-94ba-158320dd80d8",
+   "UsrProjectId": "89f02128-592b-5c85-967d-5ff7160d1d0c",
+   "UsrAccountId": "1b0f4831-fd6c-577c-8475-50ec4e4a220e",
+   "UsrPartyRoleId": "29309fa7-9741-4f2b-a060-2b96168d9524",
+   "UsrIsPrimary": false
+  },
+  {
+   "Id": "013612fc-0bfb-5231-a409-a6c1aec78222",
+   "UsrProjectId": "89f02128-592b-5c85-967d-5ff7160d1d0c",
+   "UsrAccountId": "949a86da-7d86-57ac-95c1-f3de1683347c",
+   "UsrPartyRoleId": "a8b40e92-b8fa-467b-8b6b-88309cd65dbd",
+   "UsrIsPrimary": false
+  }
+ ]
+}

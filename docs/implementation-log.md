@@ -81,3 +81,124 @@ Environment ai_hackathon re-registered locally. Pre-change bodies of the five pa
 - Intake list: renders nine columns, sorted newest first (PI-000016 first, PI-LEGACY rows last). The New quick filter narrows the list to the 15 fixture intakes; clearing it restores all rows. No console errors.
 - Intake form (PI-LEGACY-0009 and PI-000002): profile island and Linked records island on the left; Project, Stakeholders and AI verdict tabs with icons; panels render with native toggles; tooltips on read-only fields; placeholders on empty inputs; Source text panel collapsed by default. The Status field opens as an inline dropdown (clear and chevron controls), confirming the simple-lookup change.
 - Project page (1000000001): the Location and stage island renders under Timeline with address, city and construction stage; Intake history tab shows both lists loaded ("No data" for this project is a real query result); Buying centre tab lists four participants. Pre-existing defect noted, not fixed: the "Project images" island in the profile uses component type `qnt.ImageGallery`, which is not installed on this environment, so it renders the unknown-component placeholder.
+
+## 2026-09-28 — capture owner confirmation and verdict-agent kit
+
+Owner reports that the first intake-creation agent has been built and Excel records have been successfully imported into Creatio Project Intake. This is user-confirmed evidence; agent ID/version, workbook, row count and record GUIDs were not supplied or independently queried in this turn. Do not infer that the five-row test file or all email/chat/reimport paths passed. The 27 September counts remain a dated baseline, not current totals.
+
+Prepared docs/ai-studio/verdict-agent: builder/system prompts, project-intake-verdict skill with references/assets, proposed scoring policy, pure-Python local validation/calculation reference and 13 passing local tests, plus new fictional email and conversational samples. Matching confidence and action decision confidence are separate. Phase/rename/alias/missing data/search-incomplete guards force review. Numeric scoring bands/completeness rules are newly proposed, not silently installed. No live platform mutations or GitHub push in this turn. Next checkpoint: docs/checkpoint.md.
+
+## 2026-09-28 — Dynamic verdict configuration build-kit refinement
+
+- Scope: user requested storage design, all example configuration records and refined verdict AI; local kit only under current AGENTS authorization.
+- Chose reuse of eight UsrScoringFactor rows with structured JSON in existing unlimited-text UsrDescription. One proposed global UsrIntakeVerdictPolicy setting holds priority/requirements/approval; existing 85/50 confidence settings remain separate. No new custom object/list page.
+- Added full row JSON/CSV, setting specifications, worked example and record-by-record setup guide. Region map explicitly fictional. Proposed policy remains approved=false; no live GUIDs invented.
+- Added configure_verdict.py reference, approval-hash drift checks, dynamic bands/maps/requirements, active-weight validation and configuration snapshots. Refined prompt/skill/workflow/data/scoring references; regenerated upload reference pack and ZIP.
+- Verification: python -m unittest discover -s docs/ai-studio/verdict-agent/project-intake-verdict/scripts -p "test_*.py" — 25 passed. git diff --check passed. Local example 87.75 Strategic; changing and reapproving the construction-value band gives 78.75 Active without changing prompt. Unknown region and phase/rename still route to review.
+- Limits: no live settings/row updates, permission checks, executable workflow deployment, knowledge upload or GitHub push. Verify system-setting capacity, existing description consumers and supported runtime during authorized deployment.
+
+## 2026-09-28 — Live verdict policy created
+
+
+
+- Name: **Project Intake verdict policy**
+- Code: `UsrIntakeVerdictPolicy`
+- Setting record ID: `c04e4469-4341-4c61-b400-386e90d9a2e8`
+- Global value record ID: `65c45cba-a76d-461b-b321-f19df0653ffe`
+- Type: `MaxSizeText`; personal: false; cacheable: false.
+- Native All-Users value is associated with **All employees**. This value scope does not itself grant editing permissions.
+- Version: `demo-2026-09-28-v1`; approved: true for the owner-authorized hackathon demo configuration.
+- Policy file snapshot: `project-intake-verdict/assets/policy-installed-ai_hackathon.json`.
+- Existing settings unchanged: `UsrIntakeAutoApplyThreshold=85`, `UsrIntakeReviewThreshold=50`.
+
+## Factors
+
+All eight existing UsrScoringFactor GUIDs, names, weights and active flags are preserved. UsrDescription now contains versioned JSON rules; original readable guidance was copied into the previously empty Description column. The existing UsrScoringFactor package binding contains eight rows and six columns, including both descriptions. No new factor rows, intake records or verdict results were created.
+
+Numeric bands are the previously documented demo rubric. Coverage is fictional: US-NC/US-GA/US-FL covered, US-CA outside, every other region unknown. Currency semantics must be verified; no implicit USD conversion or fabricated zero values. Phase/rename and other mandatory review rules remain in force. Approved is not an auto-Apply permission.
+
+## How the assistant should retrieve it
+
+Use the current integration tool schemas. Resolve SysSettings by exact Code `UsrIntakeVerdictPolicy`, then read its related SysSettingsValue row and parse TextValue as JSON. The known GUIDs above can be used for a direct get-record test in this environment. Do not fabricate a filters shape; use the tool's actual input contract.
+
+Read the eight live UsrScoringFactor rows and both current confidence values each run. Validate approved, version, factorConfigHash, active keys/weights and rules. The local snapshot is evidence, not a fallback when live reads fail. These reads were verified through Clio with Supervisor; access by the AI Studio integration's execution identity has not been verified.
+
+Suggested assistant test:
+
+> Read the live UsrIntakeVerdictPolicy setting and its TextValue. Report policy version, approval state, priority bands and the count/sum of active UsrScoringFactor weights. Do not update any intake. Report any access error exactly and do not fall back to uploaded examples.
+
+## Verification
+
+- Native setting read-back and DataService row read-back agree; complete JSON preserved.
+- Eight factors match their intended records and hash, with active weights totaling 100.
+- All canonical priority, action and status lookup meanings are present; legacy values preserved.
+- Saved live configuration evaluated by the local reference: complete synthetic example 87.75 / Strategic Pursuit / Ready to apply; phase case Needs review; unknown region null score / Data Incomplete / Needs review. These are local tests using live configuration, not live agent runs or CRM result writes.
+
+## Remaining integration work
+
+The assistant still needs a supported executable scoring entry point and a restricted verdict-save action, followed by read-back verification. No AI Studio prompt, skill publication or agent deployment was changed by this operation. A new conversation/test should fetch live configuration; an existing chat may retain older context.
+
+## Packaging and permissions limitation
+
+Live creation/update through native system-setting tools succeeded. Adding the new setting to SysSettings_ProjectIntake through the DataService-backed binding updater was refused: SysSettings object permission, correlation ebcdc8611bee. No retry with alternate credentials or permission bypass was attempted. The existing settings and values bindings still cover the prior threshold settings; the new policy setting/value require native Configuration data binding or a supported package installation script before transfer to another environment. Factor bindings are updated and read back.
+
+System-setting edit permissions and AI Studio integration access need effective-user tests; the existing management permissions were not changed. Browser verification was unavailable: the opened tab reached login and subsequently was no longer accessible.
+
+## Evidence and recovery
+
+Pre-change package: backups/verdict-policy-2026-09-28/UsrMieleADProjects.zip (1,315,267 bytes); SHA256 818b209f08e5d9582d5a34c08a6acc74911587b69818c36534783235e87f982f. Export completed before the owner's later request to skip waiting for it. No further export was run.
+
+Snapshots: evidence/verdict-policy-before-2026-09-28.json; evidence/verdict-policy-readback-2026-09-28.json; evidence/verdict-policy-validation-2026-09-28.json; evidence/verdict-policy-lookups-2026-09-28.json.
+
+For a deliberate rollback: set policy approved=false through the native setting action, restore only the eight recorded factor GUIDs from the before snapshot with the corresponding binding values, and read back. Do not delete intake records. Do not remove binding rows to unbind settings: that operation can delete live data.
+
+## 2026-09-28 — Scoring rule objects built (clio MCP)
+
+- Pre-change export: backups/scoring-objects-2026-09-28/UsrMieleADProjects.zip, SHA256 7a60ca994ee26949f4c885f83e0be1216e8583af92ec42e6403843777c7d56a1 (owner also exported separately).
+- sync-schemas created the BaseLookups UsrScoringRuleType, UsrScoringRule and UsrIntakePriorityBand, registered them in Lookups, and added UsrFactorKey and UsrRuleType to UsrScoringFactor.
+- DB-first bindings seeded 2 rule types, 39 rules and 4 bands. The 8 factors got their keys and rule types through the existing UsrScoringFactor binding. Lookup_* registration bindings were added. The GUIDs are in evidence/scoring-objects-seed-2026-09-28.json.
+- OData/ESQ read-back matches the plan. Factor IDs, weights (sum 100), descriptions and the JSON in UsrDescription are unchanged. Binding contents were verified with read-data-binding-db.
+- Owner decision: no admin lock on the new lookups for now. No object permissions were set. No browser check: the owner accepted the clio read-backs.
+- Caveat: decimals are non-nullable, so Value-list rules have UsrMinValue 0.00. The runtime must branch on UsrRuleType.
+- Not done: skill v3, agent redeploy, live reruns. The policy setting and the JSON stay in place.
+- Settings tab on UsrProjectIntakeSection_ListPage (clio update-page, append mode): the factor grid gained Factor key and Rule type columns; new Scoring rules and Priority bands expanded lists were added. Bundle read-back verified. No browser check, per the owner.
+- Mini pages: created UsrScoringRule_MiniPage and UsrIntakePriorityBand_MiniPage and bound them as default/add pages; added 7 field tooltips to UsrPage_93laf3g (factor mini page) without changing anything else. Clio read-backs verified.
+
+## 2026-09-29 — Project Assistant chat test, apply fix, stakeholder fixtures
+
+- The in-bundle test on PI-000034 passed capture, status and verdict. Apply stopped at Project validation (service contact "Creatio.ai Studio" has no Account, so the Supplier default fails). Nothing was written; confirmed with clio. Details are in docs/ai-studio/unified-agent/01-build-status.md.
+- Loaded 4 Accounts and 12 Contacts with explicit uuid5 Ids via clio `odata-create` and read them back. They are listed in seed-data/fixture-manifest.json (stakeholderFixtures). Reset order: contacts, then accounts.
+- AI Studio drafts saved and checked (not published): apply v2, capture v2, verdict v4. The agent prompt and knowledge are updated locally only.
+- Agent v2 retest (owner published and deployed): apply on PI-000034 created Project 1000000028 (`f91c7b53…`), Opportunity `eb598981…` and 4 UsrADProjectParty rows, and marked the intake Applied with links, account lookups and reviewer. The repeat apply created nothing. Everything was verified with clio. Record IDs are in docs/ai-studio/unified-agent/01-build-status.md.
+
+## 2026-09-29 — Demo pack and demo data
+
+- Demo docs in `docs/demo/`:
+  - README (index, preparation, expected scores);
+  - 00-submission (written description);
+  - three scripts: A email→pursuit, B Dodge spreadsheet, C Phase 2 with a reviewer;
+  - 04 live examples; 05 capabilities reference; 06 run-of-show for a video under 5 minutes.
+- Demo data loaded with clio `odata-create` (uuid5 Ids, read back) and listed in the fixture manifest under `demoScripts`:
+  - 8 Accounts, 6 Contacts;
+  - 2 history Projects (1000000032 Crescent Bay Resort Myrtle Beach; 1000000033 Tech Square Commons Phase 1);
+  - 2 Closed won Opportunities, linked through Project.Opportunity;
+  - 8 involved parties.
+- Demo inputs in `seed-data/demo/`: email-the-wren.txt, meeting-note-tech-square-phase-2.txt, and Dodge_Weekly_Export_2026-09-29.xlsx (4 rows: 3 valid, 1 without a Dodge ID). Script B uses the 27 Sep seed companies; "Triangle Builders Group" is intentionally absent from CRM.
+- Expected scores were computed from the live scoring rules: A 89.75 Strategic; B 74.25 / 76.50 Active and Brightleaf 77.50 Needs review; C 90.50 Strategic → Needs review (phase).
+
+## 2026-09-29 — Scripts D/E, capture v4 source, context refresh
+
+- Demo data sets D and E loaded with clio (uuid5 Ids, read back; manifest `demoScriptsDE`): 10 Accounts, 6 Contacts, and 3 Closed won Northbeam opportunities.
+- Scripts D (guided assistant: missing facts, near-match linking, explain score, qualify → convert, disqualify) and E (full end-to-end demo run, word for word) added to docs/demo.
+- Capture skill v4 source (near-match proposals) written locally; the AI Studio draft is pending owner sign-in.
+- Knowledge reference updated to v3 locally (outcome flags, buying centre, key contact, near match, qualify/disqualify, score explanation); upload to the AI Studio knowledge source is pending.
+- Context refreshed: README, AGENTS, checkpoint, checklist, decisions, agent design, demo-script pointer, ai-studio README, user guide.
+
+## 2026-09-29 — Lookup colours (Freedom UI coloured list values)
+
+- Pre-change export of all 12 lookups with clio `export-schema` in `backups/lookup-colors-2026-09-29/` (git-ignored).
+- Colour column (`UsrColor`, type Color) added with clio `sync-schemas` to 9 lookups: UsrIntakeStatus, UsrProjectAIRecommendedAction, UsrProjectAIAnalysisStatus, UsrADIntelligenceSource, UsrADSpecificationStatus, UsrProjectClassification, UsrADRiskLevel, UsrConstructionStage and UsrScoringRuleType. UsrADProjectPriority, UsrProjectCategory and UsrADStakeholderRole already had it.
+- The object's colour-column setting (metadata `D37`) is not settable by `sync-schemas` or `set-entity-schema-properties`. It was set in the object designer (Object settings → Color → Save and publish) for the 9 lookups. For future lookups use the clio route: `export-schema` → set `D37` to the UsrColor column UId → `import-schema`.
+- Colour values for all 83 existing rows written with clio `upsert-data-binding-row-db`, which also adds UsrColor to each package binding. Existing Ids, names and descriptions are unchanged; no rows were added or removed. `execute-dataservice-batch` cannot write Color columns, and OData does not expose them.
+- Read-back: `execute-esq` returned the expected hex value for all 83 rows. A post-change `export-schema` shows `D37` equal to the UsrColor column UId for all 8 newly flagged lookups; Intake status was verified earlier. In the browser, the Project Intake list renders the "Needs review" status as a coloured chip, rgba(255,172,7,0.2), which is #FFAC07 at 0.2 opacity.
+- Palette: the out-of-the-box Creatio colours. Green means positive or advanced, amber means review or waiting, orange and red mean risk, lost, rejected or duplicate, and blue, purple and teal are neutral categories. Full mapping: `docs/lookup-colors.md`.

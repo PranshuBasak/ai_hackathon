@@ -1,6 +1,8 @@
 # Native agent design — next phase
 
-This document is a design contract. No new agent or skills are implemented by the foundation work.
+**Update 2026-09-29:** this design is implemented as one unified AI Studio agent, **Project Assistant**. Its skills are lifecycle (S4 guide), capture (S1), verdict (S2 + S3, deterministic scoring from lookups instead of model scoring) and apply (UsrIntakeApply as a human-confirmed skill instead of a process). Sources and verified behaviour: ai-studio/unified-agent/ and demo/05-agent-capabilities.md. Differences from this contract: accounts are never created by the agent (they are linked only, with near-match proposals); apply asks for the responsible person; involved parties are created by apply.
+
+This document is the original end-to-end design contract. Update 2026-09-28: the owner confirms the capture agent is built and Excel intake import succeeded. Verdict matching/scoring and Apply are not yet verified. The verdict build kit is in ai-studio/verdict-agent/; see checkpoint.md for evidence boundaries.
 
 ## Skills
 
@@ -42,4 +44,4 @@ UsrIntakeApply: require Ready to apply or Needs review with reviewer. Resolve/cr
 
 ## Legacy differences to resolve deliberately
 
-UsrSkillMieleExternalProjectIntelligenceA combines analysis, uses legacy actions and a 65–84 review band, and contains regional assumptions. UsrMieleAnalyzeExternalIntelligence, UsrMieleImportProjectIntelligence, UsrProcess_c91e943 and UsrProcess_e3ca5c6 remain legacy. Their existence does not demonstrate working native S1–S4. The intake insert Lead listener must be adapted before any new intake path is enabled for testing.
+UsrSkillMieleExternalProjectIntelligenceA combines analysis, uses legacy actions and a 65–84 review band, and contains regional assumptions. UsrMieleAnalyzeExternalIntelligence, UsrMieleImportProjectIntelligence, UsrProcess_c91e943 and UsrProcess_e3ca5c6 remain legacy. Their existence does not demonstrate working native S1–S4. The intake-specific Lead listener was disabled and the runtime gate passed on 2026-09-27; do not re-enable it.

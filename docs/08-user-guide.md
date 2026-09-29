@@ -1,5 +1,7 @@
 # Project Intake — step-by-step user guide
 
+> **Update 29 Sep 2026:** the AI phase is available through **Project Assistant** in the Creatio.ai panel on the Project Intake page. Chat or paste a lead, attach a spreadsheet, ask for a verdict, and approve the apply plan. See [the capabilities reference](demo/05-agent-capabilities.md) and [the demo scripts](demo/README.md). Sections below marked *Future* describe the original plan; the agent now covers capture, verdict and apply. Buttons such as *Run agent* are replaced by the chat.
+
 Updated: 27 September 2026 (UI pass). Environment: **ai_hackathon**.
 
 ## 1. What this application is for

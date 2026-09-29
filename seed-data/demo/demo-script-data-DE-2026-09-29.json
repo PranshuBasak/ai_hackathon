@@ -1,0 +1,142 @@
+{
+ "version": 1,
+ "environment": "ai_hackathon",
+ "tag": "HackathonSeed",
+ "created": "2026-09-29",
+ "purpose": "Demo scripts D (guided assistant) and E (full demo run) backing data",
+ "resetOrder": "opportunities, contacts, accounts",
+ "accounts": [
+  {
+   "Id": "e60b9757-c510-5a23-8cdf-d489a9d32ac3",
+   "Name": "Oakhurst Senior Living LLC",
+   "TypeId": "a241ff06-8e26-4e6f-b27b-7e129c410f2f"
+  },
+  {
+   "Id": "8f3e4ad5-c69f-5354-9ca5-94bf15a02dab",
+   "Name": "Kline & Hart Architects",
+   "TypeId": "4b42462b-8eeb-4427-bc65-c46bed37353f"
+  },
+  {
+   "Id": "afc22db1-f6bf-55ec-b8a1-3d6d4d894ed5",
+   "Name": "Granitefield Builders",
+   "TypeId": "f3c0ce97-53e6-df11-971b-001d60e938c6"
+  },
+  {
+   "Id": "0670e671-64ef-57f6-8d2b-81c364ad331a",
+   "Name": "Sunbelt Appliance Supply Co.",
+   "TypeId": "cdf9cadf-ae2c-439c-8c16-6249461ebdfa",
+   "AccountCategoryId": "37ea507c-55e6-df11-971b-001d60e938c6"
+  },
+  {
+   "Id": "5d48a7c4-6479-5dcb-8694-6513edf9f6db",
+   "Name": "Pacific Crest Homes",
+   "TypeId": "a241ff06-8e26-4e6f-b27b-7e129c410f2f"
+  },
+  {
+   "Id": "686c6fca-1828-584b-b474-e16bba13765a",
+   "Name": "Northbeam Communities",
+   "TypeId": "a241ff06-8e26-4e6f-b27b-7e129c410f2f",
+   "AlternativeName": "Northbeam"
+  },
+  {
+   "Id": "05fd267c-c025-511f-af69-532823e422eb",
+   "Name": "Studio Arcadia",
+   "TypeId": "4b42462b-8eeb-4427-bc65-c46bed37353f"
+  },
+  {
+   "Id": "1185f2ef-86ed-5a0f-9abe-3c86fda58632",
+   "Name": "Keel & Stone Construction",
+   "TypeId": "f3c0ce97-53e6-df11-971b-001d60e938c6"
+  },
+  {
+   "Id": "8ac4cb5a-26c6-5f31-a1d5-e2e8e48b378a",
+   "Name": "Peach State Appliance Distributors",
+   "TypeId": "cdf9cadf-ae2c-439c-8c16-6249461ebdfa",
+   "AccountCategoryId": "37ea507c-55e6-df11-971b-001d60e938c6"
+  },
+  {
+   "Id": "6299a608-97f0-5a0f-bff9-e5e03525c61c",
+   "Name": "Sierra Pines Builders",
+   "TypeId": "a241ff06-8e26-4e6f-b27b-7e129c410f2f"
+  }
+ ],
+ "contacts": [
+  {
+   "Id": "b5d4a174-fc25-53ea-b6a3-c7b279ec538f",
+   "Name": "Nina Patel",
+   "AccountId": "e60b9757-c510-5a23-8cdf-d489a9d32ac3",
+   "JobTitle": "VP of Development",
+   "Email": "nina.patel@example.com"
+  },
+  {
+   "Id": "79e55cbd-261d-552f-9d62-c09d0f3d1894",
+   "Name": "Ben Carter",
+   "AccountId": "5d48a7c4-6479-5dcb-8694-6513edf9f6db",
+   "JobTitle": "Owner",
+   "Email": "ben.carter@example.com"
+  },
+  {
+   "Id": "f6c38547-4bf2-5f3b-8ae1-5e43c1e48cc2",
+   "Name": "Grace Liu",
+   "AccountId": "686c6fca-1828-584b-b474-e16bba13765a",
+   "JobTitle": "SVP Development",
+   "Email": "grace.liu@example.com"
+  },
+  {
+   "Id": "390481c0-846b-5aae-9059-1d259acee438",
+   "Name": "Omar Haddad",
+   "AccountId": "1185f2ef-86ed-5a0f-9abe-3c86fda58632",
+   "JobTitle": "Project Executive",
+   "Email": "omar.haddad@example.com"
+  },
+  {
+   "Id": "412b57ea-f703-5db4-845f-1bb67a51466f",
+   "Name": "Rachel Kim",
+   "AccountId": "8ac4cb5a-26c6-5f31-a1d5-e2e8e48b378a",
+   "JobTitle": "Key Account Manager",
+   "Email": "rachel.kim@example.com"
+  },
+  {
+   "Id": "2ea1f35d-560a-513d-a857-7fedff58d0de",
+   "Name": "Dylan Brooks",
+   "AccountId": "6299a608-97f0-5a0f-bff9-e5e03525c61c",
+   "JobTitle": "Managing Partner",
+   "Email": "dylan.brooks@example.com"
+  }
+ ],
+ "opportunities": [
+  {
+   "Id": "9a586994-af04-503d-8204-25cf4efd14af",
+   "Title": "Northbeam Midtown Flats appliance package",
+   "AccountId": "686c6fca-1828-584b-b474-e16bba13765a",
+   "ContactId": "f6c38547-4bf2-5f3b-8ae1-5e43c1e48cc2",
+   "PartnerId": "8ac4cb5a-26c6-5f31-a1d5-e2e8e48b378a",
+   "OwnerId": "76929f8c-7e15-4c64-bdb0-adc62d383727",
+   "StageId": "60d5310c-5be6-df11-971b-001d60e938c6",
+   "Amount": 1450000,
+   "DueDate": "2022-09-30T00:00:00Z"
+  },
+  {
+   "Id": "97f19b1d-8dad-5e2c-8f90-fc0d697fc0a9",
+   "Title": "Northbeam Decatur Commons appliance package",
+   "AccountId": "686c6fca-1828-584b-b474-e16bba13765a",
+   "ContactId": "f6c38547-4bf2-5f3b-8ae1-5e43c1e48cc2",
+   "PartnerId": "8ac4cb5a-26c6-5f31-a1d5-e2e8e48b378a",
+   "OwnerId": "76929f8c-7e15-4c64-bdb0-adc62d383727",
+   "StageId": "60d5310c-5be6-df11-971b-001d60e938c6",
+   "Amount": 980000,
+   "DueDate": "2023-10-13T00:00:00Z"
+  },
+  {
+   "Id": "b61eebe8-a449-5dae-8c3d-6c217df134e2",
+   "Title": "Northbeam Georgia Tech West appliance package",
+   "AccountId": "686c6fca-1828-584b-b474-e16bba13765a",
+   "ContactId": "f6c38547-4bf2-5f3b-8ae1-5e43c1e48cc2",
+   "PartnerId": "8ac4cb5a-26c6-5f31-a1d5-e2e8e48b378a",
+   "OwnerId": "76929f8c-7e15-4c64-bdb0-adc62d383727",
+   "StageId": "60d5310c-5be6-df11-971b-001d60e938c6",
+   "Amount": 1720000,
+   "DueDate": "2025-03-21T00:00:00Z"
+  }
+ ]
+}

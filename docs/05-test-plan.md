@@ -11,8 +11,8 @@ No AI test is passed by the presence of a legacy skill or process. Expected outp
 | F05 | Existing data | Same nine original intake IDs, Needs review, PI identifiers | Verified 2026-09-26; handoff readback aed4be2689f6, all temporary links restored |
 | F06 | Browser | List, edit, related lists, neutral captions work | In progress; signed in by user |
 | F07 | Scoring | Eight active rows, weights total100; settings85/50 | Rows, settings and settings bindings verified; edit restrictions pending |
-| T01 | Import15 | 15 fixture intakes, New, no errors | Blocked B01 legacy Lead creation |
-| T02 | Reimport | Same15 IDs/count; review/results preserved | Blocked B01 |
+| T01 | Import15 | 15 fixture intakes, New, no errors | 15 baseline fixtures verified via Clio 2026-09-27; additional Excel import user-confirmed 2026-09-28, exact report pending |
+| T02 | Reimport | Same15 IDs/count; review/results preserved | Not run; B01 resolved; owner Excel success does not prove reimport preservation |
 | T03 | Batch | All leave New within5min, none stuck | Deferred AI phase |
 | T04 | Extraction | ≥90% expected fields on E1–E4 | Deferred AI phase |
 | T05 | Matching | ≥8/9 tricky scenarios correct | Deferred AI phase |
@@ -39,6 +39,10 @@ No AI test is passed by the presence of a legacy skill or process. Expected outp
 
 | Run | Prompt/version | Fixtures | Match/action/extraction pass rate | Evidence |
 |---|---|---|---|---|
-| None | Not implemented | Local assets only | Not run | tests/oracle.csv |
+| Verdict kit reference checks 2026-09-28 | Local script / proposed policy | Synthetic offline context | 13 validation/routing/arithmetic tests pass; no LLM accuracy measured | docs/ai-studio/verdict-agent/project-intake-verdict/scripts/test_validate_verdict.py |
 
 Before marking any test Verified complete, capture exact IDs, timestamp, readback/report and browser result where applicable. Missing business information is not an execution exception. The source attachment's T18 is superseded as described above.
+
+### Dynamic configuration reference tests — 2026-09-28
+
+25 offline checks pass in the combined verdict/configuration suites. Added 12 cases for runtime rule change and reapproval, dynamic priority bands, unknown vs outside region, required-field change, missing/unresolved evidence, immutable guards at lowered thresholds, unapproved/prose configuration rejection, inactive factor rebalancing, malformed numeric rules, unsupported/duplicate keys, and failed query vs verified zero history. These are synthetic code tests; no new live verdict or permission acceptance is implied.

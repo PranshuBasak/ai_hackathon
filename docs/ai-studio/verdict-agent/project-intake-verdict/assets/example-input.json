@@ -1,0 +1,144 @@
+{
+  "intake": {
+    "id": "synthetic-intake-1",
+    "status": "New",
+    "reviewerOwned": false,
+    "versionCurrent": true
+  },
+  "candidateProjectIds": [
+    "test-project-1"
+  ],
+  "accountCandidateIds": {
+    "developer": [],
+    "architect": [],
+    "builder": [],
+    "dealer": []
+  },
+  "searchComplete": true,
+  "phaseOrRename": false,
+  "ambiguousAccounts": false,
+  "conflictingEvidence": false,
+  "requiredMissing": [],
+  "policy": {
+    "version": "SYNTHETIC-TEST-ONLY",
+    "approved": true,
+    "readyThreshold": 85,
+    "reviewThreshold": 50,
+    "allowDiscard": false,
+    "factorKeys": [
+      "construction_value",
+      "units",
+      "type_fit",
+      "stage",
+      "architect",
+      "dealer",
+      "developer_relationship",
+      "region"
+    ],
+    "initialWeights": {
+      "construction_value": 20,
+      "units": 15,
+      "type_fit": 15,
+      "stage": 15,
+      "architect": 10,
+      "dealer": 10,
+      "developer_relationship": 10,
+      "region": 5
+    },
+    "priorityBands": [
+      {
+        "minScore": 80,
+        "name": "Strategic Pursuit"
+      },
+      {
+        "minScore": 60,
+        "name": "Active pursuit"
+      },
+      {
+        "minScore": 35,
+        "name": "Monitor"
+      },
+      {
+        "minScore": 0,
+        "name": "Low priority"
+      }
+    ],
+    "rubricReference": "../references/scoring-policy.md",
+    "notes": "Draft bands require administrator approval. Numerical factor derivation and essential completeness are host responsibilities; these are not installed settings."
+  },
+  "factors": [
+    {
+      "id": "test-factor-1",
+      "key": "construction_value",
+      "weight": 20,
+      "normalized": 100,
+      "evidence": "Synthetic test fixture: host-validated maximum score, not real CRM data."
+    },
+    {
+      "id": "test-factor-2",
+      "key": "units",
+      "weight": 15,
+      "normalized": 100,
+      "evidence": "Synthetic test fixture: host-validated maximum score, not real CRM data."
+    },
+    {
+      "id": "test-factor-3",
+      "key": "type_fit",
+      "weight": 15,
+      "normalized": 100,
+      "evidence": "Synthetic test fixture: host-validated maximum score, not real CRM data."
+    },
+    {
+      "id": "test-factor-4",
+      "key": "stage",
+      "weight": 15,
+      "normalized": 100,
+      "evidence": "Synthetic test fixture: host-validated maximum score, not real CRM data."
+    },
+    {
+      "id": "test-factor-5",
+      "key": "architect",
+      "weight": 10,
+      "normalized": 100,
+      "evidence": "Synthetic test fixture: host-validated maximum score, not real CRM data."
+    },
+    {
+      "id": "test-factor-6",
+      "key": "dealer",
+      "weight": 10,
+      "normalized": 100,
+      "evidence": "Synthetic test fixture: host-validated maximum score, not real CRM data."
+    },
+    {
+      "id": "test-factor-7",
+      "key": "developer_relationship",
+      "weight": 10,
+      "normalized": 100,
+      "evidence": "Synthetic test fixture: host-validated maximum score, not real CRM data."
+    },
+    {
+      "id": "test-factor-8",
+      "key": "region",
+      "weight": 5,
+      "normalized": 100,
+      "evidence": "Synthetic test fixture: host-validated maximum score, not real CRM data."
+    }
+  ],
+  "proposal": {
+    "intakeId": "synthetic-intake-1",
+    "matchType": "none",
+    "matchedProjectId": null,
+    "matchConfidence": 0,
+    "decisionConfidence": 95,
+    "recommendedAction": "Create new project",
+    "matchReason": "Synthetic complete-search fixture only. No real query was executed.",
+    "accountMatches": {
+      "developer": null,
+      "architect": null,
+      "builder": null,
+      "dealer": null
+    },
+    "missingInfo": [],
+    "summary": "Synthetic arithmetic and routing test; not a live business verdict."
+  }
+}
