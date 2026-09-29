@@ -1,4 +1,30 @@
-# Project checkpoint — 28 September 2026
+# Project checkpoint — 29 September 2026
+
+## Current state — 29 September 2026
+
+**Project Assistant** is built, released and deployed. It is an Enterprise AI Studio agent (`d1ff97d6-d5fd-454b-ae9a-21b0a878cd8a`), agent version 3, on 189543-crm-bundle. It combines four custom skills:
+- lifecycle v1;
+- capture v3 (**v4 with near-match proposals prepared**);
+- verdict v5;
+- apply v3.
+
+Sources: `docs/ai-studio/unified-agent/`.
+
+**Verified in the bundle with clio read-backs:**
+- Chat capture with stakeholder, lookup and contact linking.
+- Verdict: deterministic scoring from the lookups, outcome flags, buying-centre health, JSON audit.
+- Apply after an explicit "yes": Project, 4 involved parties, Opportunity and intake write-back.
+- Idempotent re-apply.
+- Records: PI-000034 → Project 1000000028 + "Larkspur Commons pursuit"; PI-000037 → Ready to apply, 82.00 Strategic.
+
+**Platform additions:**
+- Key contact lookup `UsrLinkedContact`, with entity business rule `BusinessRule_5d8c9e5` filling the contact name and email on the page.
+- Linked-record lookups render as links.
+
+**Demo pack:** `docs/demo/` (Scripts A–E, submission text, capabilities reference, video run-of-show). The backing data is manifest-listed (`demoScripts`, `demoScriptsDE`, `stakeholderFixtures`, `testSet2`).
+
+**Not yet run end to end in the bundle:** the Excel batch import through Project Assistant, and Scripts B–E (the AI capacity ran out on 29 Sep). The legacy Project Intake and Verdict Assistant agents are kept until the new agent passes all demos.
+
 
 ## Live deployment update — 28 September 2026
 

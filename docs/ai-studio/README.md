@@ -1,5 +1,7 @@
 # Build the Project Intake Capture Assistant
 
+> **Historical (27 Sep 2026).** Capture is now part of the unified **Project Assistant** agent; see [unified-agent](unified-agent/01-build-status.md) and [the demo pack](../demo/README.md). This file is kept as build history.
+
 Prepared 27 September 2026. These are design/build handoff files. No agent, channel, workflow or platform setting was changed by preparing them.
 
 ## Use the files

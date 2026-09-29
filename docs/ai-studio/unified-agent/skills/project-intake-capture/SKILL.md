@@ -56,7 +56,7 @@ Source values (UsrADIntelligenceSource): use the one the provider/file names (Do
 ## A. Chat capture (one intake)
 1. Accept a description or pasted email. Ask only for missing or ambiguous facts, 1–2 short questions at a time (project name, location, ambiguous dates or currency first). Accept "I don't know".
 2. Build the complete values map, resolve lookups, and run `creatio_validate_record` (mode `create`) on the whole map after every new input. Never drop earlier values.
-3. Show a short summary using field titles (no codes, JSON or GUIDs). Add one line **Optional details not provided:** listing the empty optional fields (project category, specification status, product package, sales region, expected order value, bid/start/completion date, completion year, description). Ask ONCE whether the user wants to add any; "no" or silence means continue. They are never required. Include a **Stakeholders** line per role: `Developer: Bluewater Living Co. ✓ linked` / `not in CRM` / `several matches – which one?`. List important missing facts, and ask: **"Create this intake?"**
+3. Show a short summary using field titles (no codes, JSON or GUIDs). Add one line **Optional details not provided:** listing the empty optional fields (project category, specification status, product package, sales region, expected order value, bid/start/completion date, completion year, description). Ask ONCE whether the user wants to add any; "no" or silence means continue. They are never required. Include a **Stakeholders** line per role: `Developer: Bluewater Living Co. ✓ linked` / `possible match: … — link it?` / `several matches – which one?` / `not in CRM`. List important missing facts, and ask: **"Create this intake?"**
 4. Only after an explicit yes: duplicate check (§C). If new, re-validate if anything changed, then **call `creatio_create_record`**. Do not stop after validation or confirmation.
 5. Verify the returned Id, read it back (`creatio_get_record`: UsrName, UsrStatus), and report: PI number, project, status, missing facts, link. Offer the next step: "Run the verdict?" (handled by project-intake-verdict).
 
@@ -94,11 +94,19 @@ For each stakeholder name that is present:
 | GC / builder / contractor | UsrBuilderName | UsrBuilderAccount | Contractor |
 | Dealer | UsrDealerName | UsrDealerAccount | Dealer |
 
-1. `creatio_list_records` Account, filter Name eq <name> (ignore case), columns Id, Name, Type. If there is no row, try AlternativeName contains <name>.
-2. **Exactly one** row whose Type is the expected type (or has no type) → link it: set the account column to its Id and show "✓ linked".
-3. Several rows, or one row of a different type → do not link. In chat, show the candidates (name, type) and ask which one, or "leave unlinked". In Excel, leave it unlinked and note it in the row reason.
-4. No row → leave it unlinked ("not in CRM"). **Never create an Account or Contact.** The verdict will list it as a missing stakeholder.
-5. Never link on a partial or "looks similar" match without the user's explicit choice.
+1. **Exact.** `creatio_list_records` Account, filter Name eq <name> (ignore case), columns Id, Name, AlternativeName, Type, AccountCategory. If there is no row, try AlternativeName eq or contains <name>.
+2. **Exactly one** exact row whose Type is the expected type (or has no type) → link it: set the account column to its Id and show "✓ linked".
+3. **Near match (proximate).** When there is no exact match, search for possible matches:
+   - Take the distinctive words of the name (drop company suffixes and generic words such as Group, Co., LLC, Inc., Company, Partners, Construction, Builders, Architects, Appliance, Supply, Distributors, Studio, Living, Homes, "and", "&").
+   - `creatio_list_records` Account with `{any:[Name contains <word>, AlternativeName contains <word>]}` for each distinctive word, at most 5 rows. Keep rows of the expected type.
+   - Rank by how many distinctive words match, then by type.
+   - In chat, show them: `Architect "Kline Hart" → possible match: Kline & Hart Architects (Architect) — link it?`, and ask for all roles in one question.
+   - Link **only** after the user confirms, and keep the source text unchanged.
+   - If the user says no, leave it unlinked ("not in CRM").
+   - In Excel, list possible matches in the preview row reason ("possible match: …"). Link them only if the user answers "link the suggested matches" in the same confirmation.
+4. Several exact rows, or one row of a different type → do not link. Show the candidates (name, type) and ask which one, or "leave unlinked". In Excel, leave it unlinked and note it in the row reason.
+5. No exact and no near match → leave it unlinked ("not in CRM"). **Never create an Account or Contact.** The verdict will list it as a missing stakeholder.
+6. Never link a near match without the user's explicit choice.
 
 Lookups resolved in the same way (exact match only; otherwise leave empty):
 - UsrProjectType ← UsrProjectTypeText: ProjectType by Name, ignoring case.

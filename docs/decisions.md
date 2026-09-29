@@ -30,3 +30,15 @@ Preserve row GUIDs and lookup meanings. Policy is unapproved until administrator
 ## 2026-09-28 — Owner-authorized live demo policy
 
 Created UsrIntakeVerdictPolicy using native system-setting lifecycle tools (MaxSizeText, global, uncached). Activated demo-2026-09-28-v1 after exact factor read-back. Reused eight existing GUIDs/weights and copied original guidance into Description before installing structured UsrDescription rules. Earlier proposed files stay unapproved as templates; the installed snapshot is separate. Source examples and fictional territory remain demo-only. Protected SysSettings DataService binding refusal is recorded; no permission bypass. No intake writes or AI Studio deployment.
+
+## 2026-09-29 — Unified agent and demo decisions
+
+| Date | Decision | Reason |
+|---|---|---|
+| 2026-09-29 | One Enterprise agent **Project Assistant** with four skills replaces the separate capture and verdict agents | Owner request: a single conversational journey; old agents are kept until the new one passes |
+| 2026-09-29 | Opportunity only for Strategic Pursuit or Active pursuit; duplicate → Rejected; chat source = Manual | Owner decisions |
+| 2026-09-29 | Supplier = "Our company"; owner and reviewer confirmed by name in the apply plan | Agent tools run as the service contact "Creatio.ai Studio", which has no account; its defaults broke Project validation |
+| 2026-09-29 | Stakeholders are linked only to existing Accounts (exact, alternative name, or confirmed near match); involved parties are created by apply | Owner request to attach and carry stakeholders; the agent must never create Accounts or Contacts |
+| 2026-09-29 | Key contact as a Contact lookup with an entity business rule filling name and email; no server-side process | PII policy masks emails and names; the owner prefers the page rule (a refresh fills it) over a signal process |
+| 2026-09-29 | Outcome flags set by rule in the verdict; buying-centre health = linked slots / 5; classification, risk and margin only when stated; probability of conversion not written | Owner decisions: fill the fields deterministically, never guess |
+| 2026-09-29 | Never remove columns; hide text columns if needed | Owner instruction |
