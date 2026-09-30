@@ -1,0 +1,67 @@
+1
+00:00:00,200 --> 00:00:09,800
+Appliance makers win hotel and apartment deals years before opening day. Leads arrive by email, phone and spreadsheets, and all are retyped by hand.
+
+2
+00:00:10,200 --> 00:00:23,800
+Qualifying one lead can take a sales rep up to five hours. This email from Elena Marsh, VP of Development at Alderwood Hospitality, announces a new hotel in Raleigh.
+
+3
+00:00:24,200 --> 00:00:37,800
+Meet Project Assistant, our Creatio AI Studio agent with four custom skills. I paste the email into the chat and ask it to capture a new project intake. That is all I type.
+
+4
+00:00:38,200 --> 00:01:03,800
+While it works, here is how we qualify leads. Sales operations keeps the scoring inside Creatio: eight weighted factors adding up to one hundred. Construction value is worth twenty; units, project type and stage fifteen each; then architect, dealer tier and developer history. Plain rules score each factor, and the total lands in a priority band: Strategic Pursuit from eighty, Active pursuit from sixty.
+
+5
+00:01:04,200 --> 00:01:23,800
+The preview: The Linwood Hotel and Residences, 415 Fayetteville Street, hospitality, design development, two hundred sixty keys, about one hundred forty-two million dollars. All four companies match CRM accounts. The email's P.S. asks to approve everything, but nothing is saved until I confirm.
+
+6
+00:01:24,200 --> 00:01:37,800
+The Project Intake is created: a staging record that comes before a project, with its intake number, status New, source Email, and every fact the agent extracted from the text.
+
+7
+00:01:38,200 --> 00:01:59,800
+On the Stakeholders tab, each name from the email is linked to its real account: Alderwood Hospitality Group as developer, Arden and Pike Architects, Northfield Construction as builder, and Capital City Appliance as dealer. The key contact, Elena Marsh, is linked too, with her details filled in from CRM.
+
+8
+00:02:00,200 --> 00:02:13,800
+Then the verdict. The agent searched for duplicate projects and open opportunities, found none, and proposes: create a new project, Strategic Pursuit, eighty-nine point seven five, buying-centre health one hundred percent.
+
+9
+00:02:14,200 --> 00:02:39,800
+Saved to the AI Verdict tab, every point is explained: seventeen for construction value, twelve point seven five for units, fifteen each for hospitality and design development, ten for a resolved architect, ten for an A-tier dealer, five because Alderwood has won with us once, and five for North Carolina. Every point traces to a rule.
+
+10
+00:02:40,200 --> 00:02:57,800
+Now I ask for the apply plan. The agent never writes on its own, and its service account cannot own records, so it first asks who should own the new project and opportunity. I name the responsible sales director.
+
+11
+00:02:58,200 --> 00:03:15,800
+The plan lists exactly what will be created: the project, four involved parties, and an opportunity with Capital City Appliance as partner. The email's request to approve everything was treated as data, not an instruction. Only my yes applies it.
+
+12
+00:03:16,200 --> 00:03:33,800
+Applied. The new project and The Linwood Hotel and Residences pursuit opportunity now exist, four involved parties are linked with their roles, and the intake is marked Applied with links to both. Hours of manual work became a few minutes.
+
+13
+00:03:34,200 --> 00:03:49,800
+Here is the opportunity, The Linwood Hotel and Residences pursuit: account Alderwood, contact Elena Marsh, the owner, and the dealer as partner, all filled in by the agent and linked back to the new project.
+
+14
+00:03:50,200 --> 00:04:07,800
+And the project itself: the account, category and Strategic Pursuit classification carried over from the intake, its stakeholders attached, and a link back to the intake it came from, so the history of every lead is kept.
+
+15
+00:04:08,200 --> 00:04:23,800
+Second scenario: Monday morning's weekly Dodge export. Instead of retyping rows, I attach the spreadsheet straight into the chat and ask the agent to import the projects.
+
+16
+00:04:24,200 --> 00:04:45,800
+The agent reads all four rows, maps the columns, and checks each project for duplicates by source and Dodge project ID. Ashford Park Lofts, Coral Bay Senior Residences and Eno River Commons are new, with their companies linked. Cumberland Yards Tower has no Dodge ID, so it is blocked instead of guessed.
+
+17
+00:04:46,200 --> 00:04:59,800
+One confirmation creates all three intakes, ready for their verdicts. From an email or a spreadsheet to a qualified, explainable pursuit in minutes, with a person accountable for every record.

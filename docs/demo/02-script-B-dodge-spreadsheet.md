@@ -31,9 +31,9 @@
 
 | Row | Project | City | Dodge ID | Class | Stakeholders linked | Reason |
 |---|---|---|---|---|---|---|
-| 1 | Peachtree Station Lofts | Atlanta, GA | DG-26-114872 | **new** | 4/4 | — |
-| 2 | Biscayne Harbor Senior Residences | Miami, FL | DG-26-115390 | **new** | 4/4 | — |
-| 3 | Brightleaf Commons | Durham, NC | DG-26-116004 | **new** | 3/4 | GC "Triangle Builders Group" is not in CRM |
+| 1 | Peachtree Station Lofts | Atlanta, GA | DG-PT4872 | **new** | 4/4 | — |
+| 2 | Biscayne Harbor Senior Residences | Miami, FL | DG-BH5390 | **new** | 4/4 | — |
+| 3 | Brightleaf Commons | Durham, NC | DG-BC6004 | **new** | 3/4 | GC "Triangle Builders Group" is not in CRM |
 | 4 | Music Row Tower | Nashville, TN | — | **blocked** | — | no Dodge project ID, so it cannot be de-duplicated |
 
 - **"Create the 3 new intakes?"**

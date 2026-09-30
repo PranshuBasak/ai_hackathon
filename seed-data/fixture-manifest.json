@@ -1490,5 +1490,369 @@
         "key": "Northbeam Georgia Tech West appliance package"
       }
     ]
+  },
+  "demoActivities": {
+    "purpose": "Cold-open email for 09-demo-script-final.md (Crescent Bay email shown in Creatio)",
+    "loaded": true,
+    "verifiedOn": "2026-09-29",
+    "loadMethod": "clio odata-create (uuid5 Id), read back with execute-esq",
+    "resetOrder": "activityParticipants (auto-created), activities",
+    "activities": [
+      {
+        "id": "d829499f-89c4-59a7-b04c-b752b7fe922e",
+        "key": "Email: The Wren – Charlotte – appliance package, early heads-up",
+        "contact": "9e532ed2-ebf2-59c0-b06c-98045af21901",
+        "account": "067f46a9-67f3-5f81-83e4-63c489165178"
+      }
+    ],
+    "activityParticipants": [
+      {
+        "id": "631cee91-c2bc-46a2-9a1c-a028ca18e75a",
+        "key": "Marcus Delgado (From)"
+      },
+      {
+        "id": "310f71fb-4b0c-4d8d-8285-f9400f643ade",
+        "key": "Supervisor (To, auto-created owner)"
+      }
+    ]
+  },
+  "rehearsalRun20260929": {
+    "purpose": "Records created by the 2026-09-29 rehearsal of 09-demo-script-final.md (Stories A, B, D/E part). Must be reset before recording: the pre-flight requires these project names to be absent.",
+    "loaded": true,
+    "verifiedOn": "2026-09-29",
+    "createdBy": "Project Assistant agent (chat), read back with clio",
+    "resetOrder": "involvedParties, opportunities (after clearing Project.Opportunity), projects, intakes",
+    "intakes": [
+      {
+        "id": "64aef867-783e-4689-a2c6-4aa733e315cd",
+        "key": "PI-000040 The Wren Hotel & Residences (Applied)"
+      },
+      {
+        "id": "c9f7a4fe-270b-48b5-93a3-d935e7837da8",
+        "key": "PI-000044 Peachtree Station Lofts"
+      },
+      {
+        "id": "fe7f20c3-579f-4dfe-9d8e-e9033d14267c",
+        "key": "PI-000045 Biscayne Harbor Senior Residences"
+      },
+      {
+        "id": "6c88ec30-82dc-43ca-a6fc-04eee898ebec",
+        "key": "PI-000046 Brightleaf Commons"
+      },
+      {
+        "id": "cffb3ca6-f466-4cb9-acd7-b436c24a1c9e",
+        "key": "PI-000050 Midtown Crossing Student Residences"
+      },
+      {
+        "id": "02954ff8-9acb-4b6b-8e85-82730a4b708a",
+        "key": "PI-000052 Desert Bloom Townhomes"
+      }
+    ],
+    "projects": [
+      {
+        "id": "82bfcb82-73ae-42fa-be39-81f92da5161b",
+        "key": "1000000036 The Wren Hotel & Residences"
+      }
+    ],
+    "opportunities": [
+      {
+        "id": "751e4f15-7f97-4660-b362-4d6ada105cfb",
+        "key": "The Wren Hotel & Residences pursuit"
+      }
+    ],
+    "involvedParties": [
+      {
+        "id": "ad8d11ff-d66c-4f65-82ab-169f5a34c69b",
+        "key": "Wren · Developer/Owner"
+      },
+      {
+        "id": "a775b177-0c02-4463-aa44-60d1675ff10f",
+        "key": "Wren · Architect/Specifier"
+      },
+      {
+        "id": "76822e5d-6a61-4de5-b968-683553bc3ed6",
+        "key": "Wren · GC/Builder"
+      },
+      {
+        "id": "733a2e97-25af-4522-a996-97c4d143bdfa",
+        "key": "Wren · Dealer"
+      }
+    ]
+  },
+  "demoFinal": {
+    "file": "seed-data/demo-final/demo-final-data-2026-09-29.json",
+    "builder": "seed-data/demo-final/build_demo_final.py",
+    "purpose": "Set F: the only data used by docs/demo/09-demo-script-final.md (Stories A, D/E, B, C). Earlier sets are not reused.",
+    "loaded": true,
+    "verifiedOn": "2026-09-29",
+    "loadMethod": "clio odata-create (uuid5 Ids) and odata-update for Project.Opportunity and one participant; read back with execute-esq",
+    "resetOrder": "activities (and their auto-created participants), parties, Project.Opportunity cleared, opportunities, projects, contacts, accounts",
+    "accounts": [
+      {
+        "id": "a3762ee8-303b-599c-bffe-b75096d395ac",
+        "key": "Alderwood Hospitality Group"
+      },
+      {
+        "id": "32a3ca1e-9c62-568c-80a4-a8d77e653954",
+        "key": "Arden & Pike Architects"
+      },
+      {
+        "id": "ce1152c1-83d9-5f62-91d3-d9b4662d0775",
+        "key": "Northfield Construction"
+      },
+      {
+        "id": "f6b60c7a-6091-5ae4-8fbc-04386fed7c4a",
+        "key": "Capital City Appliance Co."
+      },
+      {
+        "id": "f9d5f434-d0bf-5b58-8f01-80a33465ddba",
+        "key": "Riverline Communities"
+      },
+      {
+        "id": "8fd0d834-8c19-541a-a603-940053d265b6",
+        "key": "Studio Kestrel"
+      },
+      {
+        "id": "1647f950-adc4-50c6-ac55-dd4177da0008",
+        "key": "Hale & Brandt Construction"
+      },
+      {
+        "id": "1ff272a0-0891-5c94-96f1-42c1c4243524",
+        "key": "Piedmont Appliance Distributors"
+      },
+      {
+        "id": "c15e44f6-e107-59e0-b832-a768a624859f",
+        "key": "Canyon Ridge Builders"
+      },
+      {
+        "id": "2af3faa1-63de-56fa-b13b-6cb0b60cb0c6",
+        "key": "Ashgrove Urban Partners"
+      },
+      {
+        "id": "76e73beb-9ba4-527a-9287-b37fdb3dad32",
+        "key": "Mosaic Design Collaborative"
+      },
+      {
+        "id": "2556b719-f639-5b0e-9763-1d35f3fbabf8",
+        "key": "Cardinal Point Builders"
+      },
+      {
+        "id": "287c8bf4-d96d-5f3f-908a-5889c9263303",
+        "key": "Chattahoochee Appliance Supply"
+      },
+      {
+        "id": "a173fd86-0a10-5c2f-9dd5-07d88a085e39",
+        "key": "Seagrass Living Partners"
+      },
+      {
+        "id": "08cfc867-aaf7-5e34-9860-dc4c47cead5a",
+        "key": "Studio Halcyon"
+      },
+      {
+        "id": "566bc310-8e52-5210-8ea8-21b1ea6163a2",
+        "key": "Tarpon Coast Contracting"
+      },
+      {
+        "id": "0963e748-9a00-5449-a81a-d9ef36d611d2",
+        "key": "Gulfstream Builder Supply"
+      },
+      {
+        "id": "52b56ca7-87a0-5fcb-a213-7eac4e72a006",
+        "key": "Longleaf Campus Housing"
+      },
+      {
+        "id": "c643d5c5-af7e-5505-9a19-8f56bd7aa72f",
+        "key": "Pruitt + Vale Architecture"
+      },
+      {
+        "id": "3087070c-da26-5e6c-9383-0a12235eb0a5",
+        "key": "Tar Heel Appliance"
+      },
+      {
+        "id": "d2b8b3a7-6a76-5757-b638-92062c25296f",
+        "key": "Riverbend Urban Ventures"
+      },
+      {
+        "id": "04d49845-7495-5fa1-8909-cb0e85cb8718",
+        "key": "Harlow Residential"
+      },
+      {
+        "id": "8c75345f-3027-5f0a-aa0d-132734a5792a",
+        "key": "Whitfield & Crane Architects"
+      },
+      {
+        "id": "eefe2a3a-94cc-5e3f-956c-1eb8006e14de",
+        "key": "Stonebridge Builders"
+      },
+      {
+        "id": "32990db2-b764-5f22-a4fa-c8bcc3006de3",
+        "key": "Magnolia Appliance Distributors"
+      }
+    ],
+    "contacts": [
+      {
+        "id": "f671c397-a8e7-5a5f-b84a-da9202a7b981",
+        "key": "Evan Whitaker"
+      },
+      {
+        "id": "baa707c9-384d-5727-abdb-a694e187e94f",
+        "key": "Elena Marsh"
+      },
+      {
+        "id": "eaae65b7-4cbe-5beb-9a6d-f4236813a4af",
+        "key": "Simon Pike"
+      },
+      {
+        "id": "0a64adec-c71a-5db2-b91e-f0d4759ed31c",
+        "key": "Keisha Grant"
+      },
+      {
+        "id": "143d0e7a-e1d6-5fe8-a5c6-5c34a392511b",
+        "key": "Rhea Donovan"
+      },
+      {
+        "id": "75e785b1-781d-58af-b26a-e4f2f44da55d",
+        "key": "Luis Ortega"
+      },
+      {
+        "id": "eef2bfa2-d0f9-5082-90cc-14628e798eea",
+        "key": "Fletcher Wynn"
+      },
+      {
+        "id": "6a54556b-1d7a-5305-bae3-8975c2e55bee",
+        "key": "Nadia Kerr"
+      },
+      {
+        "id": "adb60fb1-dcdd-5884-8516-b2bdf9fbb061",
+        "key": "Grant Holloway"
+      },
+      {
+        "id": "66ebdd5f-f376-54af-be1e-5c0be94b6cd7",
+        "key": "Rebecca Lindqvist"
+      },
+      {
+        "id": "4d787b27-177f-5bc5-807b-5eedc94e3de1",
+        "key": "Dev Malhotra"
+      }
+    ],
+    "projects": [
+      {
+        "id": "a59ae199-6237-5d0e-a1c0-a74e133d2fd0",
+        "key": "Alderwood Resort Hilton Head"
+      },
+      {
+        "id": "ba9fe0cf-b1e7-5b5f-a363-ea11c31e8658",
+        "key": "Hawthorne Square Phase 1"
+      }
+    ],
+    "opportunities": [
+      {
+        "id": "d3eb27ad-7aed-51c9-8d6b-cca8d7777709",
+        "key": "Alderwood Resort Hilton Head appliance package"
+      },
+      {
+        "id": "186377df-6be0-501b-a255-8f20019344ce",
+        "key": "Riverline Grant Park Flats appliance package"
+      },
+      {
+        "id": "bc3363ec-93bd-5e30-9558-80a9092cf50a",
+        "key": "Riverline Inman Yards appliance package"
+      },
+      {
+        "id": "69d4dcec-f4cc-57c2-a2bc-ecfe3e22026e",
+        "key": "Riverline Kennesaw Commons appliance package"
+      },
+      {
+        "id": "240efe23-fea7-5ec8-b0b9-5261afe8f3b3",
+        "key": "Hawthorne Square Phase 1 appliance package"
+      }
+    ],
+    "parties": [
+      {
+        "id": "e3daa1d8-0e34-5e26-8066-2b1ed5ce442a"
+      },
+      {
+        "id": "2d9b07d3-6430-56ff-bb4d-1d07767b84e8"
+      },
+      {
+        "id": "ee814972-618b-548b-a0b2-072e6f27d1f8"
+      },
+      {
+        "id": "a4bcd421-7b6e-557e-aa3f-26603e091338"
+      },
+      {
+        "id": "cfe18633-9faa-5c26-809b-2b1741ae6c14"
+      },
+      {
+        "id": "29eb7ae2-3920-5c04-ab10-62482181ebcd"
+      },
+      {
+        "id": "30a13eba-14e8-534d-96ba-43f3aa4e04a3"
+      },
+      {
+        "id": "8c884ce2-d379-5405-87ec-323bb7bb814c"
+      }
+    ],
+    "activities": [
+      {
+        "id": "58edb57f-7732-58e5-8f34-16c518e7ea0a",
+        "key": "The Linwood – Raleigh – appliance package, early heads-up"
+      },
+      {
+        "id": "3df2841b-4323-5be1-aa20-6d9918969801",
+        "key": "Call with Rhea Donovan – two new leads"
+      },
+      {
+        "id": "dcbc33cf-d4b9-5c42-a84d-eef3d2ca396f",
+        "key": "Call with Rebecca Lindqvist – Hawthorne Square Phase 2"
+      }
+    ],
+    "activityParticipants": [
+      {
+        "id": "749ed97a-ff3e-4727-9650-d1d4e1fce7c6",
+        "key": "Linwood email · Elena Marsh (From)"
+      },
+      {
+        "id": "9a3d117f-8753-48fb-a54e-1920a6144c2f",
+        "key": "Linwood email · Evan Whitaker (To)"
+      },
+      {
+        "id": "cf9d2080-0f34-4a1e-b405-1b4e3a0463b1",
+        "key": "Riverline call · Evan Whitaker (Owner)"
+      },
+      {
+        "id": "4098cb31-155c-4fa2-87e0-46496a75090e",
+        "key": "Riverline call · Rhea Donovan"
+      },
+      {
+        "id": "bec0af76-270b-4977-9202-edc533282134",
+        "key": "Harlow call · Evan Whitaker (Owner)"
+      },
+      {
+        "id": "5a4ece32-9cc8-49c6-8d59-dba222184717",
+        "key": "Harlow call · Rebecca Lindqvist"
+      }
+    ],
+    "projectNumbers": {
+      "Alderwood Resort Hilton Head": "1000000037",
+      "Hawthorne Square Phase 1": "1000000038"
+    },
+    "demoOwner": {
+      "id": "f671c397-a8e7-5a5f-b84a-da9202a7b981",
+      "name": "Evan Whitaker"
+    },
+    "notInCrmOnPurpose": [
+      "Bull City Builders Group (GC of Eno River Commons)"
+    ],
+    "mustNotExistBeforeRecording": [
+      "The Linwood Hotel & Residences",
+      "Westside Yards Student Residences",
+      "Copper Sage Townhomes",
+      "Ashford Park Lofts",
+      "Coral Bay Senior Residences",
+      "Eno River Commons",
+      "Cumberland Yards Tower",
+      "Hawthorne Square Phase 2"
+    ]
   }
 }

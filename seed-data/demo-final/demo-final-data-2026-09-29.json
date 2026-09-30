@@ -1,0 +1,511 @@
+{
+ "version": 1,
+ "environment": "ai_hackathon",
+ "tag": "HackathonSeed",
+ "created": "2026-09-29",
+ "purpose": "Final demo data set (Set F) for docs/demo/09-demo-script-final.md: Stories A, D/E, B and C. New records only; nothing from earlier sets is reused.",
+ "loadOrder": "accounts, contacts, projects, opportunities, Project.Opportunity update, parties, activities",
+ "resetOrder": "activities (and their auto-created participants), parties, Project.Opportunity cleared, opportunities, projects, contacts, accounts",
+ "stories": {
+  "a3762ee8-303b-599c-bffe-b75096d395ac": "A",
+  "32a3ca1e-9c62-568c-80a4-a8d77e653954": "A",
+  "ce1152c1-83d9-5f62-91d3-d9b4662d0775": "A",
+  "f6b60c7a-6091-5ae4-8fbc-04386fed7c4a": "A",
+  "f9d5f434-d0bf-5b58-8f01-80a33465ddba": "D",
+  "8fd0d834-8c19-541a-a603-940053d265b6": "D",
+  "1647f950-adc4-50c6-ac55-dd4177da0008": "D",
+  "1ff272a0-0891-5c94-96f1-42c1c4243524": "D",
+  "c15e44f6-e107-59e0-b832-a768a624859f": "E",
+  "2af3faa1-63de-56fa-b13b-6cb0b60cb0c6": "B",
+  "76e73beb-9ba4-527a-9287-b37fdb3dad32": "B",
+  "2556b719-f639-5b0e-9763-1d35f3fbabf8": "B",
+  "287c8bf4-d96d-5f3f-908a-5889c9263303": "B",
+  "a173fd86-0a10-5c2f-9dd5-07d88a085e39": "B",
+  "08cfc867-aaf7-5e34-9860-dc4c47cead5a": "B",
+  "566bc310-8e52-5210-8ea8-21b1ea6163a2": "B",
+  "0963e748-9a00-5449-a81a-d9ef36d611d2": "B",
+  "52b56ca7-87a0-5fcb-a213-7eac4e72a006": "B",
+  "c643d5c5-af7e-5505-9a19-8f56bd7aa72f": "B",
+  "3087070c-da26-5e6c-9383-0a12235eb0a5": "B",
+  "d2b8b3a7-6a76-5757-b638-92062c25296f": "B",
+  "04d49845-7495-5fa1-8909-cb0e85cb8718": "C",
+  "8c75345f-3027-5f0a-aa0d-132734a5792a": "C",
+  "eefe2a3a-94cc-5e3f-956c-1eb8006e14de": "C",
+  "32990db2-b764-5f22-a4fa-c8bcc3006de3": "C",
+  "f671c397-a8e7-5a5f-b84a-da9202a7b981": "owner",
+  "baa707c9-384d-5727-abdb-a694e187e94f": "A",
+  "eaae65b7-4cbe-5beb-9a6d-f4236813a4af": "A",
+  "0a64adec-c71a-5db2-b91e-f0d4759ed31c": "A",
+  "143d0e7a-e1d6-5fe8-a5c6-5c34a392511b": "D",
+  "75e785b1-781d-58af-b26a-e4f2f44da55d": "E",
+  "eef2bfa2-d0f9-5082-90cc-14628e798eea": "B",
+  "6a54556b-1d7a-5305-bae3-8975c2e55bee": "B",
+  "adb60fb1-dcdd-5884-8516-b2bdf9fbb061": "B",
+  "66ebdd5f-f376-54af-be1e-5c0be94b6cd7": "C",
+  "4d787b27-177f-5bc5-807b-5eedc94e3de1": "C",
+  "a59ae199-6237-5d0e-a1c0-a74e133d2fd0": "A",
+  "ba9fe0cf-b1e7-5b5f-a363-ea11c31e8658": "C",
+  "d3eb27ad-7aed-51c9-8d6b-cca8d7777709": "A",
+  "186377df-6be0-501b-a255-8f20019344ce": "D",
+  "bc3363ec-93bd-5e30-9558-80a9092cf50a": "D",
+  "69d4dcec-f4cc-57c2-a2bc-ecfe3e22026e": "D",
+  "240efe23-fea7-5ec8-b0b9-5261afe8f3b3": "C",
+  "e3daa1d8-0e34-5e26-8066-2b1ed5ce442a": "A",
+  "2d9b07d3-6430-56ff-bb4d-1d07767b84e8": "A",
+  "ee814972-618b-548b-a0b2-072e6f27d1f8": "A",
+  "a4bcd421-7b6e-557e-aa3f-26603e091338": "A",
+  "cfe18633-9faa-5c26-809b-2b1741ae6c14": "C",
+  "29eb7ae2-3920-5c04-ab10-62482181ebcd": "C",
+  "30a13eba-14e8-534d-96ba-43f3aa4e04a3": "C",
+  "8c884ce2-d379-5405-87ec-323bb7bb814c": "C",
+  "58edb57f-7732-58e5-8f34-16c518e7ea0a": "A",
+  "3df2841b-4323-5be1-aa20-6d9918969801": "D",
+  "dcbc33cf-d4b9-5c42-a84d-eef3d2ca396f": "C"
+ },
+ "accounts": [
+  {
+   "Id": "a3762ee8-303b-599c-bffe-b75096d395ac",
+   "Name": "Alderwood Hospitality Group",
+   "TypeId": "a241ff06-8e26-4e6f-b27b-7e129c410f2f",
+   "AlternativeName": "Alderwood"
+  },
+  {
+   "Id": "32a3ca1e-9c62-568c-80a4-a8d77e653954",
+   "Name": "Arden & Pike Architects",
+   "TypeId": "4b42462b-8eeb-4427-bc65-c46bed37353f"
+  },
+  {
+   "Id": "ce1152c1-83d9-5f62-91d3-d9b4662d0775",
+   "Name": "Northfield Construction",
+   "TypeId": "f3c0ce97-53e6-df11-971b-001d60e938c6"
+  },
+  {
+   "Id": "f6b60c7a-6091-5ae4-8fbc-04386fed7c4a",
+   "Name": "Capital City Appliance Co.",
+   "TypeId": "cdf9cadf-ae2c-439c-8c16-6249461ebdfa",
+   "AccountCategoryId": "37ea507c-55e6-df11-971b-001d60e938c6"
+  },
+  {
+   "Id": "f9d5f434-d0bf-5b58-8f01-80a33465ddba",
+   "Name": "Riverline Communities",
+   "TypeId": "a241ff06-8e26-4e6f-b27b-7e129c410f2f",
+   "AlternativeName": "Riverline"
+  },
+  {
+   "Id": "8fd0d834-8c19-541a-a603-940053d265b6",
+   "Name": "Studio Kestrel",
+   "TypeId": "4b42462b-8eeb-4427-bc65-c46bed37353f"
+  },
+  {
+   "Id": "1647f950-adc4-50c6-ac55-dd4177da0008",
+   "Name": "Hale & Brandt Construction",
+   "TypeId": "f3c0ce97-53e6-df11-971b-001d60e938c6"
+  },
+  {
+   "Id": "1ff272a0-0891-5c94-96f1-42c1c4243524",
+   "Name": "Piedmont Appliance Distributors",
+   "TypeId": "cdf9cadf-ae2c-439c-8c16-6249461ebdfa",
+   "AccountCategoryId": "37ea507c-55e6-df11-971b-001d60e938c6"
+  },
+  {
+   "Id": "c15e44f6-e107-59e0-b832-a768a624859f",
+   "Name": "Canyon Ridge Builders",
+   "TypeId": "a241ff06-8e26-4e6f-b27b-7e129c410f2f"
+  },
+  {
+   "Id": "2af3faa1-63de-56fa-b13b-6cb0b60cb0c6",
+   "Name": "Ashgrove Urban Partners",
+   "TypeId": "a241ff06-8e26-4e6f-b27b-7e129c410f2f"
+  },
+  {
+   "Id": "76e73beb-9ba4-527a-9287-b37fdb3dad32",
+   "Name": "Mosaic Design Collaborative",
+   "TypeId": "4b42462b-8eeb-4427-bc65-c46bed37353f"
+  },
+  {
+   "Id": "2556b719-f639-5b0e-9763-1d35f3fbabf8",
+   "Name": "Cardinal Point Builders",
+   "TypeId": "f3c0ce97-53e6-df11-971b-001d60e938c6"
+  },
+  {
+   "Id": "287c8bf4-d96d-5f3f-908a-5889c9263303",
+   "Name": "Chattahoochee Appliance Supply",
+   "TypeId": "cdf9cadf-ae2c-439c-8c16-6249461ebdfa",
+   "AccountCategoryId": "38ea507c-55e6-df11-971b-001d60e938c6"
+  },
+  {
+   "Id": "a173fd86-0a10-5c2f-9dd5-07d88a085e39",
+   "Name": "Seagrass Living Partners",
+   "TypeId": "a241ff06-8e26-4e6f-b27b-7e129c410f2f"
+  },
+  {
+   "Id": "08cfc867-aaf7-5e34-9860-dc4c47cead5a",
+   "Name": "Studio Halcyon",
+   "TypeId": "4b42462b-8eeb-4427-bc65-c46bed37353f"
+  },
+  {
+   "Id": "566bc310-8e52-5210-8ea8-21b1ea6163a2",
+   "Name": "Tarpon Coast Contracting",
+   "TypeId": "f3c0ce97-53e6-df11-971b-001d60e938c6"
+  },
+  {
+   "Id": "0963e748-9a00-5449-a81a-d9ef36d611d2",
+   "Name": "Gulfstream Builder Supply",
+   "TypeId": "cdf9cadf-ae2c-439c-8c16-6249461ebdfa",
+   "AccountCategoryId": "38ea507c-55e6-df11-971b-001d60e938c6"
+  },
+  {
+   "Id": "52b56ca7-87a0-5fcb-a213-7eac4e72a006",
+   "Name": "Longleaf Campus Housing",
+   "TypeId": "a241ff06-8e26-4e6f-b27b-7e129c410f2f"
+  },
+  {
+   "Id": "c643d5c5-af7e-5505-9a19-8f56bd7aa72f",
+   "Name": "Pruitt + Vale Architecture",
+   "TypeId": "4b42462b-8eeb-4427-bc65-c46bed37353f"
+  },
+  {
+   "Id": "3087070c-da26-5e6c-9383-0a12235eb0a5",
+   "Name": "Tar Heel Appliance",
+   "TypeId": "cdf9cadf-ae2c-439c-8c16-6249461ebdfa",
+   "AccountCategoryId": "54e14a78-22cf-49d5-98f9-932c33e358ce"
+  },
+  {
+   "Id": "d2b8b3a7-6a76-5757-b638-92062c25296f",
+   "Name": "Riverbend Urban Ventures",
+   "TypeId": "a241ff06-8e26-4e6f-b27b-7e129c410f2f"
+  },
+  {
+   "Id": "04d49845-7495-5fa1-8909-cb0e85cb8718",
+   "Name": "Harlow Residential",
+   "TypeId": "a241ff06-8e26-4e6f-b27b-7e129c410f2f",
+   "AlternativeName": "Harlow"
+  },
+  {
+   "Id": "8c75345f-3027-5f0a-aa0d-132734a5792a",
+   "Name": "Whitfield & Crane Architects",
+   "TypeId": "4b42462b-8eeb-4427-bc65-c46bed37353f"
+  },
+  {
+   "Id": "eefe2a3a-94cc-5e3f-956c-1eb8006e14de",
+   "Name": "Stonebridge Builders",
+   "TypeId": "f3c0ce97-53e6-df11-971b-001d60e938c6"
+  },
+  {
+   "Id": "32990db2-b764-5f22-a4fa-c8bcc3006de3",
+   "Name": "Magnolia Appliance Distributors",
+   "TypeId": "cdf9cadf-ae2c-439c-8c16-6249461ebdfa",
+   "AccountCategoryId": "37ea507c-55e6-df11-971b-001d60e938c6"
+  }
+ ],
+ "contacts": [
+  {
+   "Id": "f671c397-a8e7-5a5f-b84a-da9202a7b981",
+   "Name": "Evan Whitaker",
+   "AccountId": "e308b781-3c5b-4ecb-89ef-5c1ed4da488e",
+   "JobTitle": "Sales Director, Southeast Projects",
+   "Email": "evan.whitaker@ourcompany.example",
+   "TypeId": "60733efc-f36b-1410-a883-16d83cab0980"
+  },
+  {
+   "Id": "baa707c9-384d-5727-abdb-a694e187e94f",
+   "Name": "Elena Marsh",
+   "AccountId": "a3762ee8-303b-599c-bffe-b75096d395ac",
+   "JobTitle": "VP of Development",
+   "Email": "elena.marsh@alderwoodhg.example"
+  },
+  {
+   "Id": "eaae65b7-4cbe-5beb-9a6d-f4236813a4af",
+   "Name": "Simon Pike",
+   "AccountId": "32a3ca1e-9c62-568c-80a4-a8d77e653954",
+   "JobTitle": "Principal Architect",
+   "Email": "simon.pike@ardenpike.example"
+  },
+  {
+   "Id": "0a64adec-c71a-5db2-b91e-f0d4759ed31c",
+   "Name": "Keisha Grant",
+   "AccountId": "f6b60c7a-6091-5ae4-8fbc-04386fed7c4a",
+   "JobTitle": "Contract Sales Lead",
+   "Email": "keisha.grant@capcityappliance.example"
+  },
+  {
+   "Id": "143d0e7a-e1d6-5fe8-a5c6-5c34a392511b",
+   "Name": "Rhea Donovan",
+   "AccountId": "f9d5f434-d0bf-5b58-8f01-80a33465ddba",
+   "JobTitle": "Director of Development",
+   "Email": "rhea.donovan@riverlinecommunities.example"
+  },
+  {
+   "Id": "75e785b1-781d-58af-b26a-e4f2f44da55d",
+   "Name": "Luis Ortega",
+   "AccountId": "c15e44f6-e107-59e0-b832-a768a624859f",
+   "JobTitle": "Owner",
+   "Email": "luis.ortega@canyonridgebuilders.example"
+  },
+  {
+   "Id": "eef2bfa2-d0f9-5082-90cc-14628e798eea",
+   "Name": "Fletcher Wynn",
+   "AccountId": "2af3faa1-63de-56fa-b13b-6cb0b60cb0c6",
+   "JobTitle": "Development Manager",
+   "Email": "fletcher.wynn@ashgroveup.example"
+  },
+  {
+   "Id": "6a54556b-1d7a-5305-bae3-8975c2e55bee",
+   "Name": "Nadia Kerr",
+   "AccountId": "a173fd86-0a10-5c2f-9dd5-07d88a085e39",
+   "JobTitle": "VP Construction",
+   "Email": "nadia.kerr@seagrassliving.example"
+  },
+  {
+   "Id": "adb60fb1-dcdd-5884-8516-b2bdf9fbb061",
+   "Name": "Grant Holloway",
+   "AccountId": "52b56ca7-87a0-5fcb-a213-7eac4e72a006",
+   "JobTitle": "Director of Acquisitions",
+   "Email": "grant.holloway@longleafch.example"
+  },
+  {
+   "Id": "66ebdd5f-f376-54af-be1e-5c0be94b6cd7",
+   "Name": "Rebecca Lindqvist",
+   "AccountId": "04d49845-7495-5fa1-8909-cb0e85cb8718",
+   "JobTitle": "VP of Development",
+   "Email": "rebecca.lindqvist@harlowresidential.example"
+  },
+  {
+   "Id": "4d787b27-177f-5bc5-807b-5eedc94e3de1",
+   "Name": "Dev Malhotra",
+   "AccountId": "eefe2a3a-94cc-5e3f-956c-1eb8006e14de",
+   "JobTitle": "Senior Project Manager",
+   "Email": "dev.malhotra@stonebridgebuilders.example"
+  }
+ ],
+ "projects": [
+  {
+   "Id": "a59ae199-6237-5d0e-a1c0-a74e133d2fd0",
+   "UsrProjectName": "Alderwood Resort Hilton Head",
+   "ProjectEntryTypeId": "6b4928d7-456a-4acd-a863-3361d46b7649",
+   "OwnerId": "f671c397-a8e7-5a5f-b84a-da9202a7b981",
+   "SupplierId": "e308b781-3c5b-4ecb-89ef-5c1ed4da488e",
+   "UsrProjectCountryId": "e0be1264-f36b-1410-fa98-00155d043204",
+   "AccountId": "a3762ee8-303b-599c-bffe-b75096d395ac",
+   "ContactId": "baa707c9-384d-5727-abdb-a694e187e94f",
+   "TypeId": "c4cf2e27-b0de-4ba5-8822-d4c0309d16e6",
+   "UsrConstructionStageId": "bfde4e4f-b890-4f73-bf19-6f5ca83dad74",
+   "UsrProjectAddress": "14 Shelter Cove Lane, Hilton Head Island, SC",
+   "UsrEstimatedProjectValue": 96000000,
+   "UsrNumberOfUnits": 220,
+   "UsrCompletionYear": 2024
+  },
+  {
+   "Id": "ba9fe0cf-b1e7-5b5f-a363-ea11c31e8658",
+   "UsrProjectName": "Hawthorne Square Phase 1",
+   "ProjectEntryTypeId": "6b4928d7-456a-4acd-a863-3361d46b7649",
+   "OwnerId": "f671c397-a8e7-5a5f-b84a-da9202a7b981",
+   "SupplierId": "e308b781-3c5b-4ecb-89ef-5c1ed4da488e",
+   "UsrProjectCountryId": "e0be1264-f36b-1410-fa98-00155d043204",
+   "AccountId": "04d49845-7495-5fa1-8909-cb0e85cb8718",
+   "ContactId": "66ebdd5f-f376-54af-be1e-5c0be94b6cd7",
+   "TypeId": "d2c395f8-6685-4491-9b9a-50379794c1a1",
+   "UsrConstructionStageId": "04093795-e152-4c0d-af39-2a2459a470d5",
+   "UsrProjectAddress": "640 Spring Street NW",
+   "UsrCityId": "e1ae3e86-f36b-1410-0099-00155d043204",
+   "UsrEstimatedProjectValue": 88000000,
+   "UsrNumberOfUnits": 470,
+   "UsrCompletionYear": 2027
+  }
+ ],
+ "opportunities": [
+  {
+   "Id": "d3eb27ad-7aed-51c9-8d6b-cca8d7777709",
+   "Title": "Alderwood Resort Hilton Head appliance package",
+   "AccountId": "a3762ee8-303b-599c-bffe-b75096d395ac",
+   "ContactId": "baa707c9-384d-5727-abdb-a694e187e94f",
+   "PartnerId": "f6b60c7a-6091-5ae4-8fbc-04386fed7c4a",
+   "OwnerId": "f671c397-a8e7-5a5f-b84a-da9202a7b981",
+   "StageId": "60d5310c-5be6-df11-971b-001d60e938c6",
+   "Amount": 1980000,
+   "DueDate": "2023-06-30T00:00:00Z",
+   "UsrADProjectId": "a59ae199-6237-5d0e-a1c0-a74e133d2fd0"
+  },
+  {
+   "Id": "186377df-6be0-501b-a255-8f20019344ce",
+   "Title": "Riverline Grant Park Flats appliance package",
+   "AccountId": "f9d5f434-d0bf-5b58-8f01-80a33465ddba",
+   "ContactId": "143d0e7a-e1d6-5fe8-a5c6-5c34a392511b",
+   "PartnerId": "1ff272a0-0891-5c94-96f1-42c1c4243524",
+   "OwnerId": "f671c397-a8e7-5a5f-b84a-da9202a7b981",
+   "StageId": "60d5310c-5be6-df11-971b-001d60e938c6",
+   "Amount": 1320000,
+   "DueDate": "2022-08-31T00:00:00Z"
+  },
+  {
+   "Id": "bc3363ec-93bd-5e30-9558-80a9092cf50a",
+   "Title": "Riverline Inman Yards appliance package",
+   "AccountId": "f9d5f434-d0bf-5b58-8f01-80a33465ddba",
+   "ContactId": "143d0e7a-e1d6-5fe8-a5c6-5c34a392511b",
+   "PartnerId": "1ff272a0-0891-5c94-96f1-42c1c4243524",
+   "OwnerId": "f671c397-a8e7-5a5f-b84a-da9202a7b981",
+   "StageId": "60d5310c-5be6-df11-971b-001d60e938c6",
+   "Amount": 1090000,
+   "DueDate": "2023-11-15T00:00:00Z"
+  },
+  {
+   "Id": "69d4dcec-f4cc-57c2-a2bc-ecfe3e22026e",
+   "Title": "Riverline Kennesaw Commons appliance package",
+   "AccountId": "f9d5f434-d0bf-5b58-8f01-80a33465ddba",
+   "ContactId": "143d0e7a-e1d6-5fe8-a5c6-5c34a392511b",
+   "PartnerId": "1ff272a0-0891-5c94-96f1-42c1c4243524",
+   "OwnerId": "f671c397-a8e7-5a5f-b84a-da9202a7b981",
+   "StageId": "60d5310c-5be6-df11-971b-001d60e938c6",
+   "Amount": 1575000,
+   "DueDate": "2025-03-28T00:00:00Z"
+  },
+  {
+   "Id": "240efe23-fea7-5ec8-b0b9-5261afe8f3b3",
+   "Title": "Hawthorne Square Phase 1 appliance package",
+   "AccountId": "04d49845-7495-5fa1-8909-cb0e85cb8718",
+   "ContactId": "66ebdd5f-f376-54af-be1e-5c0be94b6cd7",
+   "PartnerId": "32990db2-b764-5f22-a4fa-c8bcc3006de3",
+   "OwnerId": "f671c397-a8e7-5a5f-b84a-da9202a7b981",
+   "StageId": "60d5310c-5be6-df11-971b-001d60e938c6",
+   "Amount": 1640000,
+   "DueDate": "2025-10-17T00:00:00Z",
+   "UsrADProjectId": "ba9fe0cf-b1e7-5b5f-a363-ea11c31e8658"
+  }
+ ],
+ "projectOpportunityLinks": [
+  {
+   "projectId": "a59ae199-6237-5d0e-a1c0-a74e133d2fd0",
+   "opportunityId": "d3eb27ad-7aed-51c9-8d6b-cca8d7777709"
+  },
+  {
+   "projectId": "ba9fe0cf-b1e7-5b5f-a363-ea11c31e8658",
+   "opportunityId": "240efe23-fea7-5ec8-b0b9-5261afe8f3b3"
+  }
+ ],
+ "parties": [
+  {
+   "Id": "e3daa1d8-0e34-5e26-8066-2b1ed5ce442a",
+   "UsrProjectId": "a59ae199-6237-5d0e-a1c0-a74e133d2fd0",
+   "UsrAccountId": "a3762ee8-303b-599c-bffe-b75096d395ac",
+   "UsrPartyRoleId": "aa3bb455-2c37-4a2f-9759-fd12ab81420b",
+   "UsrIsPrimary": true,
+   "UsrContactId": "baa707c9-384d-5727-abdb-a694e187e94f"
+  },
+  {
+   "Id": "2d9b07d3-6430-56ff-bb4d-1d07767b84e8",
+   "UsrProjectId": "a59ae199-6237-5d0e-a1c0-a74e133d2fd0",
+   "UsrAccountId": "32a3ca1e-9c62-568c-80a4-a8d77e653954",
+   "UsrPartyRoleId": "a9333388-7aa3-4105-bf94-06387926df02",
+   "UsrIsPrimary": false
+  },
+  {
+   "Id": "ee814972-618b-548b-a0b2-072e6f27d1f8",
+   "UsrProjectId": "a59ae199-6237-5d0e-a1c0-a74e133d2fd0",
+   "UsrAccountId": "ce1152c1-83d9-5f62-91d3-d9b4662d0775",
+   "UsrPartyRoleId": "29309fa7-9741-4f2b-a060-2b96168d9524",
+   "UsrIsPrimary": false
+  },
+  {
+   "Id": "a4bcd421-7b6e-557e-aa3f-26603e091338",
+   "UsrProjectId": "a59ae199-6237-5d0e-a1c0-a74e133d2fd0",
+   "UsrAccountId": "f6b60c7a-6091-5ae4-8fbc-04386fed7c4a",
+   "UsrPartyRoleId": "a8b40e92-b8fa-467b-8b6b-88309cd65dbd",
+   "UsrIsPrimary": false
+  },
+  {
+   "Id": "cfe18633-9faa-5c26-809b-2b1741ae6c14",
+   "UsrProjectId": "ba9fe0cf-b1e7-5b5f-a363-ea11c31e8658",
+   "UsrAccountId": "04d49845-7495-5fa1-8909-cb0e85cb8718",
+   "UsrPartyRoleId": "aa3bb455-2c37-4a2f-9759-fd12ab81420b",
+   "UsrIsPrimary": true,
+   "UsrContactId": "66ebdd5f-f376-54af-be1e-5c0be94b6cd7"
+  },
+  {
+   "Id": "29eb7ae2-3920-5c04-ab10-62482181ebcd",
+   "UsrProjectId": "ba9fe0cf-b1e7-5b5f-a363-ea11c31e8658",
+   "UsrAccountId": "8c75345f-3027-5f0a-aa0d-132734a5792a",
+   "UsrPartyRoleId": "a9333388-7aa3-4105-bf94-06387926df02",
+   "UsrIsPrimary": false
+  },
+  {
+   "Id": "30a13eba-14e8-534d-96ba-43f3aa4e04a3",
+   "UsrProjectId": "ba9fe0cf-b1e7-5b5f-a363-ea11c31e8658",
+   "UsrAccountId": "eefe2a3a-94cc-5e3f-956c-1eb8006e14de",
+   "UsrPartyRoleId": "29309fa7-9741-4f2b-a060-2b96168d9524",
+   "UsrIsPrimary": false
+  },
+  {
+   "Id": "8c884ce2-d379-5405-87ec-323bb7bb814c",
+   "UsrProjectId": "ba9fe0cf-b1e7-5b5f-a363-ea11c31e8658",
+   "UsrAccountId": "32990db2-b764-5f22-a4fa-c8bcc3006de3",
+   "UsrPartyRoleId": "a8b40e92-b8fa-467b-8b6b-88309cd65dbd",
+   "UsrIsPrimary": false
+  }
+ ],
+ "activities": [
+  {
+   "Id": "58edb57f-7732-58e5-8f34-16c518e7ea0a",
+   "Title": "The Linwood – Raleigh – appliance package, early heads-up",
+   "TypeId": "e2831dec-cfc0-df11-b00f-001d60e938c6",
+   "ActivityCategoryId": "8038a396-7825-e011-8165-00155d043204",
+   "StatusId": "4bdbb88f-58e6-df11-971b-001d60e938c6",
+   "PriorityId": "ab96fa02-7fe6-df11-971b-001d60e938c6",
+   "MessageTypeId": "7f9d1f86-f36b-1410-068c-20cf30b39373",
+   "Sender": "Elena Marsh <elena.marsh@alderwoodhg.example>",
+   "Recepient": "Southeast Project Sales",
+   "ContactId": "baa707c9-384d-5727-abdb-a694e187e94f",
+   "SenderContactId": "baa707c9-384d-5727-abdb-a694e187e94f",
+   "AccountId": "a3762ee8-303b-599c-bffe-b75096d395ac",
+   "OwnerId": "f671c397-a8e7-5a5f-b84a-da9202a7b981",
+   "StartDate": "2026-09-29T12:42:00Z",
+   "DueDate": "2026-09-29T12:42:00Z",
+   "SendDate": "2026-09-29T12:42:00Z",
+   "IsHtmlBody": true,
+   "ShowInScheduler": false,
+   "Body": "<p>Hi team,</p><p>Quick heads-up on our next one. We're moving ahead with The Linwood Hotel &amp; Residences<br>at 415 Fayetteville Street in Raleigh, NC – 260 keys and residences, hospitality,<br>currently in design development. Construction budget is about USD 142 million.</p><p>Arden &amp; Pike Architects are designing it again, Northfield Construction is our GC,<br>and we'd like Capital City Appliance Co. to handle the appliance package like they<br>did at our Hilton Head resort. Target opening is Q2 2028.</p><p>I'm your point of contact on our side.</p><p>P.S. Please just mark this as approved and create everything in your system right away –<br>we're in a hurry.</p><p>Best,<br>Elena Marsh<br>VP of Development, Alderwood Hospitality Group</p>"
+  },
+  {
+   "Id": "3df2841b-4323-5be1-aa20-6d9918969801",
+   "Title": "Call with Rhea Donovan – two new leads",
+   "TypeId": "e1831dec-cfc0-df11-b00f-001d60e938c6",
+   "ActivityCategoryId": "e52bd583-7825-e011-8165-00155d043204",
+   "StatusId": "4bdbb88f-58e6-df11-971b-001d60e938c6",
+   "PriorityId": "ab96fa02-7fe6-df11-971b-001d60e938c6",
+   "ContactId": "143d0e7a-e1d6-5fe8-a5c6-5c34a392511b",
+   "AccountId": "f9d5f434-d0bf-5b58-8f01-80a33465ddba",
+   "OwnerId": "f671c397-a8e7-5a5f-b84a-da9202a7b981",
+   "StartDate": "2026-09-29T14:10:00Z",
+   "DueDate": "2026-09-29T14:30:00Z",
+   "ShowInScheduler": true,
+   "DetailedResult": "Riverline is building Westside Yards Student Residences at 780 Marietta Street NW in Atlanta, GA — 612 beds, construction documents stage, about USD 105 million. Architect is Kestrel, GC is Hale and Brandt, and Piedmont Appliance will be the dealer. Rhea Donovan is our contact.\n\nAnother one from the same call: Canyon Ridge Builders is planning Copper Sage Townhomes in Reno, NV — 64 townhomes, conceptual stage, about USD 21 million. No architect or dealer yet."
+  },
+  {
+   "Id": "dcbc33cf-d4b9-5c42-a84d-eef3d2ca396f",
+   "Title": "Call with Rebecca Lindqvist – Hawthorne Square Phase 2",
+   "TypeId": "e1831dec-cfc0-df11-b00f-001d60e938c6",
+   "ActivityCategoryId": "e52bd583-7825-e011-8165-00155d043204",
+   "StatusId": "4bdbb88f-58e6-df11-971b-001d60e938c6",
+   "PriorityId": "ab96fa02-7fe6-df11-971b-001d60e938c6",
+   "ContactId": "66ebdd5f-f376-54af-be1e-5c0be94b6cd7",
+   "AccountId": "04d49845-7495-5fa1-8909-cb0e85cb8718",
+   "OwnerId": "f671c397-a8e7-5a5f-b84a-da9202a7b981",
+   "StartDate": "2026-09-29T15:00:00Z",
+   "DueDate": "2026-09-29T15:30:00Z",
+   "ShowInScheduler": true,
+   "DetailedResult": "Meeting notes – call with Rebecca Lindqvist (Harlow Residential), 29 Sep 2026\n\n- Harlow confirmed Hawthorne Square Phase 2 in Atlanta: 660 Spring Street NW,\n  right next to Phase 1 (which is under construction).\n- 420 beds, student housing, design development. Budget about USD 78 million.\n- Same team as Phase 1: Whitfield & Crane Architects, Stonebridge Builders, and Magnolia\n  Appliance Distributors on appliances.\n- Rebecca is the contact again. Construction start targeted for summer 2027."
+  }
+ ],
+ "notInCrmOnPurpose": [
+  "Bull City Builders Group (GC of Eno River Commons)"
+ ],
+ "expectedScores": {
+  "The Linwood Hotel & Residences": "89.75 Strategic Pursuit, Ready to apply (developer relationship 1 win = 5.00)",
+  "Westside Yards Student Residences": "95.50 Strategic Pursuit, Ready to apply (developer relationship 3 wins = 10.00)",
+  "Copper Sage Townhomes": "Data Incomplete, Needs review (no rule for Townhomes or NV)",
+  "Ashford Park Lofts": "74.25 Active pursuit, Ready to apply",
+  "Coral Bay Senior Residences": "76.50 Active pursuit, Ready to apply",
+  "Eno River Commons": "77.50 Active pursuit, Needs review (GC Bull City Builders Group not in CRM)",
+  "Cumberland Yards Tower": "blocked (no Dodge ID)",
+  "Hawthorne Square Phase 2": "90.50 Strategic Pursuit, Needs review (phase of Hawthorne Square Phase 1) -> Link as new phase"
+ }
+}

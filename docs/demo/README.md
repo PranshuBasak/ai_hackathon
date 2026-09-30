@@ -15,7 +15,8 @@
 | [06-video-run-of-show.md](06-video-run-of-show.md) | A cut of the scripts into one video of under 5 minutes |
 | [07-script-D-guided-assistant.md](07-script-D-guided-assistant.md) | **Script D**: the assistant guides a rep. It asks for missing facts, proposes **near-match** companies, qualifies and explains the score, converts one lead and **disqualifies** another |
 | [08-script-E-full-demo-run.md](08-script-E-full-demo-run.md) | **Script E**: the full end-to-end demo run, word for word (about 12 minutes live), from the first "hi" to the manager wrap-up and the look under the hood |
-| [09-demo-script-final.md](09-demo-script-final.md) | **Final video script** (4:58): Stories A, D/E, B and C cut to the judging criteria, word for word, with a judge map, lower thirds, pre-flight, editing notes and recovery lines |
+| **[FINAL-demo-script.md](FINAL-demo-script.md)** | **The script to record (4:00)**: workspace → scoring → chat → Excel → email, on Set F, with exact prompts, expected answers, clip list and AI voice-over |
+| [09-demo-script-final.md](09-demo-script-final.md) | **Final video script** (4:58): Stories A, D/E, B and C cut to the judging criteria, word for word, with a judge map, lower thirds, pre-flight, editing notes and recovery lines. Uses only **Set F** ([seed-data/demo-final](../../seed-data/demo-final/README.md)), seeded 29 Sep 2026; the data table below belongs to scripts 01–08 |
 | [10-submission-form.md](10-submission-form.md) | Ready-to-paste answers for every field of the submission form, plus how to create the judge user |
 
 ## Demo data (loaded 29 Sep 2026; each script uses different companies)

@@ -3,7 +3,7 @@
 **Format:** one recorded video of **4 min 58 s**, four stories, one presenter voice. Every line the presenter says is written out. Every prompt to type is in a quote block. Every expected screen is stated so the editor knows what to keep.
 **Stories:** A (email), D/E (phone call: near-match linking and a disqualified lead), B (Dodge spreadsheet), C (Phase 2 with a reviewer).
 **Built for the scoring criteria:** 40 % effective use of Creatio AI Studio · 30 % innovation · 30 % demo delivery.
-**Environment:** 189543-crm-bundle · agent **Project Assistant** (Enterprise, AI Studio) · data from `seed-data/demo/` (Sets A, B, C and E).
+**Environment:** 189543-crm-bundle · agent **Project Assistant** (Enterprise, AI Studio) · data from `seed-data/demo-final/` (**Set F**, seeded 29 Sep 2026 with clio; nothing from earlier sets is reused). Owner and reviewer on camera: **Evan Whitaker** (Sales Director, employee contact).
 
 ---
 
@@ -14,7 +14,7 @@
 | **Effective use of AI Studio (40 %)** | One Enterprise agent, four custom skills, knowledge source with citations, Business Studio MCP integration with `creatio_delete_record` off, PII policy, code execution parsing Excel, versions released and deployed, Observability trace of a real apply run | 0:00, 2:35, 4:25 |
 | | Platform depth: scoring as Creatio lookups (factors, rules, priority bands) on a Settings tab, system-setting thresholds, entity business rule filling contact details, Freedom UI intake list with quick filters and the intake form with Stakeholders, AI verdict and Linked records | 0:55, 3:10, 4:25 |
 | **Innovation (30 %)** | Deterministic, explainable score read live from CRM configuration, with the developer-relationship factor moving from 5 to 10 points between two leads | 0:55, 1:45 |
-| | Near-match stakeholder proposals: "Arcadia" → Studio Arcadia, proposed and confirmed, never linked silently | 1:45 |
+| | Near-match stakeholder proposals: "Kestrel" → Studio Kestrel, proposed and confirmed, never linked silently | 1:45 |
 | | Unknown is never scored as zero: a lead outside the rules goes to a human and is disqualified with a recorded reason | 2:15 |
 | | Phase detection: "this is Phase 2 of a project we won" → child project instead of a duplicate | 3:35 |
 | | Idempotent batch import keyed on Source + provider ID, blocked rows, review routing with reasons | 2:35 |
@@ -27,18 +27,20 @@
 ## 2. Pre-flight (day before and 10 minutes before)
 
 1. AI capacity topped up. **Capture skill v4** (near-match proposals) published and pinned on Project Assistant; Story D/E does not work on v3. Dry-run all four stories the day before.
-2. Confirm none of these exist yet in the Project Intake list: *The Wren Hotel & Residences*, *Midtown Crossing Student Residences*, *Desert Bloom Townhomes*, *Peachtree Station Lofts*, *Biscayne Harbor Senior Residences*, *Brightleaf Commons*, *Tech Square Commons Phase 2*. If they do, reset per the notes at the end of scripts A, B, C and E. Never touch projects 1000000032 or 1000000033, nor the Northbeam won opportunities.
+2. Confirm none of these exist yet in the Project Intake list: *The Linwood Hotel & Residences*, *Westside Yards Student Residences*, *Copper Sage Townhomes*, *Ashford Park Lofts*, *Coral Bay Senior Residences*, *Eno River Commons*, *Cumberland Yards Tower*, *Hawthorne Square Phase 2* (list in `seed-data/fixture-manifest.json` → `demoFinal.mustNotExistBeforeRecording`). Never touch the seeded projects 1000000037 (Alderwood Resort Hilton Head) and 1000000038 (Hawthorne Square Phase 1) or the five Closed won opportunities of Set F.
 3. Tab 1: bundle → **Project Intake** list, quick filter **New** (or a saved folder "This week") so only demo rows show. Creatio.ai panel open, **new chat**, Project Assistant selected.
 4. Tab 2: AI Studio → Agents → Project Assistant → **Skills**. Tab 3: AI Studio → **Observability**.
-5. Files open: `email-the-wren.txt`, `meeting-note-tech-square-phase-2.txt`, and `Dodge_Weekly_Export_2026-09-29.xlsx` in a folder reachable from the attach dialog. The two typed leads of Story D/E are in this script; keep them in a text file to paste.
+5. Files open from `seed-data/demo-final/`: `email-the-linwood.txt`, `call-notes-riverline.txt` (the two typed leads of Story D/E, word for word), `meeting-note-hawthorne-square-phase-2.txt`, and `Dodge_Weekly_Export_2026-W40.xlsx` in a folder reachable from the attach dialog. The same email and both calls are also in Creatio as activities on Elena Marsh, Rhea Donovan and Rebecca Lindqvist, so you can open the email there for the cold open.
 6. Browser zoom 110–125 %. Close notifications. One microphone, no music.
+7. At every apply step the owner and reviewer is **Evan Whitaker** (seeded employee contact). Do not answer with a company name or an email-style name: the PII policy masks emails, and the agent then cannot resolve the owner (rehearsal 29 Sep).
+8. When the agent shows a plan card with **Confirm / Discard**, do not click Confirm: it did not resume the run in the 29 Sep rehearsal. Type *Yes* in the chat instead; every "Type: Yes" below assumes that.
 
 ---
 
 ## 3. The script
 
 ### 0:00–0:28 — Cold open: the outcome first, and the agent
-**Screen:** split view for 15 s. Left: the Crescent Bay email and the Dodge spreadsheet. Right: a finished Project page with the Involved parties list and the linked Opportunity (a rehearsal result or test project 1000000028). Then 10 s: the Creatio.ai panel with Project Assistant selected, and a 3 s cut to AI Studio → Skills.
+**Screen:** split view for 15 s. Left: the Alderwood email (The Linwood) and the Dodge spreadsheet. Right: the seeded Project 1000000037 *Alderwood Resort Hilton Head* with its Involved parties list and its linked won Opportunity. Then 10 s: the Creatio.ai panel with Project Assistant selected, and a 3 s cut to AI Studio → Skills.
 **Lower third:** *Project Assistant — 1 Enterprise agent · 4 custom skills · Business Studio MCP · delete off*
 
 **Say:**
@@ -51,9 +53,9 @@
 #### 0:28–0:55 — Capture
 **Type:**
 > Capture this email as a new project intake:
-> *(paste the full text of email-the-wren.txt)*
+> *(paste the full text of email-the-linwood.txt)*
 
-**Expect:** preview card, nothing saved. The Wren Hotel & Residences · Hospitality · Design development · 260 units · USD 142 million · Charlotte, NC. Developer, architect, GC and dealer all ✓ linked. Key contact Marcus Delgado linked. "Create this intake?" The P.S. is not acted on.
+**Expect:** preview card, nothing saved. The Linwood Hotel & Residences · Hospitality · Design development · 260 units · USD 142 million · Raleigh, NC. Developer, architect, GC and dealer all ✓ linked. Key contact Elena Marsh linked. "Create this intake?" The P.S. is not acted on.
 **Lower third:** *Skill: project-intake-capture · stakeholders linked to CRM Accounts · instructions inside the email ignored*
 
 **Say:**
@@ -62,19 +64,19 @@
 **Type:**
 > Add project category New Build and specification status Open, then create it.
 
-**Expect:** "PI-0000xx · The Wren Hotel & Residences · New" with a link and "Run the verdict now?"
+**Expect:** "PI-0000xx · The Linwood Hotel & Residences · New" with a link and "Run the verdict now?"
 
-> If the PII policy hides the contact name, reply: *"The key contact is the VP of Development at Crescent Bay — link the existing CRM contact."* Cut it from the video.
+> If the PII policy hides the contact name, reply: *"The key contact is the VP of Development at Alderwood — link the existing CRM contact."* Cut it from the video.
 
 #### 0:55–1:20 — Verdict
 **Type:**
 > Yes, run the verdict.
 
-**Expect:** Recommended action **Create new project** (it found "Crescent Bay Resort Myrtle Beach" for the same developer and judged it a different project). **89.75 / 100 · Strategic Pursuit.** Factor table: value 17.00, units 12.75, Hospitality 15.00, Design development 15.00, architect 10.00, dealer tier A 10.00, developer relationship (1 won opportunity) 5.00, NC 5.00. Buying-centre health 100 %.
+**Expect:** Recommended action **Create new project** (it found "Alderwood Resort Hilton Head" for the same developer and judged it a different project). **89.75 / 100 · Strategic Pursuit.** Factor table: value 17.00, units 12.75, Hospitality 15.00, Design development 15.00, architect 10.00, dealer tier A 10.00, developer relationship (1 won opportunity) 5.00, NC 5.00. Buying-centre health 100 %.
 **Lower third:** *Skill: project-intake-verdict · score = Creatio scoring rules, read live · audit JSON stored*
 
 **Say:**
-> "The verdict. It found the Myrtle Beach resort we built for the same developer and judged this a different project. 89.75, a Strategic Pursuit. Every point comes from scoring rules our sales operations team maintains in Creatio, including five points for a developer we've already won with once."
+> "The verdict. It found the Hilton Head resort we built for the same developer and judged this a different project. 89.75, a Strategic Pursuit. Every point comes from scoring rules our sales operations team maintains in Creatio, including five points for a developer we've already won with once."
 
 **Type:**
 > Yes, save the verdict.
@@ -83,10 +85,10 @@
 **Type:**
 > Prepare the apply plan.
 
-**Expect:** the plan, nothing written: Project, 4 involved parties, Opportunity "The Wren Hotel & Residences pursuit" with Partner Carolina Kitchen & Appliance. It asks who owns it.
-**Type:** *Me — Qnovate.* then *Yes*
+**Expect:** the plan, nothing written: Project, 4 involved parties, Opportunity "The Linwood Hotel & Residences pursuit" with Partner Capital City Appliance Co.. It asks who owns it.
+**Type:** *Evan Whitaker.* then *Yes* (see pre-flight 7)
 **Expect:** links to the Project and the Opportunity, "4 involved parties", intake **Applied**.
-**Screen:** click the Project: the Involved parties list with roles. Click the Opportunity: Partner Carolina Kitchen & Appliance, A&D Project linked. Back on the intake: Linked records island.
+**Screen:** click the Project: the Involved parties list with roles. Click the Opportunity: Partner Capital City Appliance Co., A&D Project linked. Back on the intake: Linked records island.
 **Lower third:** *Skill: project-intake-apply · plan → named owner → "yes" → Project + 4 parties + Opportunity*
 
 **Say:**
@@ -95,34 +97,34 @@
 ---
 
 ### Story D/E — A phone call: near-match linking and a disqualified lead (1:45–2:35)
-Data: Set E (Northbeam Communities with 3 won opportunities, Studio Arcadia, Keel & Stone Construction, Peach State Appliance Distributors, Grace Liu; Sierra Pines Builders). Taken from scripts [D](07-script-D-guided-assistant.md) and [E](08-script-E-full-demo-run.md).
+Data: Set F — Riverline Communities (alternative name "Riverline", 3 Closed won opportunities), Studio Kestrel, Hale & Brandt Construction, Piedmont Appliance Distributors (tier A), Rhea Donovan; Canyon Ridge Builders. The same call is logged in Creatio as an activity on Rhea Donovan.
 
 #### 1:45–2:15 — Company names as the rep remembers them
 **Screen:** new chat.
 **Type:**
-> Northbeam is building Midtown Crossing Student Residences at 400 10th Street NW in Atlanta, GA — 612 beds, construction documents stage, about USD 105 million. Architect is Arcadia, GC is Keel and Stone, and Peach State Appliance will be the dealer. Grace Liu is our contact.
+> Riverline is building Westside Yards Student Residences at 780 Marietta Street NW in Atlanta, GA — 612 beds, construction documents stage, about USD 105 million. Architect is Kestrel, GC is Hale and Brandt, and Piedmont Appliance will be the dealer. Rhea Donovan is our contact.
 
-**Expect** (preview, nothing saved): Developer "Northbeam" → ✓ **Northbeam Communities** (alternative name). Architect "Arcadia" → **possible match: Studio Arcadia**. GC "Keel and Stone" → **possible match: Keel & Stone Construction**. Dealer "Peach State Appliance" → **possible match: Peach State Appliance Distributors**. Key contact Grace Liu ✓. "Link these matches?"
+**Expect** (preview, nothing saved): Developer "Riverline" → ✓ **Riverline Communities** (alternative name). Architect "Kestrel" → **possible match: Studio Kestrel**. GC "Hale and Brandt" → **possible match: Hale & Brandt Construction**. Dealer "Piedmont Appliance" → **possible match: Piedmont Appliance Distributors**. Key contact Rhea Donovan ✓. "Link these matches?"
 **Lower third:** *Capture v4: near matches proposed, confirmed by the user, never linked silently*
 
 **Type:**
 > Yes, link all three. Category New Build, specification status Open. Create it and run the verdict.
 
-**Expect:** "PI-0000xx · Midtown Crossing Student Residences · New", then the verdict: Create new project · **95.50 · Strategic Pursuit** · developer relationship **10.00** (3 won opportunities) · buying-centre health 100 %. **Type:** *Yes, save it.*
+**Expect:** a creation plan with the four stakeholders linked and category/specification set. **Type:** *Yes* → "PI-0000xx … created and verified", then the verdict plan: Create new project · **95.50 · Strategic Pursuit** · buying-centre health 100 %. **Type:** *Yes, save it.* → the saved verdict with the factor table, developer relationship **10/10** (3 won opportunities). Cut the extra *Yes* turn in the edit.
 **Screen:** hold on the factor table for 3 s, pointing at the relationship row.
 
 **Say:**
-> "Now a lead from a phone call, with the company names as I remember them. 'Arcadia' isn't an account; Studio Arcadia is. The agent proposes the right companies but never links them silently. One yes, and the intake exists with its whole buying centre. Northbeam has won three packages with us, so the relationship factor jumps to ten and the score to 95.5."
+> "Now a lead from a phone call, with the company names as I remember them. 'Kestrel' isn't an account; Studio Kestrel is. The agent proposes the right companies but never links them silently. One yes, and the intake exists with its whole buying centre. Riverline has won three packages with us, so the relationship factor jumps to ten and the score to 95.5."
 
 #### 2:15–2:35 — A lead the rules don't cover
 **Type:**
-> Another one from the same call: Sierra Pines Builders is planning Desert Bloom Townhomes in Henderson, NV — 64 townhomes, conceptual stage, about USD 21 million. No architect or dealer yet. Create it and run the verdict.
+> Another one from the same call: Canyon Ridge Builders is planning Copper Sage Townhomes in Reno, NV — 64 townhomes, conceptual stage, about USD 21 million. No architect or dealer yet. Create it and run the verdict.
 
-**Expect:** Sierra Pines Builders ✓ linked; verdict priority **Data Incomplete**, status **Needs review**, reasons: type "Townhomes" and region "NV" have no scoring rule; architect and dealer unknown. Outcome flags all No. Options: fill facts and re-run, decide as reviewer, or reject.
+**Expect:** a creation plan (type "Townhomes" kept as source text, no lookup). **Type:** *Yes*. Then Canyon Ridge Builders ✓ linked; verdict priority **Data Incomplete**, status **Needs review**, reasons: type "Townhomes" and region "NV" have no scoring rule; architect and dealer unknown. Outcome flags all No. Options: fill facts and re-run, decide as reviewer, or reject.
 **Type:**
 > As reviewer: disqualify it. Nevada is outside our territory and townhomes aren't a fit.
 
-**Expect:** a plan saying nothing will be created and the intake will be Rejected with the reason. **Type:** *Yes* → "PI-0000xx · Desert Bloom Townhomes · **Rejected**".
+**Expect:** a plan saying nothing will be created and the intake will be Rejected with the reason. **Type:** *Yes* → "PI-0000xx · Copper Sage Townhomes · **Rejected**".
 **Lower third:** *Unknown is never scored as 0 · reviewer decision recorded · status Rejected*
 
 **Say:**
@@ -133,7 +135,7 @@ Data: Set E (Northbeam Communities with 3 won opportunities, Studio Arcadia, Kee
 ### Story B — Monday morning: the weekly Dodge export (2:35–3:35)
 
 #### 2:35–3:00 — Attach and preview
-**Screen:** new chat. Click the paperclip, attach `Dodge_Weekly_Export_2026-09-29.xlsx`.
+**Screen:** new chat. Click the paperclip, attach `Dodge_Weekly_Export_2026-W40.xlsx`.
 **Type:**
 > Import the projects from the attached Dodge export.
 
@@ -141,10 +143,10 @@ Data: Set E (Northbeam Communities with 3 won opportunities, Studio Arcadia, Kee
 
 | Row | Project | Class | Linked | Reason |
 |---|---|---|---|---|
-| 1 | Peachtree Station Lofts | new | 4/4 | — |
-| 2 | Biscayne Harbor Senior Residences | new | 4/4 | — |
-| 3 | Brightleaf Commons | new | 3/4 | GC "Triangle Builders Group" is not in CRM |
-| 4 | Music Row Tower | **blocked** | — | no Dodge project ID, cannot be de-duplicated |
+| 1 | Ashford Park Lofts | new | 4/4 | — |
+| 2 | Coral Bay Senior Residences | new | 4/4 | — |
+| 3 | Eno River Commons | new | 3/4 | GC "Bull City Builders Group" is not in CRM |
+| 4 | Cumberland Yards Tower | **blocked** | — | no Dodge project ID, cannot be de-duplicated |
 
 **Lower third:** *Excel parsed with code execution · header mapping · 11 companies linked · 1 row blocked*
 
@@ -154,14 +156,14 @@ Data: Set E (Northbeam Communities with 3 won opportunities, Studio Arcadia, Kee
 **Type:**
 > Yes, create the 3 new intakes.
 
-**Expect:** 3 intakes with PI numbers, status New, and "Music Row Tower: not created (blocked)".
+**Expect:** 3 intakes with PI numbers, status New, and "Cumberland Yards Tower: not created (blocked)".
 
 #### 3:00–3:10 — Safe re-upload
 **Screen:** attach the same file again.
 **Type:**
 > Here is the same file again — import it.
 
-**Expect:** 3 rows **existing**, 0 created, Music Row Tower still blocked.
+**Expect:** 3 rows **existing**, 0 created, Cumberland Yards Tower still blocked.
 **Lower third:** *Idempotent: Source + provider project ID*
 
 **Say:**
@@ -171,12 +173,12 @@ Data: Set E (Northbeam Communities with 3 won opportunities, Studio Arcadia, Kee
 **Type:**
 > Run the verdict on the three new intakes and tell me which ones need me.
 
-**Expect** (answer *yes* to each save; cut the waits): Peachtree Station Lofts 74.25 Active pursuit, Ready to apply. Biscayne Harbor Senior Residences 76.50 Active pursuit, Ready to apply. Brightleaf Commons 77.50, **Needs review**: unresolved GC Triangle Builders Group.
-**Screen:** the Project Intake list: **Ready to apply** quick filter with the Priority and Qualification score columns, then **Needs review** showing Brightleaf.
+**Expect** (one save plan for all three; type *Yes, save them.*; cut the waits): Ashford Park Lofts 74.25 Active pursuit, Ready to apply. Coral Bay Senior Residences 76.50 Active pursuit, Ready to apply. Eno River Commons 77.50, **Needs review**: unresolved GC Bull City Builders Group.
+**Screen:** the Project Intake list: **Ready to apply** quick filter with the Priority and Qualification score columns, then **Needs review** showing Eno River Commons.
 **Lower third:** *Review routing with reasons · Freedom UI list: quick filters, score and priority columns*
 
 **Say:**
-> "Two are ready to apply. Brightleaf Commons goes to review because the builder isn't in our CRM, and the agent won't pretend it knows who that is. The list filters show what can move today and what needs a person."
+> "Two are ready to apply. Eno River Commons goes to review because the builder isn't in our CRM, and the agent won't pretend it knows who that is. The list filters show what can move today and what needs a person."
 
 ---
 
@@ -185,20 +187,20 @@ Data: Set E (Northbeam Communities with 3 won opportunities, Studio Arcadia, Kee
 #### 3:35–3:50 — Capture the meeting note
 **Screen:** new chat.
 **Type:**
-> Here are my notes from today's call with Bellwether — capture the new project:
-> *(paste meeting-note-tech-square-phase-2.txt)*
+> Here are my notes from today's call with Harlow — capture the new project:
+> *(paste meeting-note-hawthorne-square-phase-2.txt)*
 
-**Expect:** preview: Tech Square Commons Phase 2 · Student Housing · Design development · 420 units · USD 78 million · Atlanta. All four stakeholders ✓ linked, key contact Diane Okafor. The duplicate check warns that **Tech Square Commons Phase 1** exists and asks whether this is the same project.
+**Expect:** preview: Hawthorne Square Phase 2 · Student Housing · Design development · 420 units · USD 78 million · Atlanta. All four stakeholders ✓ linked, key contact Rebecca Lindqvist. The duplicate check warns that **Hawthorne Square Phase 1** exists and asks whether this is the same project.
 **Type:** *No — it's the next phase, create it.*
 
 **Say:**
-> "Meeting notes from a call with Bellwether. Before saving, the agent spots Tech Square Commons Phase 1 in our CRM and asks whether this is the same project. It's the next phase."
+> "Meeting notes from a call with Harlow. Before saving, the agent spots Hawthorne Square Phase 1 in our CRM and asks whether this is the same project. It's the next phase."
 
 #### 3:50–4:05 — Verdict: a related project, so a human decides
 **Type:**
 > Run the verdict.
 
-**Expect:** Match **Tech Square Commons Phase 1**. Recommended action **Link as new phase**. **90.50 · Strategic Pursuit.** Status **Needs review**, reason "phase of an existing project". **Type:** *Yes, save it.*
+**Expect:** Match **Hawthorne Square Phase 1**. Recommended action **Link as new phase**. **90.50 · Strategic Pursuit.** Status **Needs review**, reason "phase of an existing project". **Type:** *Yes, save it.*
 **Lower third:** *Phase detection → Link as new phase → Needs review by policy*
 
 **Say:**
@@ -206,12 +208,12 @@ Data: Set E (Northbeam Communities with 3 won opportunities, Studio Arcadia, Kee
 
 #### 4:05–4:25 — Reviewer decision and proof
 **Type:**
-> As reviewer: approve it as a new phase of Tech Square Commons Phase 1 and prepare the plan.
+> As reviewer: approve it as a new phase of Hawthorne Square Phase 1 and prepare the plan.
 
-**Expect:** plan: new Project with **Parent: Tech Square Commons Phase 1**, 4 involved parties, Opportunity "Tech Square Commons Phase 2 pursuit" with Partner Blue Ridge Appliance Distributors, owner and reviewer asked.
-**Type:** *Me — Qnovate.* then *Yes*
+**Expect:** plan: new Project with **Parent: Hawthorne Square Phase 1**, 4 involved parties, Opportunity "Hawthorne Square Phase 2 pursuit" with Partner Magnolia Appliance Distributors, owner and reviewer asked.
+**Type:** *Evan Whitaker.* then *Yes*
 **Expect:** links to the new Project and Opportunity; intake **Applied**, reviewed by you.
-**Screen:** open the new project and point at **Parent item = Tech Square Commons Phase 1** and the involved parties.
+**Screen:** open the new project and point at **Parent item = Hawthorne Square Phase 1** and the involved parties.
 **Lower third:** *Reviewer on record · child project under Phase 1 · new pursuit*
 
 **Say:**

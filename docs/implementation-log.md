@@ -186,3 +186,39 @@ For a deliberate rollback: set policy approved=false through the native setting 
 - Colour values for all 83 existing rows written with clio `upsert-data-binding-row-db`, which also adds UsrColor to each package binding. Existing Ids, names and descriptions are unchanged; no rows were added or removed. `execute-dataservice-batch` cannot write Color columns, and OData does not expose them.
 - Read-back: `execute-esq` returned the expected hex value for all 83 rows. A post-change `export-schema` shows `D37` equal to the UsrColor column UId for all 8 newly flagged lookups; Intake status was verified earlier. In the browser, the Project Intake list renders the "Needs review" status as a coloured chip, rgba(255,172,7,0.2), which is #FFAC07 at 0.2 opacity.
 - Palette: the out-of-the-box Creatio colours. Green means positive or advanced, amber means review or waiting, orange and red mean risk, lost, rejected or duplicate, and blue, purple and teal are neutral categories. Full mapping: `docs/lookup-colors.md`.
+
+## 2026-09-29 — Rehearsal of the final demo script (09) and the Excel fix
+
+- **Excel import root cause:** the AI Studio PII policy "Default (system)" masked the Dodge IDs (`DG-26-114872` style) as `[PHONE]` before the model saw them (decision log, 9:43 PM: Phone ×3). The capture skill correctly refused to save masked IDs, so every row was blocked.
+- **Fix (data only, no policy change):** the demo IDs are now `DG-PT4872`, `DG-BH5390` and `DG-BC6004` in `seed-data/demo/Dodge_Weekly_Export_2026-09-29.xlsx` and script B. Real provider IDs with long digit runs will hit the same detector; the owner can add a Global PII policy without Phone detection if needed.
+- **Story B passed** (agent chat, verified with clio):
+  - Import preview: 3 new rows and 1 blocked (Music Row Tower); 4/4, 4/4 and 3/4 stakeholders linked.
+  - Created PI-000044, PI-000045 and PI-000046, with Source Dodge and the correct IDs, street addresses, values, units and linked contacts. Emails were filled by the page rule.
+  - Re-upload: 3 rows existing, 0 created.
+  - Verdicts: 74.25 and 76.50 (Active pursuit, Ready to apply) and 77.50 (Needs review, unresolved GC Triangle Builders Group).
+- **Story A passed:**
+  - Capture and verdict were run by the owner: PI-000040, 89.75, Strategic Pursuit.
+  - Apply: Project 1000000036, Opportunity "The Wren Hotel & Residences pursuit" with partner Carolina Kitchen & Appliance, and 4 involved parties with roles (the developer is primary with Marcus Delgado). The intake is Applied.
+  - The owner line "Me — Qnovate." failed: the owner's contact is named like an email, which the PII policy masks. Supervisor was used for the test.
+- **Story D/E, part 1 passed:**
+  - Near matches for Studio Arcadia, Keel & Stone Construction and Peach State Appliance Distributors were proposed, not linked, then confirmed.
+  - Created PI-000050: 95.50, Strategic Pursuit, developer relationship 10/10 (3 won opportunities), category New Build, specification status Open.
+- **Stopped:** PI-000052 Desert Bloom was created (New). Its verdict failed with `CreditsQuotaExceeded` (organization AI credits exhausted). Not yet tested: the Desert Bloom verdict and disqualify, Story C, and the long scripts D and E.
+- **Chat behaviour to plan for:** the agent shows Confirm/Discard plan cards. Clicking Confirm did not resume the run; typing "yes" did. Script 09 is updated accordingly.
+- Records created by the rehearsal are listed in `seed-data/fixture-manifest.json` → `rehearsalRun20260929`. They must be reset before recording.
+
+## 2026-09-29 — Set F: new data for the final demo script (owner decisions)
+
+- **Owner decisions:**
+  1. Use a separate employee as owner and reviewer: **Evan Whitaker**, Sales Director, an Employee contact of "Our company".
+  2. Build a completely new data set instead of deleting or reusing earlier records, and seed it with clio, emails included.
+  3. AI credits will be topped up before the retest.
+- **Seeded with clio** (`odata-create` with uuid5 Ids; `odata-update` for Project.Opportunity and one email participant) and read back with `execute-esq`:
+  - 25 accounts (types and dealer tiers A/B/C; alternative names Alderwood, Riverline and Harlow) and 11 contacts.
+  - 2 history projects: 1000000037 Alderwood Resort Hilton Head (completed) and 1000000038 Hawthorne Square Phase 1 (under construction).
+  - 5 Closed won opportunities (1 Alderwood, 3 Riverline, 1 Harlow), each owned by Evan Whitaker, and 8 involved parties.
+  - 3 activities: the incoming email "The Linwood – Raleigh – appliance package, early heads-up" (From Elena Marsh, To Evan Whitaker) and two completed calls with notes (Rhea Donovan, Rebecca Lindqvist).
+- Before seeding, every planned name was checked against CRM. Colliding names were replaced: Solstice, Summitline, Tessa, Caleb and Jordan.
+- **Files** (`seed-data/demo-final/`): the build script, the JSON data, the email, the call notes, the meeting note, and `Dodge_Weekly_Export_2026-W40.xlsx` (IDs `DG-AP7315`, `DG-CB2946`, `DG-ER8051`; Bull City Builders Group intentionally not in CRM).
+- **Expected scores** were computed from the live scoring rules: 89.75 / 95.50 / Data Incomplete / 74.25 / 76.50 / 77.50 (review) / blocked / 90.50 (phase review). The agent has not scored these yet; that waits for AI credits.
+- `docs/demo/09-demo-script-final.md` now uses Set F throughout (the owner line is "Evan Whitaker."). The manifest key is `demoFinal`. Rehearsal transcripts are in `docs/demo/rehearsal-2026-09-29/`; no video recording exists.
